@@ -1,0 +1,71 @@
+*{
+    border: red solid 1px;
+}
+
+.App{
+display: flex;
+width: 100%;
+flex-direction: column;
+}
+.Nav{
+    width: 50%;
+    align-self: flex-end;
+    position: absolute;
+    background-color: black;
+}
+.Nav > ul li {
+    display: inline-block;
+    padding: 2%;
+    color: white;
+}
+.Main_h{
+background-image: url("./img/mainhead.png");
+background-size: cover;
+ width: 100%;
+ height: 700px;
+
+}
+
+.Main_c{
+    width: 100%;
+    height: auto;
+    display: flex;
+    border: blue solid 1px;
+}
+
+.mainRight{
+width: 40%;
+}
+.mainRight > div {
+    height: 33.3%;
+    min-height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.mainRight :first-child{
+    background-image: url("./img/main1.png");
+}
+.mainRight :nth-child(2){
+    background-image: url("./img/main2.png");
+}
+.mainRight :nth-child(3){
+    background-image: url("./img/main3.png");
+}
+.mainLeft{
+ width: 60%;
+}
+
+.mainBot{
+
+}
+.Footer{
+    background-image: url("./img/footer.png");
+    display: flex;
+    padding: 6%;
+}
+.Footer > div{
+    color: white;
+    width: 25%;
+    padding: 2%;
+}
