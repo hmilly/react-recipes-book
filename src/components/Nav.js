@@ -10,6 +10,7 @@ function Nav() {
                 <li>WINE</li>
                 <li>GIFTS</li>
                 <li>MARKET</li>
+                <li>Test</li>
             </ul>
             <div className="trolley"><img></img></div>
         </div>
