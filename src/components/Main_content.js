@@ -1,12 +1,14 @@
 import React from "react";
+import i1 from "./src/components/img/maingbg1.png";
 
 
-function Main_content() {
+function Main_content(i1) {
     return (
         <div>
-            <div className="Main_c">
+            <div className="main_content">
                 <div className="mainLeft">
                     <div>
+
                         <h1>Choose your meals</h1>
                         <p>Our chef-designed recipes include balanced
                         Medditerranean meals, quick one-pan dinners,

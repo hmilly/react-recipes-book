@@ -3,10 +3,10 @@ import React from "react";
 
 function Footer() {
 	return (
-		<div className="Footer">
+		<div className="footer">
 			<div>
 				<ul>
-					<li>Catagories</li>
+					<h2>Catagories</h2>
 					<li>About Us</li>
 					<li>Testimonials</li>
 					<li>Contact</li>
@@ -16,7 +16,7 @@ function Footer() {
 			</div>
 			<div>
 				<ul>
-					<li>Partners</li>
+					<h2>Partners</h2>
 					<li>Support</li>
 					<li>Shipping N Returns</li>
 					<li>Size Guide</li>
@@ -25,7 +25,7 @@ function Footer() {
 			</div>
 			<div>
 				<ul
-				><li>Contact Us</li>
+				><h2>Contact Us</h2>
 					<li>26A Pagoda St, Tangs</li>
 					<li>Singapore, 058187</li>
 					<li></li>
@@ -34,7 +34,7 @@ function Footer() {
 			</div>
 			<div>
 				<ul>
-					<li className="followus">Follow Us</li>
+					<h2>Follow Us</h2>
 					<li><img src="" alt="instagram" ></img></li>
 					<li><img src="" alt="facebook" ></img></li>
 					<li><img src="" alt="twitter" ></img></li>
