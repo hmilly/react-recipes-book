@@ -1,5 +1,5 @@
 import React from "react";
-//import imag from "../public/img/mainhead.png"
+
 
 
 function Main_content() {
@@ -8,7 +8,7 @@ function Main_content() {
             <div className="main_content">
                 <div className="mainLeft">
                     <div>
-                        <img>{}</img>
+                    <img src={require('.src/img/mainhead.png')} />
                         <h1>Choose your meals</h1>
                         <p>Our chef-designed recipes include balanced
                         Medditerranean meals, quick one-pan dinners,
