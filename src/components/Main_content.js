@@ -1,5 +1,5 @@
 import React from "react";
-import imag from "./src/img/maingbg1"
+import imag from "./public/img/maingbg1"
 
 
 function Main_content() {
