@@ -107,8 +107,9 @@ width: 40%;
     margin: 6%;
 }
 .mainLeft > div > img{
-    width: 50%;
+    width: 10%; 
 }
+
 .mainLeft > div > h1{
     font-size: 5vw;
     text-align: left;
