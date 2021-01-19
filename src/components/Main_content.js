@@ -39,7 +39,6 @@ function Main_content() {
                 </div>
             </div>
             <div className="main_bot">
-            <img src={`${process.env.PUBLIC_URL}/assets/mainbot.png`} alt="burger_on_chopping_board" />
                 <div>
                     <h2>SPECIAL OFFER</h2>
                 </div>
