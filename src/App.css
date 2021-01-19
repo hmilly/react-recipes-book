@@ -1,89 +1,89 @@
-
+*{
+    box-sizing: border-box;
+}
 
 .app{
     display: flex;
-    width: 100%;
     flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .nav{
+    display: flex;
     width: 50%;
     align-self: flex-end;
     position: absolute;
-    display: block;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
 }
 .nav > ul {
-    display: block;
-    float: left;
-    padding: 0;
-    width: 80%;
+    display: flex;
+    flex:1;
+    list-style-type: none;
 }
-.nav > ul > li{
-    display: inline-block;
+.nav li{
+    flex-grow: 1;
     font-size: 1.3vw;
-    margin: 0 2%;
     color: white;
 }
-.nav > ul > li:hover{
+.nav li:hover{
     border-bottom: 1px solid gold;
     cursor: pointer;
 }
-.nav > h1{
-    float: right;
-    margin: 0 auto;
-    width: 10%;
+.nav h1{
+    padding: 0 3%;
     color: orange;
-    text-align: center;
+    margin: auto;
+    font-size: 1.3vw;
 }
 
 
 .main_head{
     display: flex;
-    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
     background-image: url("./img/mainhead.png");
     background-size: cover;
-    width: 100%;
     height: 700px;
+    max-height: 700px;
 }
 .main_head > div{
-    width: 50%;
-    align-self: flex-end;
-    position: absolute;
-    position: relative;
-    top: 40%;
+    flex-basis: 55%;
+    padding: 2%;
     color: white;
 }
-.main_head > div > h1{
-    margin: 0 auto;
+.main_head h1{
+    margin: auto;
     font-size: 4vw;
     padding: 4% 0;
 }
-.main_head > div > button{
+.main_head button{
     padding: 2% 4%;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: solid 1px gold;
 }
-.main_head > div > button:hover{
+.main_head button:hover{
     cursor: pointer;
     background-color: rgba(100, 90, 14, 0.234);
 }
 
-.main_content{
+.main_top{
+    flex-grow: 2;
+    display: flex;
     width: 100%;
     height: auto;
-    display: flex;
-    border: blue solid 1px;
 }
 
 .mainRight{
-width: 40%;
+display: flex;
+flex-direction: column;
+flex: 1;
 }
 .mainRight > div {
-    height: 33.3%;
-    min-height: 400px;
-    width: 100%;
+    flex: 1;
     background-size: cover;
     background-position: center;
 }
@@ -98,48 +98,62 @@ width: 40%;
 }
 
 .mainLeft{
-    width: 60%;
-}
-
-.mainLeft > div{
+    flex:1;
     display: flex;
-    height: 33.33%;
-    padding: 2% 6%;
     flex-direction: column;
 }
-
-.mainLeft > div > img{
-    margin: 0;
+.mainLeft > div{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    padding: 2% 5%;
 }
 .main-img-1{
-    align-self: flex-end;
-    padding-right: 20%;
     width: 10%;
+    align-self: flex-end;
 }
 .main-img-2{
-    padding-left: 1%;
-    padding-top: 4%;
     width: 8%;
+    align-self: flex-start;
 }
-
-
-
-.mainLeft > div > h1{
+.mainLeft h1{
     margin: 0;
     font-size: 5vw;
     text-align: left;
 }
-.mainLeft > div > p{
-    margin: 0;
+.mainLeft p{
+    width: 80%;
+    padding: 1%;
     font-size: 2vw;
     text-align: left;
 }
+
+.main_bot{
+    background-image: url("./img/mainbot.png");
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+.main_bot :nth-child(2){
+    margin: auto;
+    border: solid 1px purple;
+    color: gold;
+}
+
       
 
 .footer{
+    flex-grow: 1;
     background-image: url("./img/footer.png");
     display: flex;
     padding: 6%;
+}
+.footer h2{
+    color: yellow;
 }
 .footer > div{
     color: white;

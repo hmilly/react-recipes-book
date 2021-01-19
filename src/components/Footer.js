@@ -6,7 +6,7 @@ function Footer() {
 		<div className="footer">
 			<div>
 				<ul>
-					<h2>Catagories</h2>
+					<h2>Categories</h2>
 					<li>About Us</li>
 					<li>Testimonials</li>
 					<li>Contact</li>
