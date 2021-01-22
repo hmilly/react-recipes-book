@@ -12,4 +12,4 @@ function Main_Head() {
   )
 }
 
-export default Main_head
+export default Main_Head

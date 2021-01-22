@@ -4,7 +4,7 @@ import React from "react";
 
 function Main_Content() {
     return (
-        <div>
+        <div className="main_content">
             <div className="main_top">
                 <div className="mainLeft">
                     <div>
@@ -33,17 +33,23 @@ function Main_Content() {
                     </div>
                 </div>
                 <div className="mainRight">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
+                    </div>
+                    <div>
+                        <img src={`${process.env.PUBLIC_URL}/assets/main2.png`} alt="shopping_img" />
+                    </div>
+                    <div>
+                        <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
+                    </div>
                 </div>
             </div>
             <div className="main_bot">
-                <div>
+                <div className="main_bot_offer">
                     <h2>SPECIAL</h2>
                     <h2> OFFER</h2>
                 </div>
-                <div>
+                <div className="main_bot_getstarted">
                     <h1>homemade burger</h1>
                     <button>GET STARTED</button>
                 </div>
@@ -52,4 +58,4 @@ function Main_Content() {
     )
 }
 
-export default Main_content
+export default Main_Content

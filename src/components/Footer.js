@@ -18,7 +18,7 @@ function Footer() {
 				<h2>Partners</h2>
 				<ul>
 					<li>Support</li>
-					<li>Shipping N Returns</li>
+					<li>Shipping & Returns</li>
 					<li>Size Guide</li>
 					<li>Product Care</li>
 				</ul>
@@ -34,12 +34,12 @@ function Footer() {
 			</div>
 			<div>
 				<h2>Follow Us</h2>
-				<ul className="socials">
-					<li><img src="" alt="instagram" ></img></li>
-					<li><img src="" alt="facebook" ></img></li>
-					<li><img src="" alt="twitter" ></img></li>
-					<li><img src="" alt="whatsapp" ></img></li>
-				</ul>
+				<div className="socials">
+					<img src={`${process.env.PUBLIC_URL}/assets/insta.png`} alt="I"></img>
+					<img src={`${process.env.PUBLIC_URL}/assets/fb.png`} alt="F" ></img>
+					<img src={`${process.env.PUBLIC_URL}/assets/tw.png`} alt="T" ></img>
+					<img src={`${process.env.PUBLIC_URL}/assets/wh.png`} alt="W" ></img>
+				</div>
 			</div>
 		</div>
 	)
