@@ -5,8 +5,8 @@ function Footer() {
 	return (
 		<div className="footer">
 			<div>
+				<h2>Categories</h2>
 				<ul>
-					<h2>Categories</h2>
 					<li>About Us</li>
 					<li>Testimonials</li>
 					<li>Contact</li>
@@ -15,8 +15,8 @@ function Footer() {
 				</ul>
 			</div>
 			<div>
+				<h2>Partners</h2>
 				<ul>
-					<h2>Partners</h2>
 					<li>Support</li>
 					<li>Shipping N Returns</li>
 					<li>Size Guide</li>
@@ -24,17 +24,17 @@ function Footer() {
 				</ul>
 			</div>
 			<div>
-				<ul
-				><h2>Contact Us</h2>
+				<h2>Contact Us</h2>
+				<ul>
 					<li>26A Pagoda St, Tangs</li>
 					<li>Singapore, 058187</li>
-					<li></li>
+					<br></br>
 					<li>+65 62215462</li>
 				</ul>
 			</div>
 			<div>
-				<ul>
-					<h2>Follow Us</h2>
+				<h2>Follow Us</h2>
+				<ul className="socials">
 					<li><img src="" alt="instagram" ></img></li>
 					<li><img src="" alt="facebook" ></img></li>
 					<li><img src="" alt="twitter" ></img></li>

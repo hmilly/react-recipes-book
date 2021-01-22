@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function Main_content() {
+function Main_Content() {
     return (
         <div>
             <div className="main_top">
@@ -40,7 +40,8 @@ function Main_content() {
             </div>
             <div className="main_bot">
                 <div>
-                    <h2>SPECIAL OFFER</h2>
+                    <h2>SPECIAL</h2>
+                    <h2> OFFER</h2>
                 </div>
                 <div>
                     <h1>homemade burger</h1>

@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Main_head() {
+function Main_Head() {
   return (
     <div className="main_head">
       <div>
