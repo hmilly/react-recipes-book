@@ -4,8 +4,8 @@ import React from "react";
 
 function Main_Content() {
     return (
-        <div className="main_content">
-            <div className="main_top">
+        <div>
+            <div className="main">
                 <div className="mainLeft">
                     <div>
                         <img className="main-img-1" src={`${process.env.PUBLIC_URL}/assets/maingbg1.png`} alt="burger_logo" />
@@ -42,16 +42,6 @@ function Main_Content() {
                     <div>
                         <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
                     </div>
-                </div>
-            </div>
-            <div className="main_bot">
-                <div className="main_bot_offer">
-                    <h2>SPECIAL</h2>
-                    <h2> OFFER</h2>
-                </div>
-                <div className="main_bot_getstarted">
-                    <h1>homemade burger</h1>
-                    <button>GET STARTED</button>
                 </div>
             </div>
         </div>
