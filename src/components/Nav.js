@@ -11,7 +11,7 @@ function Nav() {
                 <li>GIFTS</li>
                 <li>MARKET</li>
             </ul>
-            <h1>T</h1>
+            <img src={`${process.env.PUBLIC_URL}/assets/buy.png`} alt="cart" />
         </div>
     )
 }

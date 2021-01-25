@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function Main_Content() {
+function Main_content() {
     return (
         <div>
             <div className="main">
@@ -48,4 +48,4 @@ function Main_Content() {
     )
 }
 
-export default Main_Content
+export default Main_content

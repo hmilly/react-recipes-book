@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-
     margin: 0 auto;
     height: 100%;
 }
@@ -35,7 +34,7 @@
     border-bottom: 1px solid gold;
     cursor: pointer;
 }
-.nav h1{
+.nav img{
     padding: 0 3%;
     color: orange;
     margin: auto;
@@ -66,7 +65,6 @@
 .main_head button{
     padding: 2% 4%;
     background-color: rgba(0, 0, 0, 0);
-    color: white;
     border: solid 1px gold;
 }
 .main_head button:hover{
@@ -203,7 +201,6 @@ flex: 1;
 .special_offer button{
     padding: 0.5% 2%;
     background-color: rgba(0, 0, 0, 0);
-    color: white;
     border: solid 2px gold;
 }
 .special_offer button:hover{
@@ -408,26 +405,149 @@ th, td {
 .order_complete div p{
     position: absolute;
     color: white;
-    border: solid 1px purple;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.548);
     text-align: center;
     font-size: 4vw;
+    font-weight: bold;
     padding: 10% 35%;
 }
 
+
+
+
+/* Order page styles */
 .order_page{
     display: flex;
 }
 
 .order_page_form{
-    border: solid 1px red;
+
     padding: 2%;
-    flex-basis: 50%
+    flex-basis: 40%
 }
+.order_page_form form{
+    display: flex;
+    flex-direction: column;
+
+    padding: 2%;
+}
+
+.order_page_form form > p{
+    color: gold;
+    border: none;
+}
+.order_page_form form select, .order_page_form form button{
+    background-color: gold;
+    border: gold;
+    width: 25%;
+    padding: 2%;
+    border-radius: 2px;
+}
+.order_page_form form > *, .order_page_form form div input{
+    border-radius: 4px;
+    padding: 1%;
+    margin: 2%;
+    border: 1px solid rgba(0, 0, 0, 0.549);
+}
+.order_page_form form div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.postcode {
+    width: 50%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .order_page_receipt{
+    display: flex;
+    flex-direction: column;
     border: solid 1px red;
-    flex-basis: 50%
+    flex-basis: 60%;
+    height: 100%;
+    margin: 2% 0 2% 2%;
+    background-color: black;
+    color: white;
+    padding: 5%;
+}
+.receipt_buy{
+    padding: 5% 0;
+    border-bottom: solid 1px grey;
+}
+.receipt_buy button{
+    margin-left: 5%;
+    border: solid 1px gold;
+    padding: 1% 6%;
+    background-color: gold;
+    border-radius: 2px;
+    font-size: 20px;
+}
+.receipt_main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 5% 0;
+    border-bottom: solid 1px grey;
+}
+.receipt_main_img{
+    flex-basis: 60%;
+}
+.receipt_main_img img{
+    width: 100%;
+    padding: 5% 0;
+}
+.receipt_main_info {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    flex-basis: 40%;
+}
+.receipt_main_info div{
+   display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.receipt_main_info p{
+    font-size: 14px;
+}
+.receipt_main_info select{
+    align-self: flex-end;
+    width: 20%;
+    border-radius: 2px;
+    padding: 2%;
+    background-color: gold;
+}
+.receipt_main_info h3{
+    align-self: flex-end;
+
+}
+.receipt_delivery, .receipt_total{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0;
+}
+.receipt_delivery{
+    border-bottom: solid 1px grey;
 }
