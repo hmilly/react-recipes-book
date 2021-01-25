@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    max-width: 1400px;
+
     margin: 0 auto;
     height: 100%;
 }
@@ -230,6 +230,7 @@ flex: 1;
     display: flex;
     align-items: stretch;
     justify-content: center;
+    width: 80%;
     flex-wrap: wrap;
     height: 100%;
     margin: auto;
@@ -304,12 +305,16 @@ flex: 1;
 
 .burger_elem_top{
     display: flex;
-    flex-basis: 100%;
     align-content: flex-end;
-    height: auto;
+    flex-basis: 100%;
+    height: 100%;
     padding: 2%;
 }
 .burger_elem_topl{
+    flex-basis: 50%;
+    padding: 5%;
+}
+.burger_elem_topr{
     flex-basis: 50%;
     padding: 5%;
 }
@@ -350,7 +355,7 @@ flex: 1;
     flex-basis: 100%;
     background-image: url("./img/burger_component_img1.png");
     justify-content: flex-end;
-    height: 100%;
+    height: 843px;
     background-size: cover;
     background-position: center;
 }
@@ -364,15 +369,65 @@ flex: 1;
     border-bottom: 1px solid white;
     padding: 5%;
 }
+
+.burger_elem_bot_container_top :nth-child(2){
+    width: 13%;
+    text-shadow: rgba(0, 0, 0, 0.22) 0px 0px 1px;
+    padding: 1px;
+    background-color: gold;
+}
 .burger_elem_bot_container_bot {
-    padding: 5%;
+    padding: 5% 0;
 }
 
 table, th, td {
-    margin: 2%;
+    margin: 5% 5% 5% 0;
     border: 1px solid rgba(255, 0, 0, 0);
-  }
+}
 
-  th, td {
+th, td {
     padding: 1% 6%;
-  }
+}
+
+.order_complete{
+    display: flex;
+    height: 750px;
+    width: auto;
+}
+
+.order_complete div{
+    position: relative;
+    margin: auto;
+    height: 80%;
+    width: 100%;
+    background-image: url('./img/complete_order.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.order_complete div p{
+    position: absolute;
+    color: white;
+    border: solid 1px purple;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.548);
+    text-align: center;
+    font-size: 4vw;
+    padding: 10% 35%;
+}
+
+.order_page{
+    display: flex;
+}
+
+.order_page_form{
+    border: solid 1px red;
+    padding: 2%;
+    flex-basis: 50%
+}
+.order_page_receipt{
+    border: solid 1px red;
+    flex-basis: 50%
+}

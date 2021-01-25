@@ -10,9 +10,9 @@ function Burger_elem() {
                     <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
                     <p>55 min</p>
                     <div className="topl_div">
-                        <img src={`${process.env.PUBLIC_URL}/assets/.png`} alt="kf" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/ute.png`} alt="cutlery" />
                         <p>2 servings</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/.png`} alt="a" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
                         <p>820 cals/serving</p>
                     </div>
                     <p>Plant-based burger, THIS Isn’t Bacon, vegan smoked gouda,
