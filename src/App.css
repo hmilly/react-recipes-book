@@ -12,7 +12,7 @@
     height: 100%;
 }
 
-/* main nav bar */
+/* nav styling */
 .nav{
     display: flex;
     width: 50%;
@@ -72,7 +72,7 @@
     background-color: rgba(100, 90, 14, 0.234);
 }
       
-/* main footer with socials */
+/* footer w/socials stylings */
 .footer{
     width: 100%;
     background-image: url("./img/footer.png");
@@ -113,8 +113,7 @@
     opacity: 0.8;
 }
 
-
-/* first page main content */
+/* main pg styling */
 .main{
     flex-grow: 2;
     display: flex;
@@ -166,7 +165,7 @@ flex: 1;
     text-align: left;
 }
 
-/* special offer elem */
+/* special offer pg styling */
 .special_offer{
     background-image: url("./img/mainbot.png");
     flex-grow: 1;
@@ -208,13 +207,12 @@ flex: 1;
     background-color: rgba(100, 90, 14, 0.522);
 }
 
-/* menu page content */
+/* menu pg styling */
 .menu {
     display: flex;
     flex-direction: column;
     background-color: white;
 }
-
 .menu_top {
     color: black;
     margin: 4% 30%;
@@ -222,7 +220,6 @@ flex: 1;
 .menu_top  p {
     text-align: center;
 }
-
 .menu_mid {
     display: flex;
     align-items: stretch;
@@ -272,7 +269,6 @@ flex: 1;
     text-shadow: rgba(0, 0, 0, 0.22) 0px 0px 1px;
     padding: 0 4%;
 }
-
 .menu_bot {
     display: flex;
     align-items: stretch;
@@ -293,13 +289,11 @@ flex: 1;
     opacity: 0.6;
 }
 
-/* burger elem */
-
+/* burger elem styling */
 .burger_elem{
     display: flex;
     flex-direction: column;
 }
-
 .burger_elem_top{
     display: flex;
     align-content: flex-end;
@@ -320,7 +314,6 @@ flex: 1;
     height: auto;
     margin: auto;
 }
-
 .burger_elem_topl > :nth-child(1){
     width: 30%;
     background-color: gold;
@@ -346,7 +339,6 @@ flex: 1;
     font-weight: bold;
     border-radius: 3px;
 }
-
 .burger_elem_bot{
     display: flex;
     flex-basis: 100%;
@@ -361,12 +353,10 @@ flex: 1;
     width: 50%;
     padding:  5%;
 }
-
 .burger_elem_bot_container_top{
     border-bottom: 1px solid white;
     padding: 5%;
 }
-
 .burger_elem_bot_container_top :nth-child(2){
     width: 13%;
     text-shadow: rgba(0, 0, 0, 0.22) 0px 0px 1px;
@@ -376,22 +366,20 @@ flex: 1;
 .burger_elem_bot_container_bot {
     padding: 5% 0;
 }
-
 table, th, td {
     margin: 5% 5% 5% 0;
     border: 1px solid rgba(255, 0, 0, 0);
 }
-
 th, td {
     padding: 1% 6%;
 }
 
+/* Order complete pg styling */
 .order_complete{
     display: flex;
     height: 750px;
     width: auto;
 }
-
 .order_complete div{
     position: relative;
     margin: auto;
@@ -401,7 +389,6 @@ th, td {
     background-size: cover;
     background-position: center;
 }
-
 .order_complete div p{
     position: absolute;
     color: white;
@@ -415,26 +402,19 @@ th, td {
     padding: 10% 35%;
 }
 
-
-
-
 /* Order page styles */
 .order_page{
     display: flex;
 }
-
 .order_page_form{
-
     padding: 2%;
     flex-basis: 40%
 }
 .order_page_form form{
     display: flex;
     flex-direction: column;
-
     padding: 2%;
 }
-
 .order_page_form form > p{
     color: gold;
     border: none;
@@ -462,29 +442,9 @@ th, td {
 .postcode {
     width: 50%
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .order_page_receipt{
     display: flex;
     flex-direction: column;
-    border: solid 1px red;
     flex-basis: 60%;
     height: 100%;
     margin: 2% 0 2% 2%;
@@ -525,7 +485,7 @@ th, td {
     flex-basis: 40%;
 }
 .receipt_main_info div{
-   display: flex;
+    display: flex;
     width: 80%;
     justify-content: space-between;
 }
