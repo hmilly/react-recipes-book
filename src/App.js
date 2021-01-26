@@ -13,8 +13,9 @@ import Order_page from "./components/Order_page"
 function App() {
 	return (
 		<div className="app">
-
-		<Order_page/>
+		<Nav/>
+		<Main_head/>
+		<Burger_elem/>
 		<Footer/>
 	</div>
 	)

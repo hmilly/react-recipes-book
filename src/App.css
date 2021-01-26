@@ -66,6 +66,7 @@
     padding: 2% 4%;
     background-color: rgba(0, 0, 0, 0);
     border: solid 1px gold;
+    color: gold;
 }
 .main_head button:hover{
     cursor: pointer;
@@ -202,6 +203,7 @@ flex: 1;
     padding: 0.5% 2%;
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px gold;
+    color: gold;
 }
 .special_offer button:hover{
     cursor: pointer;
