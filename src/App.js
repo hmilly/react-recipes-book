@@ -18,6 +18,7 @@ import Order_page from "./components/Order_page"
 function App() {
 	return (
 		<Router>
+			<div className="route">
 			<div className="app">
 				<ul className="nav">
 					<li>
@@ -48,9 +49,11 @@ function App() {
 					<Route path="/">
 						<Main_head />
 						<Main_content />
+						<Special_offer/>
 						<Footer />
 					</Route>
 				</Switch>
+			</div>
 			</div>
 		</Router>
 	)
