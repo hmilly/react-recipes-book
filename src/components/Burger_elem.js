@@ -1,12 +1,11 @@
 import React from "react";
 
-
 function Burger_elem() {
     return (
         <div className="burger_elem">
             <div className="burger_elem_top">
                 <div className="burger_elem_topl">
-                    <p>bacon plant</p>
+                    <p className="bacon-plant">bacon plant</p>
                     <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
                     <p>55 min</p>
                     <div className="topl_div">
@@ -22,7 +21,7 @@ function Burger_elem() {
                     <button>ADD TO BASKET</button>
                 </div>
                 <div className="burger_elem_topr">
-                    <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
                 </div>
             </div>
             <div className="burger_elem_bot">
