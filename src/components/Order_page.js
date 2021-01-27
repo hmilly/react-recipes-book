@@ -1,27 +1,85 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Order_page() {
+
+    const [enteredinfo, setEnteredinfo] = useState({
+        id: 0,
+        title : "",
+        firstname: "",
+        lastname: "",
+        email: "",
+        password: "",
+        phonenumber: 0,
+        postcode: ""
+    })
+
+    const handleChange = (e) => {
+        setEnteredinfo(enteredinfo => ({
+            ...enteredinfo,
+            fName: 'your updated value here'
+         }));
+    }
+
+    
+
+//     Through Input
+
+//     const [state, setState] = useState({ fName: "", lName: "" });
+//     const handleChange = e => {
+//         const { name, value } = e.target;
+//         setState(prevState => ({
+//             ...prevState,
+//             [name]: value
+//         }));
+//     };
+
+//     <input
+//         value={state.fName}
+//         type="text"
+//         onChange={handleChange}
+//         name="fName"
+//     />
+//     <input
+//         value={state.lName}
+//         type="text"
+//         onChange={handleChange}
+//         name="lName"
+//     />
+// ***************************
+
+// - Through onSubmit or button click
+
+//     setState(prevState => ({
+//         ...prevState,
+//         fName: 'your updated value here'
+//      }));
+
+
     return (
         <div className="order_page">
             <div className="order_page_form">
-                <form>
+                <form >
                     <p>Your details:</p>
-                    <select name="Title">
+                    <select name="title" onSubmit={handleChange}>
                         <option value="Title" >Title</option>
+                        <option value="Mr" >Mr</option>
+                        <option value="Mrs" >Mrs</option>
+                        <option value="Ms" >Ms</option>
+                        <option value="Mx" >Mx</option>
                     </select>
                     <div>
-                        <input type="text" name="firstname" placeholder="First name*"/>
-                        <input type="text" name="lastname" placeholder="Last name*"/>
+                        <input type="text" name="firstname"placeholder="First name*" onSubmit={handleChange}/>
+                        <input type="text" name="lastname" placeholder="Last name*" onSubmit={handleChange}/>
                     </div>
-                    <input type="text" name="mail" placeholder="Email address*"/>
-                    <input type="password" id="pass" name="password" placeholder="Password*" minlength="8" required/>
-
+                    <input type="text" name="email" placeholder="Email address*" onSubmit={handleChange}/>
+                    <input type="password" name="password" placeholder="Password*" minLength="8" required
+                   onSubmit={handleChange}/>
                     <p>Contact number:</p>
-                    <input type="number" placeholder="Phone number*"/>
-
+                    <input type="number" placeholder="Phone number*" onSubmit={handleChange}/>
                     <p>Delivery address:</p>
-                    <input className="postcode" name="postcode" placeholder="Postcode*" type="text" pattern="[0-9]*"/>
-                    <button>SUBMIT</button>
+                    <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
+                    onSubmit={handleChange}/>
+                    <button type="submit" value="Submit">SUBMIT</button>
                 </form>
             </div>
 

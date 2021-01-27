@@ -10,10 +10,11 @@ import Footer from "./components/Footer"
 import Main_content from "./components/Main_content"
 import Menu from "./components/Menu"
 import Special_offer from "./components/Special_offer"
-import Burger_elem from "./components/Burger_elem"
 import Main_head from "./components/Main_head"
-import Order_complete from "./components/Order_complete"
 import Order_page from "./components/Order_page"
+
+import Burger_elem from "./components/Burger_elem"
+import Order_complete from "./components/Order_complete"
 
 function App() {
 	return (
@@ -39,7 +40,7 @@ function App() {
 				<Switch>
 					<Route path="/menu">
 						<Main_head />
-						<Menu />
+						<Menu/>
 						<Footer />
 					</Route>
 					<Route path="/basket">
