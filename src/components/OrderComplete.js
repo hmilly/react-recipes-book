@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Order_complete() {
+function OrderComplete() {
     return (
         <div className="order_complete">
             <div >
@@ -11,4 +11,4 @@ function Order_complete() {
 }
 
 
-export default Order_complete
+export default OrderComplete

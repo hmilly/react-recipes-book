@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Main_head() {
+function MainHead() {
   return (
     <div className="main_head">
       <div>
@@ -12,4 +12,4 @@ function Main_head() {
   )
 }
 
-export default Main_head
+export default MainHead

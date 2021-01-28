@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Special_offer() {
+function SpecialOffer() {
         return (
             <div>
                 <div className="special_offer">
@@ -18,4 +18,4 @@ function Special_offer() {
 }
 
 
-export default Special_offer
+export default SpecialOffer

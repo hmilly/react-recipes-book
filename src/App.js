@@ -7,14 +7,14 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer"
-import Main_content from "./components/Main_content"
+import MainContent from "./components/MainContent"
 import Menu from "./components/Menu"
-import Special_offer from "./components/Special_offer"
-import Main_head from "./components/Main_head"
-import Order_page from "./components/Order_page"
+import SpecialOffer from "./components/SpecialOffer"
+import MainHead from "./components/MainHead"
+import OrderPage from "./components/OrderPage"
 
-import Burger_elem from "./components/Burger_elem"
-import Order_complete from "./components/Order_complete"
+import BurgerElem from "./components/BurgerElem"
+import OrderComplete from "./components/OrderComplete"
 
 function App() {
 	return (
@@ -39,18 +39,18 @@ function App() {
 				</ul>
 				<Switch>
 					<Route path="/menu">
-						<Main_head />
+						<MainHead />
 						<Menu/>
 						<Footer />
 					</Route>
 					<Route path="/basket">
-						<Order_page />
+						<OrderPage />
 						<Footer />
 					</Route>
 					<Route path="/">
-						<Main_head />
-						<Main_content />
-						<Special_offer/>
+						<MainHead />
+						<MainContent />
+						<SpecialOffer/>
 						<Footer />
 					</Route>
 				</Switch>

@@ -1,66 +1,41 @@
 import React, {useState} from 'react'
+import db from "../db.json"
 
-function Order_page() {
+function OrderPage() {
 
-    const [enteredinfo, setEnteredinfo] = useState({
-        id: 0,
-        title : "",
-        firstname: "",
-        lastname: "",
-        email: "",
-        password: "",
-        phonenumber: 0,
-        postcode: ""
-    })
-
-    const handleChange = (e) => {
-        setEnteredinfo(enteredinfo => ({
-            ...enteredinfo,
-            fName: 'your updated value here'
-         }));
-    }
-
+       const handleSubmit = (e) => {
+            const formData = new FormData(e.target);
+            e.preventDefault();
+            for (let [key, value] of formData.entries()) {
+                console.log(key, value);
+               
+            }
+        }
     
 
-//     Through Input
-
-//     const [state, setState] = useState({ fName: "", lName: "" });
-//     const handleChange = e => {
-//         const { name, value } = e.target;
-//         setState(prevState => ({
-//             ...prevState,
-//             [name]: value
-//         }));
-//     };
-
-//     <input
-//         value={state.fName}
-//         type="text"
-//         onChange={handleChange}
-//         name="fName"
-//     />
-//     <input
-//         value={state.lName}
-//         type="text"
-//         onChange={handleChange}
-//         name="lName"
-//     />
-// ***************************
-
-// - Through onSubmit or button click
-
-//     setState(prevState => ({
-//         ...prevState,
-//         fName: 'your updated value here'
-//      }));
+        // let postComment = async (newComment) => {
+        //     const configObject = {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //             Accept: "application/json",
+        //         },
+        //         body: JSON.stringify(newComment),
+        //     };
+        
+        //     return await fetch(`${baseURL}/comments`, configObject)
+        //         .then(res => (res.ok) ? res.json() : "Oops something went wrong!").catch(error => console.log(error))
+        // }
+        
+    
 
 
     return (
         <div className="order_page">
             <div className="order_page_form">
-                <form >
+                <form onSubmit={handleSubmit}>
                     <p>Your details:</p>
-                    <select name="title" onSubmit={handleChange}>
+                    <select name="title">
                         <option value="Title" >Title</option>
                         <option value="Mr" >Mr</option>
                         <option value="Mrs" >Mrs</option>
@@ -68,18 +43,16 @@ function Order_page() {
                         <option value="Mx" >Mx</option>
                     </select>
                     <div>
-                        <input type="text" name="firstname"placeholder="First name*" onSubmit={handleChange}/>
-                        <input type="text" name="lastname" placeholder="Last name*" onSubmit={handleChange}/>
+                        <input type="text" name="firstname"placeholder="First name*"/>
+                        <input type="text" name="lastname" placeholder="Last name*"/>
                     </div>
-                    <input type="text" name="email" placeholder="Email address*" onSubmit={handleChange}/>
-                    <input type="password" name="password" placeholder="Password*" minLength="8" required
-                   onSubmit={handleChange}/>
+                    <input type="text" name="email" placeholder="Email address*"/>
+                    <input type="password" name="password" placeholder="Password*" minLength="8" required/>
                     <p>Contact number:</p>
-                    <input type="number" placeholder="Phone number*" onSubmit={handleChange}/>
+                    <input type="number" placeholder="Phone number*"/>
                     <p>Delivery address:</p>
-                    <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
-                    onSubmit={handleChange}/>
-                    <button type="submit" value="Submit">SUBMIT</button>
+                    <input className="postcode" name="postcode" placeholder="Postcode*" type="text"/>
+                    <button type="submit" value="submit">SUBMIT</button>
                 </form>
             </div>
 
@@ -126,4 +99,4 @@ function Order_page() {
 }
 
 
-export default Order_page
+export default OrderPage

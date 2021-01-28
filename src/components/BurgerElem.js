@@ -1,6 +1,6 @@
 import React from "react";
 
-function Burger_elem() {
+function BurgerElem() {
     return (
         <div className="burger_elem">
             <div className="burger_elem_top">
@@ -80,4 +80,4 @@ function Burger_elem() {
     )
 }
 
-export default Burger_elem
+export default BurgerElem
