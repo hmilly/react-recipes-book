@@ -3,8 +3,8 @@ import db from "../db.json"
 
 function OrderPage() {
 
-    const [data, setData] = useState({
-        "id": 0,
+    const [userDetails, setUserDetails] = useState({
+        "id": db.length + 1,
         "title": "",
         "firstname": "",
         "lastname": "",
@@ -15,18 +15,15 @@ function OrderPage() {
     })
 
     const handleChange = (e) => {
-        // console.log(name, value)
         const name = e.target.name
         const v = name !== "phonenumber" ? e.target.value : parseInt(e.target.value)
-        setData({ ...data, [name] : v})
+        setUserDetails({ ...userDetails, [name]: v })
+        console.log(userDetails)
     }
 
-    const handleSubmit = () => {
-        
-        setData({ ...data, id : db.length+1})
-        console.log(data)
-        db.push(data)   
-        console.log(db)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        db.push(userDetails)
     }
 
     return (
@@ -36,6 +33,7 @@ function OrderPage() {
                 <form>
                     <p>Your details:</p>
                     <select name="title" placeholder="Title" onChange={(e) => handleChange(e)} >
+                        <option value="Mr" >Select:</option>
                         <option value="Mr" >Mr</option>
                         <option value="Mrs" >Mrs</option>
                         <option value="Ms" >Ms</option>
@@ -57,7 +55,7 @@ function OrderPage() {
                     <p>Delivery address:</p>
                     <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
                         onChange={(e) => handleChange(e)} />
-                    <button type="submit" value="submit" onSubmit={handleSubmit}>SUBMIT</button>
+                    <button type="submit" value="submit" onClick={(e) =>handleSubmit(e)}>SUBMIT</button>
                 </form>
             </div>
 
