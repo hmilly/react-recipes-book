@@ -1,58 +1,63 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import db from "../db.json"
 
 function OrderPage() {
 
-       const handleSubmit = (e) => {
-            const formData = new FormData(e.target);
-            e.preventDefault();
-            for (let [key, value] of formData.entries()) {
-                console.log(key, value);
-               
-            }
-        }
-    
+    const [data, setData] = useState({
+        "id": 0,
+        "title": "",
+        "firstname": "",
+        "lastname": "",
+        "email": "",
+        "password": "",
+        "phonenumber": 0,
+        "postcode": ""
+    })
 
-        // let postComment = async (newComment) => {
-        //     const configObject = {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //             Accept: "application/json",
-        //         },
-        //         body: JSON.stringify(newComment),
-        //     };
-        
-        //     return await fetch(`${baseURL}/comments`, configObject)
-        //         .then(res => (res.ok) ? res.json() : "Oops something went wrong!").catch(error => console.log(error))
-        // }
-        
-    
+    const handleChange = (e) => {
+        // console.log(name, value)
+        const name = e.target.name
+        const v = name !== "phonenumber" ? e.target.value : parseInt(e.target.value)
+        setData({ ...data, [name] : v})
+    }
 
+    const handleSubmit = () => {
+        
+        setData({ ...data, id : db.length+1})
+        console.log(data)
+        db.push(data)   
+        console.log(db)
+    }
 
     return (
+
         <div className="order_page">
             <div className="order_page_form">
-                <form onSubmit={handleSubmit}>
+                <form>
                     <p>Your details:</p>
-                    <select name="title">
-                        <option value="Title" >Title</option>
+                    <select name="title" placeholder="Title" onChange={(e) => handleChange(e)} >
                         <option value="Mr" >Mr</option>
                         <option value="Mrs" >Mrs</option>
                         <option value="Ms" >Ms</option>
                         <option value="Mx" >Mx</option>
                     </select>
                     <div>
-                        <input type="text" name="firstname"placeholder="First name*"/>
-                        <input type="text" name="lastname" placeholder="Last name*"/>
+                        <input type="text" name="firstname" placeholder="First name*"
+                            onChange={(e) => handleChange(e)} />
+                        <input type="text" name="lastname" placeholder="Last name*"
+                            onChange={(e) => handleChange(e)} />
                     </div>
-                    <input type="text" name="email" placeholder="Email address*"/>
-                    <input type="password" name="password" placeholder="Password*" minLength="8" required/>
+                    <input type="text" name="email" placeholder="Email address*"
+                        onChange={(e) => handleChange(e)} />
+                    <input type="password" name="password" placeholder="Password*" minLength="8" required
+                        onChange={(e) => handleChange(e)} />
                     <p>Contact number:</p>
-                    <input type="number" placeholder="Phone number*"/>
+                    <input type="number" name="phonenumber" placeholder="Phone number*"
+                        onChange={(e) => handleChange(e)} />
                     <p>Delivery address:</p>
-                    <input className="postcode" name="postcode" placeholder="Postcode*" type="text"/>
-                    <button type="submit" value="submit">SUBMIT</button>
+                    <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
+                        onChange={(e) => handleChange(e)} />
+                    <button type="submit" value="submit" onSubmit={handleSubmit}>SUBMIT</button>
                 </form>
             </div>
 
