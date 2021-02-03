@@ -32,6 +32,7 @@ function BurgerElem() {
                     </div>
                     <div className="burger_elem_bot_container_bot">
                         <table id="customers">
+                        <tbody>
                             <tr>
                                 <td>10 oz</td>
                                 <td>Ground beef</td>
@@ -72,6 +73,7 @@ function BurgerElem() {
                                 <td>1 Tbsp</td>
                                 <td>Black & white sesame seeds</td>
                             </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

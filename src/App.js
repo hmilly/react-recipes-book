@@ -48,6 +48,16 @@ function App() {
 						<OrderPage />
 						<Footer />
 					</Route>
+					<Route path="/burgerCard">
+						<MainHead />
+						<BurgerElem/>
+						<SpecialOffer/>
+						<Footer />
+					</Route>
+					<Route path="/complete">
+						<OrderComplete />
+						<Footer />
+					</Route>
 					<Route path="/">
 						<MainHead />
 						<MainContent />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from "react-router-dom"
 import db from "../db.json"
 
 function OrderPage() {
@@ -55,7 +56,7 @@ function OrderPage() {
                     <p>Delivery address:</p>
                     <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
                         onChange={(e) => handleChange(e)} />
-                    <button type="submit" value="submit" onClick={(e) =>handleSubmit(e)}>SUBMIT</button>
+                    <Link to="/complete"><button type="submit" value="submit" onClick={(e) =>handleSubmit(e)}>SUBMIT</button></Link>
                 </form>
             </div>
 

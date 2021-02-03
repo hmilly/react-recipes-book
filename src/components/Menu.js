@@ -1,22 +1,31 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
-
-function Menu() {
-
-    const seeMore = (e) => {
-        const btn = document.querySelector(".onclickBtn");
-        btn.setAttribute("disabled", true)
-        console.log(e)
-        const menuMid = document.querySelector(".menu_mid")
-        menuMid.innerHTML += `
+const seeMore = (e) => {
+    const btn = document.querySelector(".onclickBtn");
+    btn.setAttribute("disabled", true)
+    console.log(e)
+    const menuMid = document.querySelector(".menu_mid")
+    menuMid.innerHTML += `
         <div class="menu_burger_card">
+        <div class="burger_card_img">
+            <img src=/assets/main3.png alt="burger" />
+            <p>bacon plant</p>
+        </div>
+        <div class="burger_card_txt">
+            <p>Plant-based burger with Honest beef, red onion relish</p>
+            <img src=assets/clock.png alt="clock" />
+            <p>55 min</p>
+        </div>
+    </div>
+    <div class="menu_burger_card">
         <div class="burger_card_img">
             <img src=/assets/main1.png alt="burger" />
             <p>bacon plant</p>
         </div>
         <div class="burger_card_txt">
             <p>Plant-based burger with Honest beef, red onion relish</p>
-            <img src=assets/clock.png alt="clock" />
+            <img src=/assets/clock.png alt="clock" />
             <p>55 min</p>
         </div>
     </div>
@@ -30,29 +39,25 @@ function Menu() {
             <img src=/assets/clock.png alt="clock" />
             <p>55 min</p>
         </div>
-    </div>
-    <div class="menu_burger_card">
-        <div class="burger_card_img">
-            <img src=/assets/main1.png alt="burger" />
-            <p>bacon plant</p>
-        </div>
-        <div class="burger_card_txt">
-            <p>Plant-based burger with Honest beef, red onion relish</p>
-            <img src=/assets/clock.png alt="clock" />
-            <p>55 min</p>
-        </div>
     </div>`
+}
+
+function Menu() {
+    
+    let history = useHistory();
+    const burgerPage = () => {
+        history.push("/burgerCard")
     }
 
     return (
-    <div className="menu">
+        <div className="menu">
             <div className="menu_top">
                 <h1>Explore our Menus</h1>
                 <p>Choose from an ever-changing mix of meat, fish, Beyond Meat™, WW
               Approved, Diabetes Friendly recipes and health-conscious offerings.</p>
             </div>
             <div className="menu_mid">
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -63,7 +68,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -74,7 +79,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -85,7 +90,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -96,7 +101,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -107,7 +112,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -118,7 +123,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -129,7 +134,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
                         <p>bacon plant</p>
@@ -140,7 +145,7 @@ function Menu() {
                         <p>55 min</p>
                     </div>
                 </div>
-                <div className="menu_burger_card">
+                <div className="menu_burger_card" onClick={() => burgerPage()}>
                     <div className="burger_card_img">
                         <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
                         <p>bacon plant</p>
