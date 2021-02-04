@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import {Link} from "react-router-dom"
-import db from "../db.json"
 
-function OrderPage() {
-
+function OrderPage({users}) {
     const [userDetails, setUserDetails] = useState({
-        "id": db.length + 1,
+        "id": users.length + 1,
         "title": "",
         "firstname": "",
         "lastname": "",
@@ -24,7 +22,7 @@ function OrderPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        db.push(userDetails)
+        users.push(userDetails)
     }
 
     return (
@@ -100,7 +98,7 @@ function OrderPage() {
             </div>
         </div>
     )
-}
+    }
 
 
 export default OrderPage

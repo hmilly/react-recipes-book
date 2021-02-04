@@ -1,53 +1,30 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 
-const seeMore = (e) => {
-    const btn = document.querySelector(".onclickBtn");
-    btn.setAttribute("disabled", true)
-    console.log(e)
-    const menuMid = document.querySelector(".menu_mid")
-    menuMid.innerHTML += `
-        <div class="menu_burger_card">
-        <div class="burger_card_img">
-            <img src=/assets/main3.png alt="burger" />
-            <p>bacon plant</p>
-        </div>
-        <div class="burger_card_txt">
-            <p>Plant-based burger with Honest beef, red onion relish</p>
-            <img src=assets/clock.png alt="clock" />
-            <p>55 min</p>
-        </div>
-    </div>
-    <div class="menu_burger_card">
-        <div class="burger_card_img">
-            <img src=/assets/main1.png alt="burger" />
-            <p>bacon plant</p>
-        </div>
-        <div class="burger_card_txt">
-            <p>Plant-based burger with Honest beef, red onion relish</p>
-            <img src=/assets/clock.png alt="clock" />
-            <p>55 min</p>
-        </div>
-    </div>
-    <div class="menu_burger_card">
-        <div class="burger_card_img">
-            <img src=/assets/main3.png alt="burger" />
-            <p>bacon plant</p>
-        </div>
-        <div class="burger_card_txt">
-            <p>Plant-based burger with Honest beef, red onion relish</p>
-            <img src=/assets/clock.png alt="clock" />
-            <p>55 min</p>
-        </div>
-    </div>`
-}
 
-function Menu() {
-    
-    let history = useHistory();
-    const burgerPage = () => {
-        history.push("/burgerCard")
+function Menu({ burgers }) {
+
+    const seeMore = (e) => {
+        const btn = document.querySelector(".onclickBtn");
+        btn.setAttribute("disabled", true)
+        const menuMid = document.querySelector(".menu_mid")
+
+        burgers.map((b, i) =>
+            i >= 9 ?
+                menuMid.innerHTML += `<div class="menu_burger_card" key=${i}>
+                    <div class="burger_card_img">
+                        <img src=${b.imageUrl} alt=${b.name} />
+                        <p>${b.name}</p>
+                    </div>
+                    <div class="burger_card_txt">
+                        <p>${b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? ` ${ing}` : ` ${ing}.`)} </p>
+                        <img src="/assets/clock.png" alt="clock" />
+                        <p>${b.prepTime}</p>
+                    </div>
+                </div>`
+                : null
+        )
     }
+
 
     return (
         <div className="menu">
@@ -57,105 +34,22 @@ function Menu() {
               Approved, Diabetes Friendly recipes and health-conscious offerings.</p>
             </div>
             <div className="menu_mid">
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
-                <div className="menu_burger_card" onClick={() => burgerPage()}>
-                    <div className="burger_card_img">
-                        <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
-                        <p>bacon plant</p>
-                    </div>
-                    <div className="burger_card_txt">
-                        <p>Plant-based burger with Honest beef, red onion relish</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                        <p>55 min</p>
-                    </div>
-                </div>
+
+                {burgers.map((b, i) =>
+                    i < 9 ?
+                        <div className="menu_burger_card" key={i}>
+                            <div className="burger_card_img">
+                                <img src={b.imageUrl} alt={b.name} />
+                                <p>{b.name}</p>
+                            </div>
+                            <div className="burger_card_txt">
+                                <p>{b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)}</p>
+                                <img src="/assets/clock.png" alt="clock" />
+                                <p>{b.prepTime}</p>
+                            </div>
+                        </div>
+                        : null
+                )}
 
             </div>
             <div className="menu_bot">

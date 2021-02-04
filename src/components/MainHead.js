@@ -1,19 +1,20 @@
 import React from "react";
-import {
-  Route,
-  Link
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function MainHead() {
+
+  let history = useHistory();
+  const menu = () => {
+      history.push("/menu")
+  }
 
 
   return (
     <div className="main_head">
       <div>
         <h1>Order our top-rated recipes today!</h1>
-        <Link to="/menu"><button className="get_started">GET STARTED</button></Link>
+        <button className="get_started" onClick={menu}>GET STARTED</button>
       </div>
-      <Route path="/menu" />
     </div>
 
   )

@@ -12,12 +12,14 @@ import Menu from "./components/Menu"
 import SpecialOffer from "./components/SpecialOffer"
 import MainHead from "./components/MainHead"
 import OrderPage from "./components/OrderPage"
+import burgers from "./burgers"
+import users from "./users"
+
 
 import BurgerElem from "./components/BurgerElem"
 import OrderComplete from "./components/OrderComplete"
 
 function App() {
-
 	return (
 		<Router>
 			<div className="route">
@@ -41,11 +43,11 @@ function App() {
 				<Switch>
 					<Route path="/menu">
 						<MainHead />
-						<Menu/>
+						<Menu burgers={burgers}/>
 						<Footer />
 					</Route>
 					<Route path="/basket">
-						<OrderPage />
+						<OrderPage users={users}/>
 						<Footer />
 					</Route>
 					<Route path="/burgerCard">
@@ -60,7 +62,7 @@ function App() {
 					</Route>
 					<Route path="/">
 						<MainHead />
-						<MainContent />
+						<MainContent/>
 						<SpecialOffer/>
 						<Footer />
 					</Route>
