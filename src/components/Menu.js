@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
+function Menu() {
 
-function Menu({ burgers }) {
+    const [burgers, setBurgers] = useState([])
+
+    useEffect(() => {
+        const getBurgers = async () => {
+            await fetch("http://localhost:3004/burgers")
+                .then(res => res.json())
+                .then(res => setBurgers(res))
+                .catch((error) => console.log(error));
+        }
+        getBurgers()
+    }, [])
+
 
     const seeMore = (e) => {
         const btn = document.querySelector(".onclickBtn");
@@ -19,6 +31,7 @@ function Menu({ burgers }) {
                         <p>${b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? ` ${ing}` : ` ${ing}.`)} </p>
                         <img src="/assets/clock.png" alt="clock" />
                         <p>${b.prepTime}</p>
+                        <button>Add to basket</button>
                     </div>
                 </div>`
                 : null
@@ -46,6 +59,7 @@ function Menu({ burgers }) {
                                 <p>{b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)}</p>
                                 <img src="/assets/clock.png" alt="clock" />
                                 <p>{b.prepTime}</p>
+                                <button>Add to basket</button>
                             </div>
                         </div>
                         : null

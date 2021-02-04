@@ -1,7 +1,20 @@
-import React, { useState } from 'react'
-import {Link} from "react-router-dom"
+import React, { useState, useEffect } from 'react'
 
-function OrderPage({users}) {
+function OrderPage() {
+
+
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        const getUsers = async () => {
+            await fetch("http://localhost:3004/users")
+                .then(res => res.json())
+                .then(res => setUsers(res))
+                .catch((error) => console.log(error));
+        }
+        getUsers()
+    }, [])
+
     const [userDetails, setUserDetails] = useState({
         "id": users.length + 1,
         "title": "",
@@ -22,7 +35,11 @@ function OrderPage({users}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        users.push(userDetails)
+        //users.push(userDetails) 
+        users.map(u => u.email.toLowerCase() === userDetails.email.toLowerCase()
+            ? window.alert("Email entered is currently in use, please re-enter and try again")
+            : console.log("added user:", userDetails, "current users:", users)
+            )
     }
 
     return (
@@ -54,7 +71,7 @@ function OrderPage({users}) {
                     <p>Delivery address:</p>
                     <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
                         onChange={(e) => handleChange(e)} />
-                    <Link to="/complete"><button type="submit" value="submit" onClick={(e) =>handleSubmit(e)}>SUBMIT</button></Link>
+                    <button type="submit" value="submit" onClick={(e) => handleSubmit(e)}>SUBMIT</button>
                 </form>
             </div>
 
@@ -98,7 +115,7 @@ function OrderPage({users}) {
             </div>
         </div>
     )
-    }
+}
 
 
 export default OrderPage
