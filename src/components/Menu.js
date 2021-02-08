@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 
+
 function Menu() {
 
     const [burgers, setBurgers] = useState([])
 
     useEffect(() => {
         const getBurgers = async () => {
-            await fetch("http://localhost:3004/burgers")
+            await fetch('db.json')
                 .then(res => res.json())
-                .then(res => setBurgers(res))
+                .then(res => setBurgers(res.burgers))
                 .catch((error) => console.log(error));
         }
         getBurgers()
@@ -38,6 +39,23 @@ function Menu() {
         )
     }
 
+    const burgerCards = burgers.map((b, i) =>
+    i < 9 ?
+        <div className="menu_burger_card" key={i}>
+            <div className="burger_card_img">
+                <img src={b.imageUrl} alt={b.name} />
+                <p>{b.name}</p>
+            </div>
+            <div className="burger_card_txt">
+                <p>{b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)}</p>
+                <img src="/assets/clock.png" alt="clock" />
+                <p>{b.prepTime}</p>
+                <button>Add to basket</button>
+            </div>
+        </div>
+        : null
+)
+
 
     return (
         <div className="menu">
@@ -48,22 +66,7 @@ function Menu() {
             </div>
             <div className="menu_mid">
 
-                {burgers.map((b, i) =>
-                    i < 9 ?
-                        <div className="menu_burger_card" key={i}>
-                            <div className="burger_card_img">
-                                <img src={b.imageUrl} alt={b.name} />
-                                <p>{b.name}</p>
-                            </div>
-                            <div className="burger_card_txt">
-                                <p>{b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)}</p>
-                                <img src="/assets/clock.png" alt="clock" />
-                                <p>{b.prepTime}</p>
-                                <button>Add to basket</button>
-                            </div>
-                        </div>
-                        : null
-                )}
+                {burgerCards}
 
             </div>
             <div className="menu_bot">

@@ -7,9 +7,9 @@ function OrderPage() {
 
     useEffect(() => {
         const getUsers = async () => {
-            await fetch("http://localhost:3004/users")
+            await fetch('db.json')
                 .then(res => res.json())
-                .then(res => setUsers(res))
+                .then(res => setUsers(res.users))
                 .catch((error) => console.log(error));
         }
         getUsers()
@@ -33,12 +33,27 @@ function OrderPage() {
         console.log(userDetails)
     }
 
+    const newUser = async () => {
+        const configObject = await {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({...userDetails
+          }),
+        };
+        await fetch('db.json', configObject)
+          .then((res) => (res.ok ? res.json() : "Oops we couldn't update that!"))
+          .catch((error) => console.log(error));
+      };
+
     const handleSubmit = (e) => {
         e.preventDefault()
         //users.push(userDetails) 
         users.map(u => u.email.toLowerCase() === userDetails.email.toLowerCase()
             ? window.alert("Email entered is currently in use, please re-enter and try again")
-            : console.log("added user:", userDetails, "current users:", users)
+            : newUser()
             )
     }
 
