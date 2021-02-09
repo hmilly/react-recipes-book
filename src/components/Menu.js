@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 
-function Menu() {
-
+function Menu({ Burger }) {
     const [burgers, setBurgers] = useState([])
+    const [num, setnum] = useState(9)
+    const [btn, setbtn] = useState(true)
 
     useEffect(() => {
         const getBurgers = async () => {
@@ -15,47 +16,10 @@ function Menu() {
         getBurgers()
     }, [])
 
-
-    const seeMore = (e) => {
-        const btn = document.querySelector(".onclickBtn");
-        btn.setAttribute("disabled", true)
-        const menuMid = document.querySelector(".menu_mid")
-
-        burgers.map((b, i) =>
-            i >= 9 ?
-                menuMid.innerHTML += `<div class="menu_burger_card" key=${i}>
-                    <div class="burger_card_img">
-                        <img src=${b.imageUrl} alt=${b.name} />
-                        <p>${b.name}</p>
-                    </div>
-                    <div class="burger_card_txt">
-                        <p>${b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? ` ${ing}` : ` ${ing}.`)} </p>
-                        <img src="/assets/clock.png" alt="clock" />
-                        <p>${b.prepTime}</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>`
-                : null
-        )
+    const moreOrLess = () => {
+        setbtn(!btn)
+        num === 12 ? setnum(9) : setnum(12)
     }
-
-    const burgerCards = burgers.map((b, i) =>
-    i < 9 ?
-        <div className="menu_burger_card" key={i}>
-            <div className="burger_card_img">
-                <img src={b.imageUrl} alt={b.name} />
-                <p>{b.name}</p>
-            </div>
-            <div className="burger_card_txt">
-                <p>{b.ingredients.map((ing, j) => j < b.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)}</p>
-                <img src="/assets/clock.png" alt="clock" />
-                <p>{b.prepTime}</p>
-                <button>Add to basket</button>
-            </div>
-        </div>
-        : null
-)
-
 
     return (
         <div className="menu">
@@ -65,12 +29,20 @@ function Menu() {
               Approved, Diabetes Friendly recipes and health-conscious offerings.</p>
             </div>
             <div className="menu_mid">
-
-                {burgerCards}
-
+                {burgers.slice(0, num).map((b, i) => (
+                    <Burger
+                        key={b.name}
+                        imageUrl={b.imageUrl}
+                        name={b.name}
+                        ingredients={b.ingredients}
+                        prepTime={b.prepTime}
+                        b={b}
+                    />
+                ))}
             </div>
             <div className="menu_bot">
-                <button className="onclickBtn" onClick={(e) => seeMore(e)}>SEE MORE</button>
+                <button className="onclickBtn" onClick={(e) =>
+                    moreOrLess()}>{btn === true ? "SEE MORE" : "SEE LESS"}</button>
             </div>
         </div>
     )

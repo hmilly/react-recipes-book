@@ -267,19 +267,40 @@
     left: 10%;
     padding: 1%;
 }
+
+
+
 .burger_card_txt{
-    padding: 2% 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 8%;
+    height: 50%;
+    width: 100%;
+    justify-content: space-around;
 }
 .burger_card_txt :nth-child(1){
-    margin: 2% 0;
+    margin: 0;
 }
-.burger_card_txt :nth-child(2), .burger_card_txt :nth-child(3){
-    display: inline-block;
+.burger_card_txt div{
+    display: flex;
+    width: 50%;
+    height: 20%;
     color: rgb(255, 217, 0);
     font-weight: bolder;
     text-shadow: rgb(0, 0, 0) 0px 0px 1px;
-    padding: 0 4%;
+    justify-content: space-between;
+    align-items: center;
 }
+.burger_card_txt div img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
 .menu_bot {
     display: flex;
     justify-content: center;
@@ -521,7 +542,10 @@ td {
     align-self: flex-end;
 
 }
-.order_page_form form select:hover, .order_page_form form button:hover, .receipt_main_info select:hover, .receipt_buy button:hover{
+.order_page_form form select:hover,
+.order_page_form form button:hover,
+.receipt_main_info select:hover,
+.receipt_buy button:hover{
     cursor: pointer;
     opacity: 0.8;
 }

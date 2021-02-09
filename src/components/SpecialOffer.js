@@ -3,9 +3,8 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-function SpecialOffer() {
 
-    
+function SpecialOffer() {
     return (
         <div>
             <div className="special_offer">

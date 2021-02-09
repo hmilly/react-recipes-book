@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react'
 
-function OrderPage() {
+function OrderPage({ burger }) {
+
+    const [basketsContents, setBasketsContents] = useState([])
+
+    useEffect(() => {
+        const updateBasket = () => {
+            setBasketsContents({ ...basketsContents, burger })
+            console.log(basketsContents)
+        }
+        updateBasket()
+    }, [])
+
 
 
     const [users, setUsers] = useState([])
@@ -35,18 +46,19 @@ function OrderPage() {
 
     const newUser = async () => {
         const configObject = await {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({...userDetails
-          }),
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                ...userDetails
+            }),
         };
         await fetch('db.json', configObject)
-          .then((res) => (res.ok ? res.json() : "Oops we couldn't update that!"))
-          .catch((error) => console.log(error));
-      };
+            .then((res) => (res.ok ? res.json() : "Oops we couldn't update that!"))
+            .catch((error) => console.log(error));
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -54,7 +66,7 @@ function OrderPage() {
         users.map(u => u.email.toLowerCase() === userDetails.email.toLowerCase()
             ? window.alert("Email entered is currently in use, please re-enter and try again")
             : newUser()
-            )
+        )
     }
 
     return (
