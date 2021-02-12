@@ -4,7 +4,9 @@ import {
     Link,
 } from "react-router-dom";
 
+
 function SpecialOffer() {
+
     return (
         <div>
             <div className="special_offer">

@@ -5,12 +5,11 @@ function OrderPage({ burger }) {
     const [basketsContents, setBasketsContents] = useState([])
 
     useEffect(() => {
-        const updateBasket = () => {
+        setBasketsContents((basketsContents) => {
             setBasketsContents({ ...basketsContents, burger })
-            console.log(basketsContents)
-        }
-        updateBasket()
-    }, [])
+            console.log(basketsContents) 
+        })
+    }, [basketsContents, burger])
 
 
 

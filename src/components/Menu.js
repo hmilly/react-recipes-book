@@ -34,7 +34,7 @@ function Menu({ Burger }) {
                         key={b.name}
                         imageUrl={b.imageUrl}
                         name={b.name}
-                        ingredients={b.ingredients}
+                        prep={b.prep}
                         prepTime={b.prepTime}
                         b={b}
                     />
