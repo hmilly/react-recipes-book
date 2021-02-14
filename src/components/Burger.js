@@ -3,12 +3,12 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-import appContext from "./context/appContext"
+import AppContext from "./context/appContext"
 
-function Burger({ imageUrl, name, prep, prepTime, b }) {
+function Burger({ imageUrl, name, ingredients, prepTime, b }) {
 
 
-    const { setBurger, addToBasket } = useContext(appContext)
+    const { setBurger, addToBasket } = useContext(AppContext)
 
 
     //	const [state, dispatch] = useReducer(reducer, initialState)
@@ -18,8 +18,10 @@ function Burger({ imageUrl, name, prep, prepTime, b }) {
         console.log(b)
     }
 
-    const p = prep.ingredients.map((ing, j) =>
-        j < prep.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)
+    const p = ingredients.map((ing, j) =>
+        j < ingredients.length - 1
+            ? `${ing.split(": ")[1]}, `
+            : `${ing.split(": ")[1]}.`)
 
     return (
         <div className="menu_burger_card">

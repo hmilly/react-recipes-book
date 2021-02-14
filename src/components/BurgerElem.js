@@ -1,12 +1,28 @@
-import React, { useContext } from "react";
-import appContext from "./context/appContext"
+import React, { useContext, useEffect } from "react";
+import AppContext from "./context/appContext"
 
 function BurgerElem() {
-    const { selectedBurger } = useContext(appContext)
-    console.log(selectedBurger)
+    const { selectedBurger } = useContext(AppContext)
 
-    const p = selectedBurger.prep.ingredients
-    .map((ing, j) => j < selectedBurger.prep.ingredients.length - 1 ? `${ing}, ` : `${ing}.`)
+    useEffect(() => {
+
+        console.log(selectedBurger)
+    }, [selectedBurger])
+
+    const p = selectedBurger.ingredients.map((ing, j) =>
+        j < selectedBurger.ingredients.length - 1
+            ? `${ing.split(": ")[1]}, `
+            : `${ing.split(": ")[1]}.`)
+
+    const b = selectedBurger.ingredients.map((i, j) =>
+        <tr key={j}>
+            <td>{i.slice((i.indexOf(":") + 1))}</td>
+            <td>{i.slice(0, i.indexOf(":"))}</td>
+        </tr>
+    )
+
+
+
 
     return (
         <div className="burger_elem">
@@ -41,18 +57,7 @@ function BurgerElem() {
                                     <td>potato buns</td>
                                     <td>2</td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        {selectedBurger.prep.ingredients}
-                                    </td>
-                                    <td>
-                                        {selectedBurger.prep.measurements}
-                                    </td>
-                                </tr>
-
-
-
-
+                                {b}
                             </tbody>
                         </table>
                     </div>

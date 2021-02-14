@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import AppContext from "./appContext";
-import appReducer from "./appReducer"
+import AppReducer from "./appReducer"
 
 const AppState = (props) => {
     const initialState = {
@@ -8,7 +8,7 @@ const AppState = (props) => {
         basketContents: []
     }
 
-    const [state, dispatch] = useReducer(appReducer, initialState);
+    const [state, dispatch] = useReducer(AppReducer, initialState);
 
     const setBurger = (burger) => {
         dispatch({

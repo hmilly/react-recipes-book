@@ -13,240 +13,140 @@
         {
             "imageUrl": "/assets/main1.png",
             "name": "Bacon Plant",
-            "prep": {
-                "measurements": [
-                    "10 oz",
-                    "2 Tbsp chopped",
-                    "1 Tbsp"
-                ],
-                "ingredients": [
-                    "bacon plant burger",
-                    "red onion",
-                    "relish"
-                ]
-            },
+            "ingredients": [
+                "10 oz: bacon plant burger",
+                "2 tbsp slices: red onion",
+                "1 tbsp: relish"
+            ],
             "prepTime": "40 mins"
         },
         {
             "imageUrl": "/assets/main3.png",
             "name": "Bacon burger",
-            "prep": {
-                "measurements": [
-                    "2 Strips",
-                    "8 oz",
-                    "2 slices",
-                    "2 leaves",
-                    "1 Tbsp"
-                ],
-                "ingredients": [
-                    "bacon",
-                    "beef burger",
-                    "cheese",
-                    "lettuce",
-                    "mayo"
-                ]
-            },
+            "ingredients": [
+                "2 Strips: bacon",
+                "8 oz: beef burger",
+                "2 slices: cheese",
+                "2 leaves: lettuce",
+                "1 tbsp: mayo"
+            ],
             "prepTime": "55 mins"
         },
         {
             "imageUrl": "/assets/main1.png",
             "name": "Chicken Plant",
-            "prep": {
-                "measurements": [
-                    "6 oz",
-                    "2 Tbsp chopped",
-                    "1 Tbsp"
-                ],
-                "ingredients": [
-                    "chicken plant burger",
-                    "red onion",
-                    "relish"
-                ]
-            },
+            "ingredients": [
+                "6 oz: chicken plant burger",
+                "2 slices: red onion",
+                "1 tbsp: relish"
+            ],
             "prepTime": "45 mins"
         },
         {
             "imageUrl": "/assets/main3.png",
             "name": "Chicken burger",
-            "prep": {
-                "measurements": [
-                    "2 Strips",
-                    "8 oz",
-                    "2 slices",
-                    "2 leaves",
-                    "1 Tbsp"
-                ],
-                "ingredients": [
-                    "bacon",
-                    "beef burger",
-                    "cheese",
-                    "lettuce",
-                    "mayo"
-                ]
-            },
+            "ingredients": [
+                "2 Strips: bacon",
+                "8 oz: beef burger",
+                "2 slices: cheese",
+                "2 leaves: lettuce",
+                "1 tbsp: mayo"
+            ],
             "prepTime": "50 mins"
         },
         {
             "imageUrl": "/assets/main1.png",
             "name": "USA burger",
-            "prep": {
-                "measurements": [
-                    "2 Strips",
-                    "8 oz",
-                    "2 slices",
-                    "2 leaves",
-                    "3 slices",
-                    "1 Tbsp"
-                ],
-                "ingredients": [
-                    "bacon",
-                    "beef burger",
-                    "cheese",
-                    "lettuce",
-                    "tomato",
-                    "mayo"
-                ]
-            },
+            "ingredients": [
+                "2 Strips: bacon",
+                "8 oz: beef burger",
+                "2 slices: cheese",
+                "2 leaves: lettuce",
+                "3 slices: tomato",
+                "1 tbsp: mayo"
+            ],
             "prepTime": "49 mins"
         },
         {
             "imageUrl": "/assets/main3.png",
             "name": "Spicy Plant",
-            "prep": {
-                "measurements": [
-                    "10 oz",
-                    "2 Tbsp chopped",
-                    "2 slices",
-                    "2 leaves",
-                    "1 Tbsp chopped"
-                ],
-                "ingredients": [
-                    "bacon plant burger",
-                    "red onion",
-                    "tomato",
-                    "lettuce",
-                    "jalapenos"
-                ]
-            },
+            "ingredients": [
+                "10 oz: bacon plant burger",
+                "2 slices: red onion",
+                "2 slices: tomato",
+                "2 leaves: lettuce",
+                "1 tbsp diced: jalapenos"
+            ],
             "prepTime": "35 mins"
         },
         {
             "imageUrl": "/assets/main1.png",
             "name": "Brisket burger",
-            "prep": {"measurements": [
-                "10 oz",
-                "2 slices",
-                "2 leaves",
-                "1 Tbsp"
-            ],
             "ingredients": [
-                "brisket",
-                "tomato",
-                "lettuce",
-                "mayo"
-            ]
-        },
-        "prepTime": "55 mins"
-    },
-    {
-        "imageUrl": "/assets/main3.png",
-        "name": "Brisket Plant",
-        "prep": {
-            "measurements": [
-                "8 oz",
-                "2 slices",
-                "2 leaves",
-                "2 Tbsp"
+                "10 oz: brisket",
+                "2 slices: tomato",
+                "2 leaves: lettuce",
+                "1 tbsp: mayo"
             ],
-            "ingredients": [
-                "brisket plant burger",
-                "tomato",
-                "lettuce",
-                "mayo"
-            ]
+            "prepTime": "55 mins"
         },
-        "prepTime": "45 mins"
-    },
-    {
-        "imageUrl": "/assets/main1.png",
-        "name": "Spicy chicken",
-        "prep": {
-            "measurements": [
-                "10 oz",
-                "2 slices",
-                "1 Tbsp",
-                "1 Tbsp chopped"
+        {
+            "imageUrl": "/assets/main3.png",
+            "name": "Brisket Plant",
+            "ingredients": [
+                "8 oz: brisket plant burger",
+                "2 slices: tomato",
+                "2 leaves: lettuce",
+                "2 tbsp: mayo"
             ],
-            "ingredients": [
-                "chicken burger",
-                "red onion",
-                "relish",
-                "jalapenos"
-            ]
+            "prepTime": "45 mins"
         },
-        "prepTime": "50 mins"
-    },
-    {
-        "imageUrl": "/assets/main3.png",
-        "name": "Tofu burger",
-        "prep": {
-            "measurements": [
-                "6 oz",
-                "2 slices",
-                "2 leaves",
-                "3 slices",
-                "1 Tbsp"
+        {
+            "imageUrl": "/assets/main1.png",
+            "name": "Spicy chicken",
+            "ingredients": [
+                "10 oz: chicken burger",
+                "2 slices: red onion",
+                "1 tbsp: relish",
+                "1 tbsp diced: jalapenos"
             ],
-            "ingredients": [
-                "tofu plant burger",
-                "red onion",
-                "lettuce",
-                "tomato",
-                "relish"
-            ]
+            "prepTime": "50 mins"
         },
-        "prepTime": "40 mins"
-    },
-    {
-        "imageUrl": "/assets/main1.png",
-        "name": "Cheese burger",
-        "prep": {
-            "measurements": [
-                "10 oz",
-                "2 slices",
-                "3 slices",
-                "1 Tbsp"
-            ],
-            "ingredients": [
-                "beef burger",
-                "cheese",
-                "red onion",
-                "relish"
-            ]
+        {
+            "imageUrl": "/assets/main3.png",
+            "name": "Tofu burger",
+                "ingredients": [
+                    "6 oz: tofu plant burger",
+                    "2 slices: red onion",
+                    "2 leaves: lettuce",
+                    "3 slices: tomato",
+                    "1 tbsp: relish"
+                ],
+            "prepTime": "40 mins"
         },
-        "prepTime": "55 mins"
-    },
-    {
-        "imageUrl": "/assets/main3.png",
-        "name": "Double beef",
-        "prep": {
-            "measurements": [
-                "2 x 6 oz",
-                "3 slices",
-                "2 slices",
-                "2 leaves",
-                "1 Tbsp"
-            ],
-            "ingredients": [
-                "double beef patty",
-                "red onion",
-                "cheese",
-                "lettuce",
-                "relish"
-            ]
+        {
+            "imageUrl": "/assets/main1.png",
+            "name": "Cheese burger",
+                "ingredients": [
+                    "10 oz: beef burger",
+                    "2 slices: cheese",
+                    "3 slices: red onion",
+                    "1 tbsp: relish"
+                ],
+            "prepTime": "55 mins"
         },
-        "prepTime": "55 mins"
-    }
-],
-"basket": []
+        {
+            "imageUrl": "/assets/main3.png",
+            "name": "Double beef",
+                "ingredients": [
+                    "2 x 6 oz: double beef patty",
+                    "3 slices: red onion",
+                    "2 slices: cheese",
+                    "2 leaves: lettuce",
+                    "1 tbsp: relish"
+                ],
+            "prepTime": "55 mins"
+        }
+    ],
+    "basket": []
 }
