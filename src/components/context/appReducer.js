@@ -9,7 +9,7 @@ const appReducer = (state, action) => {
         case 'DELETEITEM':
             return { ...state, basketContents: action.payload }
         default:
-            throw new Error();
+            return state
     }
 }
 

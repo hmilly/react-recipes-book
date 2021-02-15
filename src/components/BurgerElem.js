@@ -1,20 +1,21 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AppContext from "./context/appContext"
 
 function BurgerElem() {
-    const { selectedBurger } = useContext(AppContext)
+
+    const { state } = useContext(AppContext)
+    const [selectedBurger, setSelectedBurger] = useState({})
 
     useEffect(() => {
+        setSelectedBurger(state.selectedBurger)
+    }, [selectedBurger, state.selectedBurger])
 
-        console.log(selectedBurger)
-    }, [selectedBurger])
-
-    const p = selectedBurger.ingredients.map((ing, j) =>
-        j < selectedBurger.ingredients.length - 1
+    const p = state.selectedBurger.ingredients.map((ing, j) =>
+        j < state.selectedBurger.ingredients.length - 1
             ? `${ing.split(": ")[1]}, `
             : `${ing.split(": ")[1]}.`)
 
-    const b = selectedBurger.ingredients.map((i, j) =>
+    const b = state.selectedBurger.ingredients.map((i, j) =>
         <tr key={j}>
             <td>{i.slice((i.indexOf(":") + 1))}</td>
             <td>{i.slice(0, i.indexOf(":"))}</td>
@@ -22,15 +23,13 @@ function BurgerElem() {
     )
 
 
-
-
     return (
         <div className="burger_elem">
             <div className="burger_elem_top">
                 <div className="burger_elem_topl">
-                    <p className="bacon-plant">{selectedBurger.name}</p>
+                    <p className="bacon-plant">{state.selectedBurger.name}</p>
                     <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                    <p>{selectedBurger.prepTime}</p>
+                    <p>{state.selectedBurger.prepTime}</p>
                     <div className="topl_div">
                         <img src={`${process.env.PUBLIC_URL}/assets/ute.png`} alt="cutlery" />
                         <p>2 servings</p>

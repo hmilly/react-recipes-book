@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import AppContext from "./appContext";
 import AppReducer from "./appReducer"
 
-const AppState = (props) => {
+const AppState = ({ children }) => {
     const initialState = {
         selectedBurger: [],
         basketContents: []
@@ -22,7 +22,6 @@ const AppState = (props) => {
             type: "SETBASKET",
             payload: burger
         })
-        
     }
 
     const deleteFromBasket = (burger) => {
@@ -34,15 +33,13 @@ const AppState = (props) => {
     }
 
     return (
-
-        <AppContext.Provider value={{
-            selectedBurger: state.selectedBurger,
-            setBurger,
-            addToBasket,
-            deleteFromBasket,
-            initialState
-        }}>
-            {props.children}
+        <AppContext.Provider
+            value={{
+                state,
+                setBurger,
+                addToBasket,
+                deleteFromBasket
+            }}> {children}
         </AppContext.Provider>
     )
 }

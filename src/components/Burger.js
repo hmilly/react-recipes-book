@@ -6,10 +6,7 @@ import {
 import AppContext from "./context/appContext"
 
 function Burger({ imageUrl, name, ingredients, prepTime, b }) {
-
-
-    const { setBurger, addToBasket } = useContext(AppContext)
-
+    const { setBurger } = useContext(AppContext)
 
     //	const [state, dispatch] = useReducer(reducer, initialState)
 
