@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
-import AppContext from "./context/appContext"
+import { store } from "../appContext"
 
 function BurgerElem() {
-
-    const { state } = useContext(AppContext)
-    const [selectedBurger, setSelectedBurger] = useState({})
+    const { state } = useContext(store)
+    const [burger, setburger] = useState ({})
 
     useEffect(() => {
-        setSelectedBurger(state.selectedBurger)
-    }, [selectedBurger, state.selectedBurger])
+    setburger(state.selectedBurger)
+    console.log(burger)
+    }, [burger, state.selectedBurger])
 
     const p = state.selectedBurger.ingredients.map((ing, j) =>
         j < state.selectedBurger.ingredients.length - 1
@@ -21,7 +21,6 @@ function BurgerElem() {
             <td>{i.slice(0, i.indexOf(":"))}</td>
         </tr>
     )
-
 
     return (
         <div className="burger_elem">

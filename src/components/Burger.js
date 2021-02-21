@@ -3,10 +3,10 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-import AppContext from "./context/appContext"
+import { store } from "../appContext"
 
 function Burger({ imageUrl, name, ingredients, prepTime, b }) {
-    const { setBurger } = useContext(AppContext)
+    const { setBurger } = useContext(store)
 
     //	const [state, dispatch] = useReducer(reducer, initialState)
 
