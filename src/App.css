@@ -519,8 +519,16 @@ td {
     padding: 5% 0;
     border-bottom: solid 1px grey;
 }
+
+.burger1{
+    display: flex;
+    height: 15%;
+    width: 100%;
+    align-items: center;
+}
 .receipt_main_img{
-    flex-basis: 60%;
+    flex-basis: 50%;
+    margin: 0 1%;
 }
 .receipt_main_img img{
     width: 100%;
@@ -528,17 +536,17 @@ td {
 }
 .receipt_main_info {
     display: flex;
-    flex-direction: column;
-    padding: 1%;
-    flex-basis: 40%;
+    flex-basis: 90%;
 }
 .receipt_main_info div{
     display: flex;
-    width: 80%;
+    width: 60%;
+    padding: 0 5%;
     justify-content: space-between;
 }
 .receipt_main_info p{
     font-size: 14px;
+    
 }
 .receipt_main_info select{
     align-self: flex-end;
