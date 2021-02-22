@@ -11,8 +11,8 @@
     ],
     "burgers": [
         {
-            "imageUrl": "/assets/main1.png",
             "name": "Bacon Plant",
+            "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "10 oz: bacon plant burger",
                 "2 tbsp slices: red onion",
@@ -21,8 +21,8 @@
             "prepTime": "40 mins"
         },
         {
-            "imageUrl": "/assets/main3.png",
             "name": "Bacon burger",
+            "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "2 Strips: bacon",
                 "8 oz: beef burger",
@@ -33,8 +33,8 @@
             "prepTime": "55 mins"
         },
         {
-            "imageUrl": "/assets/main1.png",
             "name": "Chicken Plant",
+            "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "6 oz: chicken plant burger",
                 "2 slices: red onion",
@@ -43,8 +43,8 @@
             "prepTime": "45 mins"
         },
         {
-            "imageUrl": "/assets/main3.png",
             "name": "Chicken burger",
+            "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "2 Strips: bacon",
                 "8 oz: beef burger",
@@ -55,8 +55,8 @@
             "prepTime": "50 mins"
         },
         {
-            "imageUrl": "/assets/main1.png",
             "name": "USA burger",
+            "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "2 Strips: bacon",
                 "8 oz: beef burger",
@@ -68,8 +68,8 @@
             "prepTime": "49 mins"
         },
         {
-            "imageUrl": "/assets/main3.png",
             "name": "Spicy Plant",
+            "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "10 oz: bacon plant burger",
                 "2 slices: red onion",
@@ -80,8 +80,8 @@
             "prepTime": "35 mins"
         },
         {
-            "imageUrl": "/assets/main1.png",
             "name": "Brisket burger",
+            "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "10 oz: brisket",
                 "2 slices: tomato",
@@ -91,8 +91,8 @@
             "prepTime": "55 mins"
         },
         {
-            "imageUrl": "/assets/main3.png",
             "name": "Brisket Plant",
+            "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "8 oz: brisket plant burger",
                 "2 slices: tomato",
@@ -102,8 +102,8 @@
             "prepTime": "45 mins"
         },
         {
-            "imageUrl": "/assets/main1.png",
             "name": "Spicy chicken",
+            "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "10 oz: chicken burger",
                 "2 slices: red onion",
@@ -113,38 +113,38 @@
             "prepTime": "50 mins"
         },
         {
-            "imageUrl": "/assets/main3.png",
             "name": "Tofu burger",
-                "ingredients": [
-                    "6 oz: tofu plant burger",
-                    "2 slices: red onion",
-                    "2 leaves: lettuce",
-                    "3 slices: tomato",
-                    "1 tbsp: relish"
-                ],
+            "imageUrl": "/assets/main3.png",
+            "ingredients": [
+                "6 oz: tofu plant burger",
+                "2 slices: red onion",
+                "2 leaves: lettuce",
+                "3 slices: tomato",
+                "1 tbsp: relish"
+            ],
             "prepTime": "40 mins"
         },
         {
-            "imageUrl": "/assets/main1.png",
             "name": "Cheese burger",
-                "ingredients": [
-                    "10 oz: beef burger",
-                    "2 slices: cheese",
-                    "3 slices: red onion",
-                    "1 tbsp: relish"
-                ],
+            "imageUrl": "/assets/main1.png",
+            "ingredients": [
+                "10 oz: beef burger",
+                "2 slices: cheese",
+                "3 slices: red onion",
+                "1 tbsp: relish"
+            ],
             "prepTime": "55 mins"
         },
         {
-            "imageUrl": "/assets/main3.png",
             "name": "Double beef",
-                "ingredients": [
-                    "2 x 6 oz: double beef patty",
-                    "3 slices: red onion",
-                    "2 slices: cheese",
-                    "2 leaves: lettuce",
-                    "1 tbsp: relish"
-                ],
+            "imageUrl": "/assets/main3.png",
+            "ingredients": [
+                "2 x 6 oz: double beef patty",
+                "3 slices: red onion",
+                "2 slices: cheese",
+                "2 leaves: lettuce",
+                "1 tbsp: relish"
+            ],
             "prepTime": "55 mins"
         }
     ],

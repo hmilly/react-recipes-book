@@ -1,74 +1,139 @@
 [
     {
-        "imageUrl" : "/assets/main1.png",
-        "name" : "Bacon Plant",
-        "ingredients" : ["bacon plant burger", "red onion", "relish"],
-        "prepTime" : "40 mins"
+        "name": "Bacon Plant",
+        "imageUrl": "/assets/main1.png",
+        "ingredients": [
+            "bacon plant burger",
+            "red onion",
+            "relish"
+        ],
+        "prepTime": "40 mins"
     },
     {
-        "imageUrl" : "/assets/main3.png",
-        "name" : "Bacon burger",
-        "ingredients" : ["bacon", "beef burger", "cheese", "lettuce", "mayo"],
-        "prepTime" : "55 mins"
+        "name": "Bacon burger",
+        "imageUrl": "/assets/main3.png",
+        "ingredients": [
+            "bacon",
+            "beef burger",
+            "cheese",
+            "lettuce",
+            "mayo"
+        ],
+        "prepTime": "55 mins"
     },
     {
-        "imageUrl" : "/assets/main1.png",
-        "name" : "Chicken Plant",
-        "ingredients" : ["chicken plant burger", "red onion", "relish"],
-        "prepTime" : "45 mins"
+        "name": "Chicken Plant",
+        "imageUrl": "/assets/main1.png",
+        "ingredients": [
+            "chicken plant burger",
+            "red onion",
+            "relish"
+        ],
+        "prepTime": "45 mins"
     },
     {
-        "imageUrl" : "/assets/main3.png",
-        "name" : "Chicken burger",
-        "ingredients" : ["bacon", "beef burger", "cheese", "lettuce", "mayo"],
-        "prepTime" : "50 mins"
+        "name": "Chicken burger",
+        "imageUrl": "/assets/main3.png",
+        "ingredients": [
+            "bacon",
+            "beef burger",
+            "cheese",
+            "lettuce",
+            "mayo"
+        ],
+        "prepTime": "50 mins"
     },
     {
-        "imageUrl" : "/assets/main1.png",
-        "name" : "USA burger",
-        "ingredients" : ["bacon", "beef burger", "cheese", "lettuce", "tomato", "mayo"],
-        "prepTime" : "49 mins"
+        "name": "USA burger",
+        "imageUrl": "/assets/main1.png",
+        "ingredients": [
+            "bacon",
+            "beef burger",
+            "cheese",
+            "lettuce",
+            "tomato",
+            "mayo"
+        ],
+        "prepTime": "49 mins"
     },
     {
-        "imageUrl" : "/assets/main3.png",
-        "name" : "Spicy Plant",
-        "ingredients" : ["bacon plant burger", "red onion", "tomato", "lettuce", "jalapenos"],
-        "prepTime" : "35 mins"
+        "name": "Spicy Plant",
+        "imageUrl": "/assets/main3.png",
+        "ingredients": [
+            "bacon plant burger",
+            "red onion",
+            "tomato",
+            "lettuce",
+            "jalapenos"
+        ],
+        "prepTime": "35 mins"
     },
     {
-        "imageUrl" : "/assets/main1.png",
-        "name" : "Brisket burger",
-        "ingredients" : ["brisket", "tomato", "lettuce", "mayo"],
-        "prepTime" : "55 mins"
+        "name": "Brisket burger",
+        "imageUrl": "/assets/main1.png",
+        "ingredients": [
+            "brisket",
+            "tomato",
+            "lettuce",
+            "mayo"
+        ],
+        "prepTime": "55 mins"
     },
     {
-        "imageUrl" : "/assets/main3.png",
-        "name" : "Brisket Plant",
-        "ingredients" : ["brisket plant burger", "tomato", "lettuce", "mayo"],
-        "prepTime" : "45 mins"
+        "name": "Brisket Plant",
+        "imageUrl": "/assets/main3.png",
+        "ingredients": [
+            "brisket plant burger",
+            "tomato",
+            "lettuce",
+            "mayo"
+        ],
+        "prepTime": "45 mins"
     },
     {
-        "imageUrl" : "/assets/main1.png",
-        "name" : "Spicy chicken",
-        "ingredients" : ["chicken burger", "red onion", "relish", "jalapenos"],
-        "prepTime" : "50 mins"
+        "name": "Spicy chicken",
+        "imageUrl": "/assets/main1.png",
+        "ingredients": [
+            "chicken burger",
+            "red onion",
+            "relish",
+            "jalapenos"
+        ],
+        "prepTime": "50 mins"
     },
     {
-        "imageUrl" : "/assets/main3.png",
-        "name" : "Tofu burger",
-        "ingredients" : ["tofu plant burger", "red onion", "lettuce", "tomato", "relish"],
-        "prepTime" : "40 mins"
+        "name": "Tofu burger",
+        "imageUrl": "/assets/main3.png",
+        "ingredients": [
+            "tofu plant burger",
+            "red onion",
+            "lettuce",
+            "tomato",
+            "relish"
+        ],
+        "prepTime": "40 mins"
     },
     {
-        "imageUrl" : "/assets/main1.png",
-        "name" : "Cheese burger",
-        "ingredients" : ["beef burger", "cheese", "red onion", "relish"],
-        "prepTime" : "55 mins"
+        "name": "Cheese burger",
+        "imageUrl": "/assets/main1.png",
+        "ingredients": [
+            "beef burger",
+            "cheese",
+            "red onion",
+            "relish"
+        ],
+        "prepTime": "55 mins"
     },
     {
-        "imageUrl" : "/assets/main3.png",
-        "name" : "Double beef",
-        "ingredients" : ["double beef patty", "red onion", "cheese", "lettuce", "relish"],
-        "prepTime" : "55 mins"
+        "name": "Double beef",
+        "imageUrl": "/assets/main3.png",
+        "ingredients": [
+            "double beef patty",
+            "red onion",
+            "cheese",
+            "lettuce",
+            "relish"
+        ],
+        "prepTime": "55 mins"
     }
 ]

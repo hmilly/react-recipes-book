@@ -32,11 +32,7 @@ function Menu({ Burger }) {
                 {burgers.slice(0, num).map((b, i) => (
                     <Burger
                         key={b.name}
-                        imageUrl={b.imageUrl}
-                        name={b.name}
-                        ingredients={b.ingredients}
-                        prepTime={b.prepTime}
-                        b={b}
+                        burgerObj={b}
                     />
                 ))}
             </div>

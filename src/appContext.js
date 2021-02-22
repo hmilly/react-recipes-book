@@ -12,11 +12,16 @@ const AppState = ({ children }) => {
         switch (action.type) {
             case 'SETBURGER':
                 return { ...state, selectedBurger: action.payload }
-            case 'SETBASKET':
-                return {
-                    ...state,
-                    basketContents: [...state.basketContents, action.payload]
-                }
+                case 'SETBASKET':
+                    return {
+                        ...state,
+                        basketContents: [...state.basketContents, { burger: action.payload, quantity: 1 }]
+                    }
+                    case 'UPDATEBASKET':
+                        return {
+                            ...state,
+                            basketContents: [...state.basketContents, { burger: action.payload, quantity : action.quantity + 1 }]
+                        }
             case 'DELETEITEM':
                 return { ...state, basketContents: action.payload }
             default:
@@ -36,6 +41,13 @@ const AppState = ({ children }) => {
             payload: burger
         })
     }
+    const updateBasket = (burger, quantity) => {
+        dispatch({
+            type: "UPDATEBASKET",
+            payload: burger,
+            quantity: quantity
+        })
+    }
     const deleteFromBasket = (burger) => {
         dispatch({
             type: "DELETEITEM",
@@ -44,12 +56,24 @@ const AppState = ({ children }) => {
         console.log(burger)
     }
 
+    const clicked = (e, burgerObj) => {
+        e.preventDefault();
+        const findBurgerobj = state.basketContents.find(b => b.burger.name === burgerObj.name)
+        if (findBurgerobj) {
+            updateBasket(findBurgerobj.burger, findBurgerobj.quantity)
+        } else {
+            addToBasket(burgerObj)
+        }
+        console.log(state.basketContents)
+    }
+
     return <Provider
         value={{
             state,
             setBurger,
             addToBasket,
-            deleteFromBasket
+            deleteFromBasket,
+            clicked
         }}>
         {children} </Provider>;
 };
