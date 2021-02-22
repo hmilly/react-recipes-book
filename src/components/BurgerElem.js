@@ -1,26 +1,34 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext
+    //, useEffect, useState
+} from "react";
 import { store } from "../appContext"
 
 function BurgerElem() {
-    const { state } = useContext(store)
-    const [burger, setburger] = useState ({})
+    const { state, addToBasket } = useContext(store)
 
-    useEffect(() => {
-    setburger(state.selectedBurger)
-    console.log(burger)
-    }, [burger, state.selectedBurger])
+    // const [burger, setburger] = useState ({})
 
-    const p = state.selectedBurger.ingredients.map((ing, j) =>
+    // useEffect(() => {
+    // setburger(state.selectedBurger)
+    // console.log(burger)
+    // }, [burger, state.selectedBurger])
+
+    const ingredientsList = state.selectedBurger.ingredients.map((ing, j) =>
         j < state.selectedBurger.ingredients.length - 1
             ? `${ing.split(": ")[1]}, `
             : `${ing.split(": ")[1]}.`)
 
-    const b = state.selectedBurger.ingredients.map((i, j) =>
+    const recipeTable = state.selectedBurger.ingredients.map((i, j) =>
         <tr key={j}>
             <td>{i.slice((i.indexOf(":") + 1))}</td>
             <td>{i.slice(0, i.indexOf(":"))}</td>
         </tr>
     )
+
+    const updateBasket = (e) => {
+        e.preventDefault()
+        addToBasket(state.selectedBurger)
+    }
 
     return (
         <div className="burger_elem">
@@ -35,11 +43,11 @@ function BurgerElem() {
                         <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
                         <p>820 cals/serving</p>
                     </div>
-                    <p>{p}</p>
-                    <button>ADD TO BASKET</button>
+                    <p>{ingredientsList}</p>
+                    <button onClick={(e) => {updateBasket(e)}}>ADD TO BASKET</button>
                 </div>
                 <div className="burger_elem_topr">
-                    <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
+                    <img src={`${process.env.PUBLIC_URL}${state.selectedBurger.imageUrl}`} alt="burger"/>
                 </div>
             </div>
             <div className="burger_elem_bot">
@@ -55,7 +63,7 @@ function BurgerElem() {
                                     <td>potato buns</td>
                                     <td>2</td>
                                 </tr>
-                                {b}
+                                {recipeTable}
                             </tbody>
                         </table>
                     </div>

@@ -6,13 +6,14 @@ import {
 import { store } from "../appContext"
 
 function Burger({ imageUrl, name, ingredients, prepTime, b }) {
-    const { setBurger } = useContext(store)
+    const { state, setBurger, addToBasket } = useContext(store)
 
     //	const [state, dispatch] = useReducer(reducer, initialState)
 
-    const clicked = (e, b) => {
+    const clicked = (e) => {
         e.preventDefault();
-        console.log(b)
+        addToBasket(b)
+        console.log(state.basketContents)
     }
 
     const p = ingredients.map((ing, j) =>
@@ -34,7 +35,7 @@ function Burger({ imageUrl, name, ingredients, prepTime, b }) {
                         <p>{prepTime}</p>
                     </div>
                     <div>
-                        <button className="add_btn" onClick={(e) => clicked(e, b)}>Add to basket</button>
+                        <button className="add_btn" onClick={(e) => clicked(e)}>Add to basket</button>
                     </div>
                 </div>
             </Link>

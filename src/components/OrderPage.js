@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { store } from "../appContext"
 
-function OrderPage({ burger }) {
+function OrderPage() {
 
-    const [basketsContents, setBasketsContents] = useState([])
+    const { state } = useContext(store)
+    console.log(state.basketContents[0].ingredients)
 
-    useEffect(() => {
-        setBasketsContents((basketsContents) => {
-            setBasketsContents({ ...basketsContents, burger })
-            console.log(basketsContents) 
-        })
-    }, [basketsContents, burger])
+
+// const p = store.basketContents[0].ingredients.map((ing, j) =>
+//     j < store.basketContents[0].ingredients.length - 1
+//         ? `${ing.split(": ")[1]}, `
+//         : `${ing.split(": ")[1]}.`)
 
 
 
@@ -68,6 +69,8 @@ function OrderPage({ burger }) {
         )
     }
 
+
+
     return (
 
         <div className="order_page">
@@ -112,13 +115,10 @@ function OrderPage({ burger }) {
                     </div>
                     <div className="receipt_main_info">
                         <div>
-                            <h4>2 servings</h4>
-                            <h4>2 burgers</h4>
+                            <h4>1 serving</h4>
+                            <h4>1 burger</h4>
                         </div>
-                        <p>Ground beef, Potato Buns, Broccoli, Garlic,
-                        Baby Bok Choy, Hoisin Sauce, Sweet White Miso
-                        Paste, Mayonnaise, White Wine Vinegar, Black
-                        & White Sesame Seeds
+                        <p>
                         </p>
                         <select name="quantity">
                             <option value="1" >1</option>
