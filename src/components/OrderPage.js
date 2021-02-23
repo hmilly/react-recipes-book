@@ -68,6 +68,11 @@ function OrderPage() {
         )
     }
 
+    const handleSelectChange = () => {
+
+        
+    }
+
     let burgers
     if (state.basketContents) {
         burgers = state.basketContents.map((b, i) => 
@@ -79,7 +84,7 @@ function OrderPage() {
                 <p>{b.burger.name}</p>
                 <div>
                     <h3>£15</h3>
-                    <select name="quantity">
+                    <select name="quantity" onChange={handleSelectChange}>
                         <option value="1" >1</option>
                         <option value="2" >2</option>
                         <option value="3" >3</option>

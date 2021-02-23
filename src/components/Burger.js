@@ -1,47 +1,77 @@
-import React, { useContext } from "react";
-import {
-    Route,
-    Link,
-} from "react-router-dom";
+import React, {
+    useContext
+    //, useEffect, useState
+} from "react";
 import { store } from "../appContext"
 
-function Burger({ burgerObj }) {
-    const { setBurger, clicked } = useContext(store)
-    //	const [state, dispatch] = useReducer(reducer, initialState)
+function Burger() {
+    const { state, clicked } = useContext(store)
 
-    const p = burgerObj.ingredients.map((ing, j) =>
-        j < burgerObj.ingredients.length - 1
-            ? `${ing.split(": ")[1]}, `
-            : `${ing.split(": ")[1]}.`)
+    // const [burger, setburger] = useState ({})
+
+    // useEffect(() => {
+    // setburger(state.selectedBurger)
+    // console.log(burger)
+    // }, [burger, state.selectedBurger])
+
+    let ingredientsList
+    let recipeTable
+    if (state.selectedBurger) {
+        ingredientsList = state.selectedBurger.ingredients.map((ing, j) =>
+            j < state.selectedBurger.ingredients.length - 1
+                ? `${ing.split(": ")[1]}, `
+                : `${ing.split(": ")[1]}.`)
+
+        recipeTable = state.selectedBurger.ingredients.map((i, j) =>
+            <tr key={j}>
+                <td>{i.slice((i.indexOf(":") + 1))}</td>
+                <td>{i.slice(0, i.indexOf(":"))}</td>
+            </tr>
+        )
+    }
+
 
     return (
-        <div className="menu_burger_card">
-            <Link to="/burgerCard" id="link" onClick={() => setBurger(burgerObj)}>
-                <div className="burger_card_img">
-                    <img src={burgerObj.imageUrl} alt={burgerObj.name} />
-                    <p>{burgerObj.name}</p>
-                </div>
-                <div className="burger_card_txt">
-                    <p>{p}</p>
-                    <div>
-                        <img src="/assets/clock.png" alt="clock" />
-                        <p>{burgerObj.prepTime}</p>
+        <div className="burger_elem">
+            <div className="burger_elem_top">
+                <div className="burger_elem_topl">
+                    <p className="bacon-plant">{state.selectedBurger.name}</p>
+                    <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
+                    <p>{state.selectedBurger.prepTime}</p>
+                    <div className="topl_div">
+                        <img src={`${process.env.PUBLIC_URL}/assets/ute.png`} alt="cutlery" />
+                        <p>2 servings</p>
+                        <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
+                        <p>820 cals/serving</p>
                     </div>
-                    <div>
-                        <button className="add_btn" onClick={(e) => clicked(e, burgerObj)}>Add to basket</button>
+                    <p>{ingredientsList}</p>
+                    <button onClick={(e) => { clicked(e, state.selectedBurger.burger) }}>ADD TO BASKET</button>
+                </div>
+                <div className="burger_elem_topr">
+                    <img src={`${process.env.PUBLIC_URL}${state.selectedBurger.imageUrl}`} alt="burger" />
+                </div>
+            </div>
+            <div className="burger_elem_bot">
+                <div className="burger_elem_bot_container">
+                    <div className="burger_elem_bot_container_top">
+                        <h5>fresh</h5>
+                        <p>ingredients</p>
+                    </div>
+                    <div className="burger_elem_bot_container_bot">
+                        <table id="customers">
+                            <tbody>
+                                <tr>
+                                    <td>potato buns</td>
+                                    <td>2</td>
+                                </tr>
+                                {recipeTable}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </Link>
-            <Route path="/burgerCard" />
+            </div>
         </div>
     )
 }
 
 export default Burger
-
-
-
-
-
-
-

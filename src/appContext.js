@@ -11,16 +11,24 @@ const AppState = ({ children }) => {
     const [state, dispatch] = useReducer((state, action) => {
         switch (action.type) {
             case 'SETBURGER':
-                return { ...state, selectedBurger: action.payload }
+                return {
+                    ...state,
+                    selectedBurger: action.payload
+                }
             case 'SETBASKET':
                 return {
                     ...state,
-                    basketContents: [...state.basketContents, action.payload]
+                    basketContents: action.payload
+                }
+            case 'UPDATEBASKET':
+                return {
+                    ...state,
+                    basketContents: action.payload
                 }
             case 'DELETEITEM':
                 return {
                     ...state,
-                    basketContents: [...action.payload]
+                    basketContents: action.payload
                 }
             default:
                 return state
@@ -39,30 +47,33 @@ const AppState = ({ children }) => {
             payload: burgerObj
         })
     }
+    const updateBasket = (burgerObj) => {
+        dispatch({
+            type: "UPDATEBASKET",
+            payload: burgerObj
+        })
+    }
 
     const deleteFromBasket = (e, burgerObj) => {
         e.preventDefault()
         const basket = state.basketContents.filter(b => b.burger.name !== burgerObj.name)
-        console.log(basket)
         dispatch({
             type: "DELETEITEM",
-            payload: basket
+            payload: [...basket]
         })
     }
-
-
 
     const clicked = (e, burgerObj) => {
         e.preventDefault();
         const findBurgerobj = state.basketContents.find(b => b.burger.name.includes(burgerObj.name))
-        if (findBurgerobj){
-            deleteFromBasket(findBurgerobj)
+        if (findBurgerobj) {
+            const allObjects = state.basketContents
+            let edited = allObjects.splice(allObjects.indexOf(findBurgerobj), 1)
+            edited = { burger: edited[0].burger, quantity: edited[0].quantity + 1 }
+            updateBasket([...allObjects, edited])
         } else {
-           addToBasket({burger: burgerObj, quantity: 1}) 
+            addToBasket([...state.basketContents, { burger: burgerObj, quantity: 1 }])
         }
-        
-        console.log(state.basketContents)
-        console.log(findBurgerobj)
     }
 
     return <Provider
