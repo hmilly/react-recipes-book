@@ -1,4 +1,5 @@
-import React, { useContext
+import React, {
+    useContext
     //, useEffect, useState
 } from "react";
 import { store } from "../appContext"
@@ -13,17 +14,22 @@ function BurgerElem() {
     // console.log(burger)
     // }, [burger, state.selectedBurger])
 
-    const ingredientsList = state.selectedBurger.ingredients.map((ing, j) =>
-        j < state.selectedBurger.ingredients.length - 1
-            ? `${ing.split(": ")[1]}, `
-            : `${ing.split(": ")[1]}.`)
+    let ingredientsList
+    let recipeTable
+    if (state.selectedBurger) {
+        ingredientsList = state.selectedBurger.ingredients.map((ing, j) =>
+            j < state.selectedBurger.ingredients.length - 1
+                ? `${ing.split(": ")[1]}, `
+                : `${ing.split(": ")[1]}.`)
 
-    const recipeTable = state.selectedBurger.ingredients.map((i, j) =>
-        <tr key={j}>
-            <td>{i.slice((i.indexOf(":") + 1))}</td>
-            <td>{i.slice(0, i.indexOf(":"))}</td>
-        </tr>
-    )
+        recipeTable = state.selectedBurger.ingredients.map((i, j) =>
+            <tr key={j}>
+                <td>{i.slice((i.indexOf(":") + 1))}</td>
+                <td>{i.slice(0, i.indexOf(":"))}</td>
+            </tr>
+        )
+    }
+
 
     return (
         <div className="burger_elem">
@@ -39,10 +45,10 @@ function BurgerElem() {
                         <p>820 cals/serving</p>
                     </div>
                     <p>{ingredientsList}</p>
-                    <button onClick={(e) => {clicked(e, state.selectedBurger.burger)}}>ADD TO BASKET</button>
+                    <button onClick={(e) => { clicked(e, state.selectedBurger.burger) }}>ADD TO BASKET</button>
                 </div>
                 <div className="burger_elem_topr">
-                    <img src={`${process.env.PUBLIC_URL}${state.selectedBurger.imageUrl}`} alt="burger"/>
+                    <img src={`${process.env.PUBLIC_URL}${state.selectedBurger.imageUrl}`} alt="burger" />
                 </div>
             </div>
             <div className="burger_elem_bot">

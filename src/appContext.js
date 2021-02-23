@@ -12,59 +12,57 @@ const AppState = ({ children }) => {
         switch (action.type) {
             case 'SETBURGER':
                 return { ...state, selectedBurger: action.payload }
-                case 'SETBASKET':
-                    return {
-                        ...state,
-                        basketContents: [...state.basketContents, { burger: action.payload, quantity: 1 }]
-                    }
-                    case 'UPDATEBASKET':
-                        return {
-                            ...state,
-                            basketContents: [...state.basketContents, { burger: action.payload, quantity : action.quantity + 1 }]
-                        }
+            case 'SETBASKET':
+                return {
+                    ...state,
+                    basketContents: [...state.basketContents, action.payload]
+                }
             case 'DELETEITEM':
-                return { ...state, basketContents: action.payload }
+                return {
+                    ...state,
+                    basketContents: [...action.payload]
+                }
             default:
                 return state
         }
     }, initialState);
 
-    const setBurger = (burger) => {
+    const setBurger = (burgerObj) => {
         dispatch({
             type: "SETBURGER",
-            payload: burger
+            payload: burgerObj
         })
     }
-    const addToBasket = (burger) => {
+    const addToBasket = (burgerObj) => {
         dispatch({
             type: "SETBASKET",
-            payload: burger
+            payload: burgerObj
         })
     }
-    const updateBasket = (burger, quantity) => {
-        dispatch({
-            type: "UPDATEBASKET",
-            payload: burger,
-            quantity: quantity
-        })
-    }
-    const deleteFromBasket = (burger) => {
+
+    const deleteFromBasket = (e, burgerObj) => {
+        e.preventDefault()
+        const basket = state.basketContents.filter(b => b.burger.name !== burgerObj.name)
+        console.log(basket)
         dispatch({
             type: "DELETEITEM",
-            payload: burger
+            payload: basket
         })
-        console.log(burger)
     }
+
+
 
     const clicked = (e, burgerObj) => {
         e.preventDefault();
-        const findBurgerobj = state.basketContents.find(b => b.burger.name === burgerObj.name)
-        if (findBurgerobj) {
-            updateBasket(findBurgerobj.burger, findBurgerobj.quantity)
+        const findBurgerobj = state.basketContents.find(b => b.burger.name.includes(burgerObj.name))
+        if (findBurgerobj){
+            deleteFromBasket(findBurgerobj)
         } else {
-            addToBasket(burgerObj)
+           addToBasket({burger: burgerObj, quantity: 1}) 
         }
+        
         console.log(state.basketContents)
+        console.log(findBurgerobj)
     }
 
     return <Provider

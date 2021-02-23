@@ -3,7 +3,7 @@ import { store } from "../appContext"
 
 function OrderPage() {
 
-    const { state } = useContext(store)
+    const { state, deleteFromBasket } = useContext(store)
     console.log(state.basketContents)
 
 
@@ -11,7 +11,6 @@ function OrderPage() {
     //     j < store.basketContents[0].ingredients.length - 1
     //         ? `${ing.split(": ")[1]}, `
     //         : `${ing.split(": ")[1]}.`)
-
 
 
     const [users, setUsers] = useState([])
@@ -69,6 +68,30 @@ function OrderPage() {
         )
     }
 
+    let burgers
+    if (state.basketContents) {
+        burgers = state.basketContents.map((b, i) => 
+            <div className="burger_in_cart" key={i}>
+            <div className="receipt_main_img">
+                <img src={`${process.env.PUBLIC_URL}${b.burger.imageUrl}`} alt="burger" />
+            </div>
+            <div className="receipt_main_info">
+                <p>{b.burger.name}</p>
+                <div>
+                    <h3>£15</h3>
+                    <select name="quantity">
+                        <option value="1" >1</option>
+                        <option value="2" >2</option>
+                        <option value="3" >3</option>
+                        <option value="4" >4</option>
+                        <option value="5" >5</option>
+                    </select>
+                    <button onClick={(e) => deleteFromBasket(e, b.burger)}>X</button>
+                </div>
+            </div>
+        </div>
+        )
+    }
 
 
     return (
@@ -110,28 +133,7 @@ function OrderPage() {
                     <button> basket</button>
                 </div>
                 <div className="receipt_main">
-
-        <div className="burger1">
-                        <div className="receipt_main_img">
-                            <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
-                        </div>
-                        <div className="receipt_main_info">
-                            <div>
-                                <h4>1 serving</h4>
-                                <h4>1 burger</h4>
-                            </div>
-                            <p>   burger</p>
-                            <select name="quantity">
-                                <option value="1" >1</option>
-                                <option value="2" >2</option>
-                                <option value="3" >3</option>
-                                <option value="4" >4</option>
-                                <option value="5" >5</option>
-                            </select>
-                            <h3>£15</h3>
-                        </div>
-                        </div>
-
+                    {burgers}
                 </div>
                 <div className="receipt_delivery">
                     <h3>Delivery Fee:</h3>
