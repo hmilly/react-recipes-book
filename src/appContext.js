@@ -20,11 +20,6 @@ const AppState = ({ children }) => {
                     ...state,
                     basketContents: action.payload
                 }
-            case 'UPDATEBASKET':
-                return {
-                    ...state,
-                    basketContents: action.payload
-                }
             case 'DELETEITEM':
                 return {
                     ...state,
@@ -35,24 +30,19 @@ const AppState = ({ children }) => {
         }
     }, initialState);
 
-    const setBurger = (burgerObj) => {
+    const setItem = (typeCase, burgerObj) => {
+        console.log("set", burgerObj)
         dispatch({
-            type: "SETBURGER",
+            type: typeCase,
             payload: burgerObj
         })
     }
-    const addToBasket = (burgerObj) => {
-        dispatch({
-            type: "SETBASKET",
-            payload: burgerObj
-        })
-    }
-    const updateBasket = (burgerObj) => {
-        dispatch({
-            type: "UPDATEBASKET",
-            payload: burgerObj
-        })
-    }
+    // const addToBasket = (burgerObj) => {
+    //     dispatch({
+    //         type: "SETBASKET",
+    //         payload: burgerObj
+    //     })
+    // }
 
     const deleteFromBasket = (e, burgerObj) => {
         e.preventDefault()
@@ -64,23 +54,23 @@ const AppState = ({ children }) => {
     }
 
     const clicked = (e, burgerObj) => {
+        console.log("click", burgerObj)
         e.preventDefault();
         const findBurgerobj = state.basketContents.find(b => b.burger.name.includes(burgerObj.name))
         if (findBurgerobj) {
             const allObjects = state.basketContents
             let edited = allObjects.splice(allObjects.indexOf(findBurgerobj), 1)
             edited = { burger: edited[0].burger, quantity: edited[0].quantity + 1 }
-            updateBasket([...allObjects, edited])
+            setItem("SETBASKET", [...allObjects, edited])
         } else {
-            addToBasket([...state.basketContents, { burger: burgerObj, quantity: 1 }])
+            setItem("SETBASKET", [...state.basketContents, { burger: burgerObj, quantity: 1 }])
         }
     }
 
     return <Provider
         value={{
             state,
-            setBurger,
-            addToBasket,
+            setItem,
             deleteFromBasket,
             clicked
         }}>

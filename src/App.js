@@ -13,6 +13,7 @@ import MainHead from "./components/MainHead"
 import OrderPage from "./components/OrderPage"
 import Burgers from "./components/Burgers"
 import Nav from "./components/Nav"
+import UserForm from "./components/UserForm"
 
 import Burger from "./components/Burger"
 import OrderComplete from "./components/OrderComplete"
@@ -31,7 +32,7 @@ function App() {
 							<Footer />
 						</Route>
 						<Route path="/basket">
-							<OrderPage />
+							<OrderPage UserForm={UserForm}/>
 							<Footer />
 						</Route>
 						<Route path="/burgerCard">

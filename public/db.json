@@ -18,7 +18,8 @@
                 "2 tbsp slices: red onion",
                 "1 tbsp: relish"
             ],
-            "prepTime": "40 mins"
+            "prepTime": "40 mins",
+            "price": "9.00"
         },
         {
             "name": "Bacon burger",
@@ -30,7 +31,8 @@
                 "2 leaves: lettuce",
                 "1 tbsp: mayo"
             ],
-            "prepTime": "55 mins"
+            "prepTime": "55 mins",
+            "price": "11.50"
         },
         {
             "name": "Chicken Plant",
@@ -40,7 +42,8 @@
                 "2 slices: red onion",
                 "1 tbsp: relish"
             ],
-            "prepTime": "45 mins"
+            "prepTime": "45 mins",
+            "price": "9.00"
         },
         {
             "name": "Chicken burger",
@@ -52,7 +55,8 @@
                 "2 leaves: lettuce",
                 "1 tbsp: mayo"
             ],
-            "prepTime": "50 mins"
+            "prepTime": "50 mins",
+            "price": "11.00"
         },
         {
             "name": "USA burger",
@@ -65,7 +69,8 @@
                 "3 slices: tomato",
                 "1 tbsp: mayo"
             ],
-            "prepTime": "49 mins"
+            "prepTime": "49 mins",
+            "price": "13.00"
         },
         {
             "name": "Spicy Plant",
@@ -77,7 +82,8 @@
                 "2 leaves: lettuce",
                 "1 tbsp diced: jalapenos"
             ],
-            "prepTime": "35 mins"
+            "prepTime": "35 mins",
+            "price": "9.50"
         },
         {
             "name": "Brisket burger",
@@ -88,7 +94,8 @@
                 "2 leaves: lettuce",
                 "1 tbsp: mayo"
             ],
-            "prepTime": "55 mins"
+            "prepTime": "55 mins",
+            "price": "15.00"
         },
         {
             "name": "Brisket Plant",
@@ -99,7 +106,8 @@
                 "2 leaves: lettuce",
                 "2 tbsp: mayo"
             ],
-            "prepTime": "45 mins"
+            "prepTime": "45 mins",
+            "price": "10.00"
         },
         {
             "name": "Spicy chicken",
@@ -110,7 +118,8 @@
                 "1 tbsp: relish",
                 "1 tbsp diced: jalapenos"
             ],
-            "prepTime": "50 mins"
+            "prepTime": "50 mins",
+            "price": "11.00"
         },
         {
             "name": "Tofu burger",
@@ -122,7 +131,8 @@
                 "3 slices: tomato",
                 "1 tbsp: relish"
             ],
-            "prepTime": "40 mins"
+            "prepTime": "40 mins",
+            "price": "10.50"
         },
         {
             "name": "Cheese burger",
@@ -133,7 +143,8 @@
                 "3 slices: red onion",
                 "1 tbsp: relish"
             ],
-            "prepTime": "55 mins"
+            "prepTime": "55 mins",
+            "price": "9.50"
         },
         {
             "name": "Double beef",
@@ -145,7 +156,8 @@
                 "2 leaves: lettuce",
                 "1 tbsp: relish"
             ],
-            "prepTime": "55 mins"
+            "prepTime": "55 mins",
+            "price": "15.00"
         }
     ],
     "basket": []

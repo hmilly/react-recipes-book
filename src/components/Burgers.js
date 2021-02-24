@@ -6,7 +6,7 @@ import {
 import { store } from "../appContext"
 
 function Burgers({ burgerObj }) {
-    const { setBurger, clicked } = useContext(store)
+    const { setItem, clicked } = useContext(store)
     //	const [state, dispatch] = useReducer(reducer, initialState)
 
     const p = burgerObj.ingredients.map((ing, j) =>
@@ -16,7 +16,7 @@ function Burgers({ burgerObj }) {
 
     return (
         <div className="menu_burger_card">
-            <Link to="/burgerCard" id="link" onClick={() => setBurger(burgerObj)}>
+            <Link to="/burgerCard" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
                 <div className="burger_card_img">
                     <img src={burgerObj.imageUrl} alt={burgerObj.name} />
                     <p>{burgerObj.name}</p>

@@ -45,7 +45,7 @@ function Burger() {
                         <p>820 cals/serving</p>
                     </div>
                     <p>{ingredientsList}</p>
-                    <button onClick={(e) => { clicked(e, state.selectedBurger.burger) }}>ADD TO BASKET</button>
+                    <button onClick={(e) => { clicked(e, state.selectedBurger) }}>ADD TO BASKET</button>
                 </div>
                 <div className="burger_elem_topr">
                     <img src={`${process.env.PUBLIC_URL}${state.selectedBurger.imageUrl}`} alt="burger" />
