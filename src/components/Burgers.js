@@ -7,7 +7,6 @@ import { store } from "../appContext"
 
 function Burgers({ burgerObj }) {
     const { setItem, clicked } = useContext(store)
-    //	const [state, dispatch] = useReducer(reducer, initialState)
 
     const p = burgerObj.ingredients.map((ing, j) =>
         j < burgerObj.ingredients.length - 1
@@ -28,7 +27,7 @@ function Burgers({ burgerObj }) {
                         <p>{burgerObj.prepTime}</p>
                     </div>
                     <div>
-                        <button className="add_btn" onClick={(e) => clicked(e, burgerObj)}>Add to basket</button>
+                        <button className="add_btn" onClick={(e) => clicked(e, burgerObj, 1)}>Add to basket</button>
                     </div>
                 </div>
             </Link>

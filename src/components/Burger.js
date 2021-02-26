@@ -1,18 +1,10 @@
 import React, {
     useContext
-    //, useEffect, useState
 } from "react";
 import { store } from "../appContext"
 
 function Burger() {
     const { state, clicked } = useContext(store)
-
-    // const [burger, setburger] = useState ({})
-
-    // useEffect(() => {
-    // setburger(state.selectedBurger)
-    // console.log(burger)
-    // }, [burger, state.selectedBurger])
 
     let ingredientsList
     let recipeTable
@@ -30,7 +22,6 @@ function Burger() {
         )
     }
 
-
     return (
         <div className="burger_elem">
             <div className="burger_elem_top">
@@ -45,7 +36,7 @@ function Burger() {
                         <p>820 cals/serving</p>
                     </div>
                     <p>{ingredientsList}</p>
-                    <button onClick={(e) => { clicked(e, state.selectedBurger) }}>ADD TO BASKET</button>
+                    <button onClick={(e) => { clicked(e, state.selectedBurger, 1) }}>ADD TO BASKET</button>
                 </div>
                 <div className="burger_elem_topr">
                     <img src={`${process.env.PUBLIC_URL}${state.selectedBurger.imageUrl}`} alt="burger" />

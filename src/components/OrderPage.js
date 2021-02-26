@@ -1,31 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { store } from "../appContext"
 
 function OrderPage({ UserForm }) {
-
-    const { state, deleteFromBasket } = useContext(store)
-    console.log(state.basketContents)
-
-
-    // const p = store.basketContents[0].ingredients.map((ing, j) =>
-    //     j < store.basketContents[0].ingredients.length - 1
-    //         ? `${ing.split(": ")[1]}, `
-    //         : `${ing.split(": ")[1]}.`)
-
-    const [totalPrice, setTotalPrice] = useState(0)
-    const [selectValue, setSelectValue] = useState(0)
-    
-    const handleSelectChange = (e, price) => {
-        const p = parseFloat(price)
-        const q = parseInt(e.target.value)
-        setSelectValue(q)
-        const equat = p*q
-        setTotalPrice(totalPrice + equat)
-        //console.log(totalPrice)
-        console.log(p, q, equat, totalPrice)
-    }
-
-
+    const { state, deleteFromBasket, clicked, totalPrice } = useContext(store)
 
     let burgers
     if (state.basketContents) {
@@ -39,7 +16,7 @@ function OrderPage({ UserForm }) {
                     <p>{b.burger.name}</p>
                     <div>
                         <h3>£{b.burger.price}</h3>
-                        <select name="quantity" value={selectValue} onChange={(e) => handleSelectChange(e, b.burger.price)}>
+                        <select name="quantity" value={b.quantity} onChange={(e) => clicked(e, b.burger, e.target.value)}>
                             <option value="1" >1</option>
                             <option value="2" >2</option>
                             <option value="3" >3</option>
@@ -52,7 +29,6 @@ function OrderPage({ UserForm }) {
             </div>
         )
     }
-
 
     return (
         <div className="order_page">
@@ -71,12 +47,11 @@ function OrderPage({ UserForm }) {
                 </div>
                 <div className="receipt_total">
                     <h3>Total Price:</h3>
-                    <h3>£{totalPrice}</h3>
+                    <h3>£{totalPrice > 0 ? totalPrice + 3 : totalPrice}</h3>
                 </div>
             </div>
         </div>
     )
 }
-
 
 export default OrderPage

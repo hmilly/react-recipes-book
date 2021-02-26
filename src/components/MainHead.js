@@ -2,12 +2,10 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 function MainHead() {
-
   let history = useHistory();
   const menu = () => {
-      history.push("/menu")
+    history.push("/menu")
   }
-
 
   return (
     <div className="main_head">

@@ -4,9 +4,7 @@ import {
     Link,
 } from "react-router-dom";
 
-
 function SpecialOffer() {
-
     return (
         <div>
             <div className="special_offer">
@@ -23,6 +21,5 @@ function SpecialOffer() {
         </div>
     )
 }
-
 
 export default SpecialOffer

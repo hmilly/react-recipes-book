@@ -1,9 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
 function UserForm() {
-
     const [users, setUsers] = useState([])
-
     useEffect(() => {
         const getUsers = async () => {
             await fetch('db.json')
@@ -89,6 +87,5 @@ function UserForm() {
         </div>
     )
 }
-
 
 export default UserForm

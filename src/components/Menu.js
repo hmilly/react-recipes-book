@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 function Menu({ Burgers }) {
     const [burgers, setBurgers] = useState([])
     const [num, setnum] = useState(9)
@@ -30,15 +29,13 @@ function Menu({ Burgers }) {
             </div>
             <div className="menu_mid">
                 {burgers.slice(0, num).map((b, i) => (
-                    <Burgers
-                        key={b.name}
-                        burgerObj={b}
-                    />
+                    <Burgers key={b.name} burgerObj={b} />
                 ))}
             </div>
             <div className="menu_bot">
-                <button className="onclickBtn" onClick={moreOrLess
-                }>{btn === true ? "SEE MORE" : "SEE LESS"}</button>
+                <button className="onclickBtn"
+                    onClick={moreOrLess}>{btn === true ? "SEE MORE" : "SEE LESS"}
+                </button>
             </div>
         </div>
     )

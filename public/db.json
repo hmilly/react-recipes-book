@@ -11,7 +11,7 @@
     ],
     "burgers": [
         {
-            "name": "Bacon Plant",
+            "name": "Bacon plant burger",
             "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "10 oz: bacon plant burger",
@@ -35,7 +35,7 @@
             "price": "11.50"
         },
         {
-            "name": "Chicken Plant",
+            "name": "Chicken plant burger",
             "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "6 oz: chicken plant burger",
@@ -73,7 +73,7 @@
             "price": "13.00"
         },
         {
-            "name": "Spicy Plant",
+            "name": "Spicy plant burger",
             "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "10 oz: bacon plant burger",
@@ -98,7 +98,7 @@
             "price": "15.00"
         },
         {
-            "name": "Brisket Plant",
+            "name": "Brisket plant burger",
             "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "8 oz: brisket plant burger",
@@ -110,7 +110,7 @@
             "price": "10.00"
         },
         {
-            "name": "Spicy chicken",
+            "name": "Spicy chicken burger",
             "imageUrl": "/assets/main1.png",
             "ingredients": [
                 "10 oz: chicken burger",
@@ -147,7 +147,7 @@
             "price": "9.50"
         },
         {
-            "name": "Double beef",
+            "name": "Double beef burger",
             "imageUrl": "/assets/main3.png",
             "ingredients": [
                 "2 x 6 oz: double beef patty",
@@ -159,6 +159,5 @@
             "prepTime": "55 mins",
             "price": "15.00"
         }
-    ],
-    "basket": []
+    ]
 }
