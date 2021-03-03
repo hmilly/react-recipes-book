@@ -1,27 +1,24 @@
-import React, { useContext} from "react";
-import {
-    Route,
-    Link,
-} from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Route, Link, } from "react-router-dom";
 import { store } from "../appContext"
 
 function Burgers({ burgerObj }) {
-   
     const { state, setItem, clicked } = useContext(store)
 
-    const p = burgerObj.ingredients.map((ing, j) =>
-        j < burgerObj.ingredients.length - 1
+    const [itemInBasket, setItemInBasket] = useState(false)
+    useEffect(() => {
+        state.basketContents.map(b => {
+            if (b.burger.name.includes(burgerObj.name))
+                setItemInBasket(true)
+
+        })
+    }, [state.basketContents, burgerObj])
+
+    const p = burgerObj.ingredients.map((ing, i) =>
+        i < burgerObj.ingredients.length - 1
             ? `${ing.split(": ")[1]}, `
             : `${ing.split(": ")[1]}.`)
 
-
-//  const [dis, setDis] = useState({disabled : false, txt : "Add to basket"})
-//        const disableButton =  state.basketContents.find(b => b.burger === burgerObj)
-
-        // useEffect(() => {
-        //     if ( disableButton ) setDis({disabled : true, txt : "Added to basket"})  
-        // },[disableButton])
-       
     return (
         <div className="menu_burger_card">
             <Link to="/burgerCard" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
@@ -36,7 +33,7 @@ function Burgers({ burgerObj }) {
                         <p>{burgerObj.prepTime}</p>
                     </div>
                     <div>
-                        <button className="add_btn" onClick={(e) => clicked(e, burgerObj, 1)}>Add to basket</button>
+                        <button className="add_btn" disabled={itemInBasket} onClick={(e) => clicked(e, burgerObj, 1)}>{itemInBasket ? "Added to basket" : "Add to basket"}</button>
                     </div>
                 </div>
             </Link>

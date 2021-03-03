@@ -8,8 +8,7 @@ function UserForm() {
         history.push("/complete")
     }
 
-
-    const { state, setItem } = useContext(store)
+    const { state } = useContext(store)
     // json-server -p 8080 ./public/db.json
 
     const [users, setUsers] = useState([])
@@ -32,6 +31,7 @@ function UserForm() {
     }
 
     const newUser = async () => {
+        const userOrder = state.basketContents.map(b => `${b.burger.name} x ${b.quantity}`)
         const configObject = await {
             method: "POST",
             headers: {
@@ -39,7 +39,7 @@ function UserForm() {
                 Accept: "application/json",
             },
             body: JSON.stringify({
-                ...userDetails
+                ...userDetails, "order": userOrder
             }),
         };
         await fetch(`http://localhost:8080/users`, configObject)

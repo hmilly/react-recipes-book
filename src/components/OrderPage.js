@@ -38,7 +38,7 @@ function OrderPage({ UserForm }) {
                     <button> basket</button>
                 </div>
                 <div className="receipt_main">
-                {burgers.length !== 0 ? burgers : <p>Nothing added to basket yet, please use the menu</p>}
+                    {burgers.length !== 0 ? burgers : <p>Nothing added to basket yet, please use the menu</p>}
                 </div>
                 <div className="receipt_delivery">
                     <h3>Delivery Fee:</h3>

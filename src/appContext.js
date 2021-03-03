@@ -63,7 +63,6 @@ const AppState = ({ children }) => {
     }
 
     const [totalPrice, setTotalPrice] = useState(0)
-
     useEffect(() => {
         const total = state.basketContents.reduce((all, bVal) => (
             all + (parseFloat(bVal.burger.price) * parseInt(bVal.quantity))
@@ -71,8 +70,6 @@ const AppState = ({ children }) => {
         setTotalPrice(total)
     }, [state.basketContents])
 
-
-    
 
     return <Provider
         value={{

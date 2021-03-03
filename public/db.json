@@ -7,7 +7,11 @@
       "email": "jm@gmail.com",
       "password": "jm",
       "phonenumber": 123456,
-      "postcode": "tn29"
+      "postcode": "tn29",
+      "order": [
+        "Bacon plant burger x3",
+        "Chicken burger x1"
+      ]
     },
     {
       "id": 2,
@@ -17,36 +21,41 @@
       "email": "pp@gmail.com",
       "password": "",
       "phonenumber": 78245364,
-      "postcode": "10 rob st"
+      "postcode": "10 rob st",
+      "order": [
+        "Chicken plant burger x3",
+        "Bacon burger x1"
+      ]
     },
     {
       "id": 3,
       "title": "Mr",
-      "firstname": "a",
-      "lastname": "j",
-      "email": "a@y.com",
-      "password": "",
-      "phonenumber": 124563879,
-      "postcode": "10 the lane"
+      "firstname": "John",
+      "lastname": "Gatti",
+      "email": "jg@hotmail.com",
+      "password": "Iamagod123",
+      "phonenumber": 1258963214,
+      "postcode": "10 the loo",
+      "order": [
+        "Bacon plant burger x 1",
+        "USA burger x 2",
+        "Spicy chicken burger x 2"
+      ]
     },
     {
       "id": 4,
       "title": "Mr",
-      "firstname": "peter",
-      "lastname": "Sut",
-      "email": "ps@jdog.com",
-      "password": "",
-      "phonenumber": 123462345,
-      "postcode": "7 highgate"
-    },
-    {
-      "id": 5,
-      "title": "Mrs",
-      "firstname": "j",
-      "lastname": "dawg",
-      "email": "jdawg@hotmail.com",
-      "phonenumber": 781546923,
-      "postcode": "2 the plup"
+      "firstname": "John",
+      "lastname": "Johnson",
+      "email": "jj@hotmail.com",
+      "password": "yesitsmejogn",
+      "phonenumber": 123589647,
+      "postcode": "1 yes yes",
+      "order": [
+        "Bacon plant burger x 1",
+        "USA burger x 2",
+        "Spicy chicken burger x 2"
+      ]
     }
   ],
   "burgers": [

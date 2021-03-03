@@ -14,7 +14,6 @@ function MainHead() {
         <button className="get_started" onClick={menu}>GET STARTED</button>
       </div>
     </div>
-
   )
 }
 
