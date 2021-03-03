@@ -32,7 +32,6 @@ const AppState = ({ children }) => {
     }, initialState);
 
     const setItem = (typeCase, burgerObj) => {
-        // console.log("set", burgerObj)
         dispatch({
             type: typeCase,
             payload: burgerObj
@@ -49,14 +48,15 @@ const AppState = ({ children }) => {
     }
 
     const clicked = (e, burgerObj, quantity) => {
-        console.log("click", burgerObj)
         e.preventDefault();
         const findBurgerobj = state.basketContents.find(b => b.burger.name.includes(burgerObj.name))
         if (findBurgerobj) {
             const allObjects = state.basketContents
-            let edited = allObjects.splice(allObjects.indexOf(findBurgerobj), 1)
-            edited = { burger: edited[0].burger, quantity: quantity }
-            setItem("SETBASKET", [...allObjects, edited])
+            const index = allObjects.indexOf(findBurgerobj)
+            let edited = allObjects.splice(index, 1)
+            edited = { burger: edited[0].burger, quantity: parseInt(quantity) }
+            allObjects.splice(index, 0, edited)
+            setItem("SETBASKET", [...allObjects])
         } else {
             setItem("SETBASKET", [...state.basketContents, { burger: burgerObj, quantity: 1 }])
         }
@@ -70,6 +70,9 @@ const AppState = ({ children }) => {
         ), 0)
         setTotalPrice(total)
     }, [state.basketContents])
+
+
+    
 
     return <Provider
         value={{

@@ -8,7 +8,6 @@ function OrderPage({ UserForm }) {
     if (state.basketContents) {
         burgers = state.basketContents.map((b, i) =>
             <div className="burger_in_cart" key={i}>
-                {console.log(b.quantity)}
                 <div className="receipt_main_img">
                     <img src={`${process.env.PUBLIC_URL}${b.burger.imageUrl}`} alt="burger" />
                 </div>
@@ -39,7 +38,7 @@ function OrderPage({ UserForm }) {
                     <button> basket</button>
                 </div>
                 <div className="receipt_main">
-                    {burgers}
+                {burgers.length !== 0 ? burgers : <p>Nothing added to basket yet, please use the menu</p>}
                 </div>
                 <div className="receipt_delivery">
                     <h3>Delivery Fee:</h3>

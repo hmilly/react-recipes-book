@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import {
     Route,
     Link,
@@ -6,13 +6,22 @@ import {
 import { store } from "../appContext"
 
 function Burgers({ burgerObj }) {
-    const { setItem, clicked } = useContext(store)
+   
+    const { state, setItem, clicked } = useContext(store)
 
     const p = burgerObj.ingredients.map((ing, j) =>
         j < burgerObj.ingredients.length - 1
             ? `${ing.split(": ")[1]}, `
             : `${ing.split(": ")[1]}.`)
 
+
+//  const [dis, setDis] = useState({disabled : false, txt : "Add to basket"})
+//        const disableButton =  state.basketContents.find(b => b.burger === burgerObj)
+
+        // useEffect(() => {
+        //     if ( disableButton ) setDis({disabled : true, txt : "Added to basket"})  
+        // },[disableButton])
+       
     return (
         <div className="menu_burger_card">
             <Link to="/burgerCard" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>

@@ -5,6 +5,8 @@ function Menu({ Burgers }) {
     const [num, setnum] = useState(9)
     const [btn, setbtn] = useState(true)
 
+// json-server -p 8080 ./public/db.json
+
     useEffect(() => {
         const getBurgers = async () => {
             await fetch('db.json')

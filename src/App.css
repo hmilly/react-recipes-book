@@ -271,7 +271,8 @@
 }
 .burger_card_img p{
     position: absolute;
-    background-color: gold;
+    background-color: rgba(255, 217, 0, 0.74);
+    border-radius: 5px;
     top: 70%;
     left: 10%;
     padding: 1%;
@@ -292,7 +293,7 @@
 }
 .burger_card_txt div{
     display: flex;
-    width: 50%;
+    width: 100%;
     height: 20%;
     color: rgb(255, 217, 0);
     font-weight: bolder;
@@ -307,24 +308,25 @@
 
 
 
-
-
-
 .menu_bot {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 2%;
 }
-.menu_bot button{
+.menu_bot button, .add_btn{
     color: black;
     background: gold;
     padding: 2% 4%;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 3px;
+    border-radius: 5px;
 }
-.menu_bot button:hover, .burger_elem_topl button:hover{
+.add_btn{
+    font-size: 14px;
+    font-weight: normal;
+}
+.menu_bot button:hover, .burger_elem_topl button:hover, .add_btn:hover{
     cursor: pointer;
     opacity: 0.6;
 }

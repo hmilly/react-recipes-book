@@ -1,163 +1,203 @@
 {
-    "users": [
-        {
-            "firstname": "Martin",
-            "lastname": "John",
-            "email": "jm@gmail.com",
-            "password": "jm",
-            "phonenumber": 123456,
-            "postcode": "tn29"
-        }
-    ],
-    "burgers": [
-        {
-            "name": "Bacon plant burger",
-            "imageUrl": "/assets/main1.png",
-            "ingredients": [
-                "10 oz: bacon plant burger",
-                "2 tbsp slices: red onion",
-                "1 tbsp: relish"
-            ],
-            "prepTime": "40 mins",
-            "price": "9.00"
-        },
-        {
-            "name": "Bacon burger",
-            "imageUrl": "/assets/main3.png",
-            "ingredients": [
-                "2 Strips: bacon",
-                "8 oz: beef burger",
-                "2 slices: cheese",
-                "2 leaves: lettuce",
-                "1 tbsp: mayo"
-            ],
-            "prepTime": "55 mins",
-            "price": "11.50"
-        },
-        {
-            "name": "Chicken plant burger",
-            "imageUrl": "/assets/main1.png",
-            "ingredients": [
-                "6 oz: chicken plant burger",
-                "2 slices: red onion",
-                "1 tbsp: relish"
-            ],
-            "prepTime": "45 mins",
-            "price": "9.00"
-        },
-        {
-            "name": "Chicken burger",
-            "imageUrl": "/assets/main3.png",
-            "ingredients": [
-                "2 Strips: bacon",
-                "8 oz: beef burger",
-                "2 slices: cheese",
-                "2 leaves: lettuce",
-                "1 tbsp: mayo"
-            ],
-            "prepTime": "50 mins",
-            "price": "11.00"
-        },
-        {
-            "name": "USA burger",
-            "imageUrl": "/assets/main1.png",
-            "ingredients": [
-                "2 Strips: bacon",
-                "8 oz: beef burger",
-                "2 slices: cheese",
-                "2 leaves: lettuce",
-                "3 slices: tomato",
-                "1 tbsp: mayo"
-            ],
-            "prepTime": "49 mins",
-            "price": "13.00"
-        },
-        {
-            "name": "Spicy plant burger",
-            "imageUrl": "/assets/main3.png",
-            "ingredients": [
-                "10 oz: bacon plant burger",
-                "2 slices: red onion",
-                "2 slices: tomato",
-                "2 leaves: lettuce",
-                "1 tbsp diced: jalapenos"
-            ],
-            "prepTime": "35 mins",
-            "price": "9.50"
-        },
-        {
-            "name": "Brisket burger",
-            "imageUrl": "/assets/main1.png",
-            "ingredients": [
-                "10 oz: brisket",
-                "2 slices: tomato",
-                "2 leaves: lettuce",
-                "1 tbsp: mayo"
-            ],
-            "prepTime": "55 mins",
-            "price": "15.00"
-        },
-        {
-            "name": "Brisket plant burger",
-            "imageUrl": "/assets/main3.png",
-            "ingredients": [
-                "8 oz: brisket plant burger",
-                "2 slices: tomato",
-                "2 leaves: lettuce",
-                "2 tbsp: mayo"
-            ],
-            "prepTime": "45 mins",
-            "price": "10.00"
-        },
-        {
-            "name": "Spicy chicken burger",
-            "imageUrl": "/assets/main1.png",
-            "ingredients": [
-                "10 oz: chicken burger",
-                "2 slices: red onion",
-                "1 tbsp: relish",
-                "1 tbsp diced: jalapenos"
-            ],
-            "prepTime": "50 mins",
-            "price": "11.00"
-        },
-        {
-            "name": "Tofu burger",
-            "imageUrl": "/assets/main3.png",
-            "ingredients": [
-                "6 oz: tofu plant burger",
-                "2 slices: red onion",
-                "2 leaves: lettuce",
-                "3 slices: tomato",
-                "1 tbsp: relish"
-            ],
-            "prepTime": "40 mins",
-            "price": "10.50"
-        },
-        {
-            "name": "Cheese burger",
-            "imageUrl": "/assets/main1.png",
-            "ingredients": [
-                "10 oz: beef burger",
-                "2 slices: cheese",
-                "3 slices: red onion",
-                "1 tbsp: relish"
-            ],
-            "prepTime": "55 mins",
-            "price": "9.50"
-        },
-        {
-            "name": "Double beef burger",
-            "imageUrl": "/assets/main3.png",
-            "ingredients": [
-                "2 x 6 oz: double beef patty",
-                "3 slices: red onion",
-                "2 slices: cheese",
-                "2 leaves: lettuce",
-                "1 tbsp: relish"
-            ],
-            "prepTime": "55 mins",
-            "price": "15.00"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Martin",
+      "lastname": "John",
+      "email": "jm@gmail.com",
+      "password": "jm",
+      "phonenumber": 123456,
+      "postcode": "tn29"
+    },
+    {
+      "id": 2,
+      "title": "Mr",
+      "firstname": "Paul",
+      "lastname": "Peter",
+      "email": "pp@gmail.com",
+      "password": "",
+      "phonenumber": 78245364,
+      "postcode": "10 rob st"
+    },
+    {
+      "id": 3,
+      "title": "Mr",
+      "firstname": "a",
+      "lastname": "j",
+      "email": "a@y.com",
+      "password": "",
+      "phonenumber": 124563879,
+      "postcode": "10 the lane"
+    },
+    {
+      "id": 4,
+      "title": "Mr",
+      "firstname": "peter",
+      "lastname": "Sut",
+      "email": "ps@jdog.com",
+      "password": "",
+      "phonenumber": 123462345,
+      "postcode": "7 highgate"
+    },
+    {
+      "id": 5,
+      "title": "Mrs",
+      "firstname": "j",
+      "lastname": "dawg",
+      "email": "jdawg@hotmail.com",
+      "phonenumber": 781546923,
+      "postcode": "2 the plup"
+    }
+  ],
+  "burgers": [
+    {
+      "name": "Bacon plant burger",
+      "imageUrl": "/assets/main1.png",
+      "ingredients": [
+        "10 oz: bacon plant burger",
+        "2 tbsp slices: red onion",
+        "1 tbsp: relish"
+      ],
+      "prepTime": "40 mins",
+      "price": "9.00"
+    },
+    {
+      "name": "Bacon burger",
+      "imageUrl": "/assets/main3.png",
+      "ingredients": [
+        "2 Strips: bacon",
+        "8 oz: beef burger",
+        "2 slices: cheese",
+        "2 leaves: lettuce",
+        "1 tbsp: mayo"
+      ],
+      "prepTime": "55 mins",
+      "price": "11.50"
+    },
+    {
+      "name": "Chicken plant burger",
+      "imageUrl": "/assets/main1.png",
+      "ingredients": [
+        "6 oz: chicken plant burger",
+        "2 slices: red onion",
+        "1 tbsp: relish"
+      ],
+      "prepTime": "45 mins",
+      "price": "9.00"
+    },
+    {
+      "name": "Chicken burger",
+      "imageUrl": "/assets/main3.png",
+      "ingredients": [
+        "2 Strips: bacon",
+        "8 oz: beef burger",
+        "2 slices: cheese",
+        "2 leaves: lettuce",
+        "1 tbsp: mayo"
+      ],
+      "prepTime": "50 mins",
+      "price": "11.00"
+    },
+    {
+      "name": "USA burger",
+      "imageUrl": "/assets/main1.png",
+      "ingredients": [
+        "2 Strips: bacon",
+        "8 oz: beef burger",
+        "2 slices: cheese",
+        "2 leaves: lettuce",
+        "3 slices: tomato",
+        "1 tbsp: mayo"
+      ],
+      "prepTime": "49 mins",
+      "price": "13.00"
+    },
+    {
+      "name": "Spicy plant burger",
+      "imageUrl": "/assets/main3.png",
+      "ingredients": [
+        "10 oz: bacon plant burger",
+        "2 slices: red onion",
+        "2 slices: tomato",
+        "2 leaves: lettuce",
+        "1 tbsp diced: jalapenos"
+      ],
+      "prepTime": "35 mins",
+      "price": "9.50"
+    },
+    {
+      "name": "Brisket burger",
+      "imageUrl": "/assets/main1.png",
+      "ingredients": [
+        "10 oz: brisket",
+        "2 slices: tomato",
+        "2 leaves: lettuce",
+        "1 tbsp: mayo"
+      ],
+      "prepTime": "55 mins",
+      "price": "15.00"
+    },
+    {
+      "name": "Brisket plant burger",
+      "imageUrl": "/assets/main3.png",
+      "ingredients": [
+        "8 oz: brisket plant burger",
+        "2 slices: tomato",
+        "2 leaves: lettuce",
+        "2 tbsp: mayo"
+      ],
+      "prepTime": "45 mins",
+      "price": "10.00"
+    },
+    {
+      "name": "Spicy chicken burger",
+      "imageUrl": "/assets/main1.png",
+      "ingredients": [
+        "10 oz: chicken burger",
+        "2 slices: red onion",
+        "1 tbsp: relish",
+        "1 tbsp diced: jalapenos"
+      ],
+      "prepTime": "50 mins",
+      "price": "11.00"
+    },
+    {
+      "name": "Tofu burger",
+      "imageUrl": "/assets/main3.png",
+      "ingredients": [
+        "6 oz: tofu plant burger",
+        "2 slices: red onion",
+        "2 leaves: lettuce",
+        "3 slices: tomato",
+        "1 tbsp: relish"
+      ],
+      "prepTime": "40 mins",
+      "price": "10.50"
+    },
+    {
+      "name": "Cheese burger",
+      "imageUrl": "/assets/main1.png",
+      "ingredients": [
+        "10 oz: beef burger",
+        "2 slices: cheese",
+        "3 slices: red onion",
+        "1 tbsp: relish"
+      ],
+      "prepTime": "55 mins",
+      "price": "9.50"
+    },
+    {
+      "name": "Double beef burger",
+      "imageUrl": "/assets/main3.png",
+      "ingredients": [
+        "2 x 6 oz: double beef patty",
+        "3 slices: red onion",
+        "2 slices: cheese",
+        "2 leaves: lettuce",
+        "1 tbsp: relish"
+      ],
+      "prepTime": "55 mins",
+      "price": "15.00"
+    }
+  ]
 }

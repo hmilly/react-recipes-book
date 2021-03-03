@@ -1,7 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { useHistory } from "react-router-dom";
+import { store } from "../appContext"
 
 function UserForm() {
+    let history = useHistory();
+    const orderComplete = () => {
+        history.push("/complete")
+    }
+
+
+    const { state, setItem } = useContext(store)
+    // json-server -p 8080 ./public/db.json
+
     const [users, setUsers] = useState([])
+    const [userDetails, setUserDetails] = useState({})
+
     useEffect(() => {
         const getUsers = async () => {
             await fetch('db.json')
@@ -10,24 +23,12 @@ function UserForm() {
                 .catch((error) => console.log(error));
         }
         getUsers()
-    }, [])
-
-    const [userDetails, setUserDetails] = useState({
-        "id": users.length + 1,
-        "title": "",
-        "firstname": "",
-        "lastname": "",
-        "email": "",
-        "password": "",
-        "phonenumber": 0,
-        "postcode": ""
-    })
+    }, [userDetails])
 
     const handleChange = (e) => {
         const name = e.target.name
         const v = name !== "phonenumber" ? e.target.value : parseInt(e.target.value)
-        setUserDetails({ ...userDetails, [name]: v })
-        console.log(userDetails)
+        setUserDetails({ ...userDetails, id: users.length + 1, [name]: v })
     }
 
     const newUser = async () => {
@@ -41,18 +42,22 @@ function UserForm() {
                 ...userDetails
             }),
         };
-        await fetch(`${process.env.PUBLIC_URL}/db.json`, configObject)
+        await fetch(`http://localhost:8080/users`, configObject)
             .then((res) => (res.ok ? res.json() : "Oops we couldn't update that!"))
             .catch((error) => console.log(error));
+        orderComplete()
     };
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        //users.push(userDetails) 
-        users.map(u => u.email.toLowerCase() === userDetails.email.toLowerCase()
-            ? window.alert("Email entered is currently in use, please re-enter and try again")
-            : newUser()
-        )
+        if (state.basketContents.length === 0) {
+            window.alert("please add something to the basket")
+        } else {
+            users.map(u => u.email.toLowerCase() === userDetails.email.toLowerCase()
+                ? window.alert("Email entered is currently in use, please re-enter and try again")
+                : newUser()
+            )
+        }
     }
 
     return (
@@ -74,7 +79,7 @@ function UserForm() {
                 </div>
                 <input type="text" name="email" placeholder="Email address*"
                     onChange={(e) => handleChange(e)} />
-                <input type="password" name="password" placeholder="Password*" minLength="8" required
+                <input type="password" name="password" placeholder="Password*" minLength="8" required={true}
                     onChange={(e) => handleChange(e)} />
                 <p>Contact number:</p>
                 <input type="number" name="phonenumber" placeholder="Phone number*"
