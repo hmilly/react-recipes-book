@@ -53,10 +53,9 @@ function UserForm() {
         if (state.basketContents.length === 0) {
             window.alert("please add something to the basket")
         } else {
-            users.map(u => u.email.toLowerCase() === userDetails.email.toLowerCase()
-                ? window.alert("Email entered is currently in use, please re-enter and try again")
-                : newUser()
-            )
+            const u = users.find(u => u.email.toLowerCase() === userDetails.email.toLowerCase())
+            u ? window.alert("Email entered is currently in use, please re-enter and try again")
+              : newUser()
         }
     }
 
