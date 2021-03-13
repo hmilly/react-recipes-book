@@ -37,23 +37,21 @@
     width: 50%;
     align-self: flex-end;
     padding-top: 1%;
-    list-style-type: none;
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.nav li{
-
+.nav a{
     margin: auto;
     font-size: 16px;
     color: white;
     text-decoration: none;
 }
-.nav_link:visited{
+.nav a:visited{
     color: white;
     text-decoration: none;
 }
-.nav li:hover{
+.nav a:hover{
     border-bottom: 1px solid gold;
     cursor: pointer;
     text-decoration: none;
