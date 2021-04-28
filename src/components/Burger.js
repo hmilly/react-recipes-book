@@ -65,7 +65,7 @@ function Burger() {
                                     <td>potato buns</td>
                                     <td>2</td>
                                 </tr>
-                                {!recipeTable}
+                                {recipeTable}
                             </tbody>
                         </table>
                     </div>
