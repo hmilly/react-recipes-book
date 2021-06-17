@@ -38,7 +38,7 @@ function MainContent() {
                         <img src={`${process.env.PUBLIC_URL}/assets/main2.png`} alt="shopping_img" />
                     </div>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}/assets/main3.png`} alt="burger" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/7.png`} alt="burger" />
                     </div>
                 </div>
             </div>

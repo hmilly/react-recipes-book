@@ -61,7 +61,7 @@
   "burgers": [
     {
       "name": "Bacon plant burger",
-      "imageUrl": "/assets/main1.png",
+      "imageUrl": "/assets/1.png",
       "ingredients": [
         "10 oz: bacon plant burger",
         "2 tbsp slices: red onion",
@@ -72,9 +72,9 @@
     },
     {
       "name": "Bacon burger",
-      "imageUrl": "/assets/main3.png",
+      "imageUrl": "/assets/2.png",
       "ingredients": [
-        "2 Strips: bacon",
+        "2 strips: bacon",
         "8 oz: beef burger",
         "2 slices: cheese",
         "2 leaves: lettuce",
@@ -85,9 +85,9 @@
     },
     {
       "name": "Chicken plant burger",
-      "imageUrl": "/assets/main1.png",
+      "imageUrl": "/assets/3.png",
       "ingredients": [
-        "6 oz: chicken plant burger",
+        "6 oz: battered chicken plant burger",
         "2 slices: red onion",
         "1 tbsp: relish"
       ],
@@ -96,10 +96,10 @@
     },
     {
       "name": "Chicken burger",
-      "imageUrl": "/assets/main3.png",
+      "imageUrl": "/assets/4.png",
       "ingredients": [
-        "2 Strips: bacon",
-        "8 oz: beef burger",
+        "2 strips: bacon",
+        "2 breasts: battered chicken",
         "2 slices: cheese",
         "2 leaves: lettuce",
         "1 tbsp: mayo"
@@ -109,11 +109,11 @@
     },
     {
       "name": "USA burger",
-      "imageUrl": "/assets/main1.png",
+      "imageUrl": "/assets/5.png",
       "ingredients": [
         "2 Strips: bacon",
         "8 oz: beef burger",
-        "2 slices: cheese",
+        "2 slices: american cheese",
         "2 leaves: lettuce",
         "3 slices: tomato",
         "1 tbsp: mayo"
@@ -123,9 +123,9 @@
     },
     {
       "name": "Spicy plant burger",
-      "imageUrl": "/assets/main3.png",
+      "imageUrl": "/assets/6.png",
       "ingredients": [
-        "10 oz: bacon plant burger",
+        "10 oz: facon infused plant burger",
         "2 slices: red onion",
         "2 slices: tomato",
         "2 leaves: lettuce",
@@ -136,9 +136,9 @@
     },
     {
       "name": "Brisket burger",
-      "imageUrl": "/assets/main1.png",
+      "imageUrl": "/assets/7.png",
       "ingredients": [
-        "10 oz: brisket",
+        "10 oz: beef brisket",
         "2 slices: tomato",
         "2 leaves: lettuce",
         "1 tbsp: mayo"
@@ -148,7 +148,7 @@
     },
     {
       "name": "Brisket plant burger",
-      "imageUrl": "/assets/main3.png",
+      "imageUrl": "/assets/8.png",
       "ingredients": [
         "8 oz: brisket plant burger",
         "2 slices: tomato",
@@ -160,9 +160,9 @@
     },
     {
       "name": "Spicy chicken burger",
-      "imageUrl": "/assets/main1.png",
+      "imageUrl": "/assets/9.png",
       "ingredients": [
-        "10 oz: chicken burger",
+        "2 breasts: steamed chicken",
         "2 slices: red onion",
         "1 tbsp: relish",
         "1 tbsp diced: jalapenos"
@@ -172,9 +172,9 @@
     },
     {
       "name": "Tofu burger",
-      "imageUrl": "/assets/main3.png",
+      "imageUrl": "/assets/10.png",
       "ingredients": [
-        "6 oz: tofu plant burger",
+        "2 slices: tofu burger",
         "2 slices: red onion",
         "2 leaves: lettuce",
         "3 slices: tomato",
@@ -185,7 +185,7 @@
     },
     {
       "name": "Cheese burger",
-      "imageUrl": "/assets/main1.png",
+      "imageUrl": "/assets/11.png",
       "ingredients": [
         "10 oz: beef burger",
         "2 slices: cheese",
@@ -197,7 +197,7 @@
     },
     {
       "name": "Double beef burger",
-      "imageUrl": "/assets/main3.png",
+      "imageUrl": "/assets/12.png",
       "ingredients": [
         "2 x 6 oz: double beef patty",
         "3 slices: red onion",
