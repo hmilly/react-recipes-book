@@ -56,6 +56,10 @@
     cursor: pointer;
     text-decoration: none;
 }
+.nav img{
+    width: 90%;
+    height: auto;
+}
 
 /* main page header */
 .main_head{
@@ -122,6 +126,8 @@
     flex-direction: row;
 }
 .socials > img{
+    width: 15%;
+    height: auto;
     margin: 2% 2% 2% 0;
 }
 .socials > img:hover{
@@ -343,6 +349,9 @@
 .burger_elem_topr{
     flex-basis: 55%;
     padding: 5% 0;
+}
+.burger_elem_topr img{
+    width: 100%;
 }
 .bacon-plant{
     width: 35%;

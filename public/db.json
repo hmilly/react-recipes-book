@@ -61,10 +61,11 @@
   "burgers": [
     {
       "name": "Bacon plant burger",
-      "imageUrl": "/assets/1.png",
+      "imageUrl": "/assets/1.jpg",
       "ingredients": [
         "10 oz: bacon plant burger",
         "2 tbsp slices: red onion",
+        "2 slices: tomato",
         "1 tbsp: relish"
       ],
       "prepTime": "40 mins",
@@ -72,12 +73,12 @@
     },
     {
       "name": "Bacon burger",
-      "imageUrl": "/assets/2.png",
+      "imageUrl": "/assets/2.jpg",
       "ingredients": [
         "2 strips: bacon",
         "8 oz: beef burger",
         "2 slices: cheese",
-        "2 leaves: lettuce",
+        "2: pickles",
         "1 tbsp: mayo"
       ],
       "prepTime": "55 mins",
@@ -85,23 +86,25 @@
     },
     {
       "name": "Chicken plant burger",
-      "imageUrl": "/assets/3.png",
+      "imageUrl": "/assets/3.jpg",
       "ingredients": [
-        "6 oz: battered chicken plant burger",
+        "6 oz: chicken plant burger",
         "2 slices: red onion",
-        "1 tbsp: relish"
+        "2 slices: tomato",
+        "2 leaves: lettuce",
+        "1 slice: cheese"
       ],
       "prepTime": "45 mins",
       "price": "9.00"
     },
     {
       "name": "Chicken burger",
-      "imageUrl": "/assets/4.png",
+      "imageUrl": "/assets/4.jpg",
       "ingredients": [
-        "2 strips: bacon",
         "2 breasts: battered chicken",
         "2 slices: cheese",
         "2 leaves: lettuce",
+        "2 slices: tomato",
         "1 tbsp: mayo"
       ],
       "prepTime": "50 mins",
@@ -109,9 +112,8 @@
     },
     {
       "name": "USA burger",
-      "imageUrl": "/assets/5.png",
+      "imageUrl": "/assets/5.jpg",
       "ingredients": [
-        "2 Strips: bacon",
         "8 oz: beef burger",
         "2 slices: american cheese",
         "2 leaves: lettuce",
@@ -123,10 +125,10 @@
     },
     {
       "name": "Spicy plant burger",
-      "imageUrl": "/assets/6.png",
+      "imageUrl": "/assets/6.jpg",
       "ingredients": [
-        "10 oz: facon infused plant burger",
-        "2 slices: red onion",
+        "2 slices: facon",
+        "10 oz: plant burger",
         "2 slices: tomato",
         "2 leaves: lettuce",
         "1 tbsp diced: jalapenos"
@@ -141,6 +143,7 @@
         "10 oz: beef brisket",
         "2 slices: tomato",
         "2 leaves: lettuce",
+        "2 slices: red onion",
         "1 tbsp: mayo"
       ],
       "prepTime": "55 mins",
@@ -148,23 +151,23 @@
     },
     {
       "name": "Brisket plant burger",
-      "imageUrl": "/assets/8.png",
+      "imageUrl": "/assets/8.jpg",
       "ingredients": [
-        "8 oz: brisket plant burger",
-        "2 slices: tomato",
+        "6 oz: brisket plant shredded",
+        "2 slices: red onion",
         "2 leaves: lettuce",
-        "2 tbsp: mayo"
+        "2 tbsp: vegan mayo"
       ],
       "prepTime": "45 mins",
       "price": "10.00"
     },
     {
       "name": "Spicy chicken burger",
-      "imageUrl": "/assets/9.png",
+      "imageUrl": "/assets/9.jpg",
       "ingredients": [
         "2 breasts: steamed chicken",
-        "2 slices: red onion",
-        "1 tbsp: relish",
+        "2 slices: tomato",
+        "1 slice: cheese",
         "1 tbsp diced: jalapenos"
       ],
       "prepTime": "50 mins",
@@ -172,11 +175,10 @@
     },
     {
       "name": "Tofu burger",
-      "imageUrl": "/assets/10.png",
+      "imageUrl": "/assets/10.jpg",
       "ingredients": [
         "2 slices: tofu burger",
         "2 slices: red onion",
-        "2 leaves: lettuce",
         "3 slices: tomato",
         "1 tbsp: relish"
       ],
@@ -185,25 +187,27 @@
     },
     {
       "name": "Cheese burger",
-      "imageUrl": "/assets/11.png",
+      "imageUrl": "/assets/11.jpg",
       "ingredients": [
         "10 oz: beef burger",
         "2 slices: cheese",
         "3 slices: red onion",
-        "1 tbsp: relish"
+        "2 leaves: lettuce",
+        "2 slices: pickle"
       ],
       "prepTime": "55 mins",
       "price": "9.50"
     },
     {
       "name": "Double beef burger",
-      "imageUrl": "/assets/12.png",
+      "imageUrl": "/assets/12.jpg",
       "ingredients": [
         "2 x 6 oz: double beef patty",
         "3 slices: red onion",
         "2 slices: cheese",
         "2 leaves: lettuce",
-        "1 tbsp: relish"
+        "2 slices: red onion",
+        "2 slices: pickle"
       ],
       "prepTime": "55 mins",
       "price": "15.00"
