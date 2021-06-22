@@ -22,7 +22,6 @@ import OrderComplete from "./components/OrderComplete"
 function App() {
 	return (
 		<Router>
-			<div className="route">
 				<div className="app">
 					<Nav />
 					<Switch>
@@ -36,7 +35,6 @@ function App() {
 							<Footer />
 						</Route>
 						<Route path="/burgerCard">
-							<MainHead />
 							<Burger />
 							<SpecialOffer />
 							<Footer />
@@ -53,7 +51,6 @@ function App() {
 						</Route>
 					</Switch>
 				</div>
-			</div>
 		</Router>
 	)
 }

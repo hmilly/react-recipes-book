@@ -33,12 +33,12 @@ function Footer() {
 			</div>
 			<div>
 				<h2>Follow Us</h2>
-				<div className="socials">
+				<section>
 					<img src={`${process.env.PUBLIC_URL}/assets/insta.png`} alt="I"></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/fb.png`} alt="F" ></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/tw.png`} alt="T" ></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/wh.png`} alt="W" ></img>
-				</div>
+				</section>
 			</div>
 		</div>
 	)

@@ -7,10 +7,10 @@ function Burgers({ burgerObj }) {
 
     const [itemInBasket, setItemInBasket] = useState(false)
     useEffect(() => {
+        // eslint-disable-next-line array-callback-return
         state.basketContents.map(b => {
             if (b.burger.name.includes(burgerObj.name))
                 setItemInBasket(true)
-
         })
     }, [state.basketContents, burgerObj])
 
@@ -20,7 +20,7 @@ function Burgers({ burgerObj }) {
             : `${ing.split(": ")[1]}.`)
 
     return (
-        <div className="menu_burger_card">
+        <div className="burger_card">
             <Link to="/burgerCard" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
                 <div className="burger_card_img">
                     <img src={burgerObj.imageUrl} alt={burgerObj.name} />

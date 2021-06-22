@@ -3,7 +3,7 @@ import React from "react";
 function MainContent() {
     return (
         <div>
-            <div className="main">
+            <div className="main_cont">
                 <div className="mainLeft">
                     <div>
                         <img className="main-img-1" src={`${process.env.PUBLIC_URL}/assets/maingbg1.png`} alt="burger_logo" />

@@ -45,7 +45,7 @@ function Burger() {
                         <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
                         <p>820 cals/serving</p>
                     </div>
-                    <p>{!ingredientsList}</p>
+                    <p>Ingredients: <br/>{ingredientsList}</p>
                     <button disabled={itemInBasket} onClick={(e) => { clicked(e, selectedBurger, 1) }}>{itemInBasket ? "ADDED TO BASKET!" : "ADD TO BASKET"}</button>
                 </div>
                 <div className="burger_elem_topr">
