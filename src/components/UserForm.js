@@ -55,40 +55,38 @@ function UserForm() {
         } else {
             const u = users.find(u => u.email.toLowerCase() === userDetails.email.toLowerCase())
             u ? window.alert("Email entered is currently in use, please re-enter and try again")
-              : newUser()
+                : newUser()
         }
     }
 
     return (
-        <div className="order_page_form">
-            <form>
-                <p>Your details:</p>
-                <select name="title" placeholder="Title" onChange={(e) => handleChange(e)} >
-                    <option value="Mr" >Select:</option>
-                    <option value="Mr" >Mr</option>
-                    <option value="Mrs" >Mrs</option>
-                    <option value="Ms" >Ms</option>
-                    <option value="Mx" >Mx</option>
-                </select>
-                <div>
-                    <input type="text" name="firstname" placeholder="First name*"
-                        onChange={(e) => handleChange(e)} />
-                    <input type="text" name="lastname" placeholder="Last name*"
-                        onChange={(e) => handleChange(e)} />
-                </div>
-                <input type="text" name="email" placeholder="Email address*"
+        <form>
+            <h1>Your details:</h1>
+            <select name="title" placeholder="Title" onChange={(e) => handleChange(e)} >
+                <option value="Mr" >Select:</option>
+                <option value="Mr" >Mr</option>
+                <option value="Mrs" >Mrs</option>
+                <option value="Ms" >Ms</option>
+                <option value="Mx" >Mx</option>
+            </select>
+            <section>
+                <input type="text" name="firstname" placeholder="First name*"
                     onChange={(e) => handleChange(e)} />
-                <input type="password" name="password" placeholder="Password*" minLength="8" required={true}
+                <input type="text" name="lastname" placeholder="Last name*"
                     onChange={(e) => handleChange(e)} />
-                <p>Contact number:</p>
-                <input type="number" name="phonenumber" placeholder="Phone number*"
-                    onChange={(e) => handleChange(e)} />
-                <p>Delivery address:</p>
-                <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
-                    onChange={(e) => handleChange(e)} />
-                <button type="submit" value="submit" onClick={(e) => handleSubmit(e)}>SUBMIT</button>
-            </form>
-        </div>
+            </section>
+            <input type="text" name="email" placeholder="Email address*"
+                onChange={(e) => handleChange(e)} />
+            <input type="password" name="password" placeholder="Password*" minLength="8" required={true}
+                onChange={(e) => handleChange(e)} />
+            <p>Contact number:</p>
+            <input type="number" name="phonenumber" placeholder="Phone number*"
+                onChange={(e) => handleChange(e)} />
+            <p>Delivery address:</p>
+            <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
+                onChange={(e) => handleChange(e)} />
+            <button type="submit" value="submit" onClick={(e) => handleSubmit(e)}>SUBMIT</button>
+        </form>
     )
 }
 

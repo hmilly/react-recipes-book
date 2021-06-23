@@ -70,7 +70,6 @@ const AppState = ({ children }) => {
         setTotalPrice(total)
     }, [state.basketContents])
 
-
     return <Provider
         value={{
             state,

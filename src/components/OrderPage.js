@@ -7,11 +7,12 @@ function OrderPage({ UserForm }) {
     let burgers
     if (state.basketContents) {
         burgers = state.basketContents.map((b, i) =>
+            // receipt main
             <div className="burger_in_cart" key={i}>
-                <div className="receipt_main_img">
+                <div className="burger_in_cart_img">
                     <img src={`${process.env.PUBLIC_URL}${b.burger.imageUrl}`} alt="burger" />
                 </div>
-                <div className="receipt_main_info">
+                <div className="burger_in_cart_main">
                     <p>{b.burger.name}</p>
                     <div>
                         <h3>£{b.burger.price}</h3>
@@ -29,13 +30,21 @@ function OrderPage({ UserForm }) {
         )
     }
 
+    let total
+    if (totalPrice === 0) {
+        total = 0
+    } else if (!Number.isInteger(totalPrice)) {
+        total = (totalPrice + 3).toString().concat("0")
+    } else {
+        total = totalPrice + 3
+    }
+
     return (
         <div className="order_page">
             <UserForm />
             <div className="order_page_receipt">
-                <div className="receipt_buy">
-                    <img src={`${process.env.PUBLIC_URL}/assets/buy.png`} alt="cart" />
-                    <button> basket</button>
+                <div className="receipt_top">
+                    <h1>Basket</h1>
                 </div>
                 <div className="receipt_main">
                     {burgers.length !== 0 ? burgers : <p>Nothing added to basket yet, please use the menu</p>}
@@ -46,7 +55,7 @@ function OrderPage({ UserForm }) {
                 </div>
                 <div className="receipt_total">
                     <h3>Total Price:</h3>
-                    <h3>£{totalPrice > 0 ? totalPrice + 3 : totalPrice}</h3>
+                    <h3>£{total}</h3>
                 </div>
             </div>
         </div>

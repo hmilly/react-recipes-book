@@ -17,14 +17,15 @@ function Burger() {
 
         recipeTable = selectedBurger.ingredients.map((ing, i) =>
             <tr key={i}>
-                <td>{ing.slice((ing.indexOf(":") + 1))}</td>
                 <td>{ing.slice(0, ing.indexOf(":"))}</td>
+                <td>{ing.slice((ing.indexOf(":") + 1))}</td>
             </tr>
         )
     }
 
     const [itemInBasket, setItemInBasket] = useState(false)
     useEffect(() => {
+        // eslint-disable-next-line array-callback-return
         state.basketContents.map(b => {
             if (b.burger.name.includes(selectedBurger.name))
                 setItemInBasket(true)
@@ -33,42 +34,45 @@ function Burger() {
     }, [state.basketContents, selectedBurger.name])
 
     return (
-        <div className="burger_elem">
-            <div className="burger_elem_top">
-                <div className="burger_elem_topl">
-                    <p className="bacon-plant">{selectedBurger.name}</p>
-                    <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
-                    <p>{selectedBurger.prepTime}</p>
-                    <div className="topl_div">
-                        <img src={`${process.env.PUBLIC_URL}/assets/ute.png`} alt="cutlery" />
-                        <p>2 servings</p>
-                        <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
-                        <p>820 cals/serving</p>
-                    </div>
-                    <p>Ingredients: <br/>{ingredientsList}</p>
+        <div className="burger">
+            <div className="burger_top">
+                <div className="burger_top-main">
+                    <h1>{selectedBurger.name}</h1>
+                    <section>
+                        <div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
+                            <p>{selectedBurger.prepTime}</p>
+                        </div>
+                        <div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/ute.png`} alt="cutlery" />
+                            <p>2 servings</p>
+                        </div>
+                        <div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
+                            <p>820 cals/serving</p>
+                        </div>
+                    </section>
+                    <h3>Ingredients:</h3>
+                    <h4>{ingredientsList}</h4>
                     <button disabled={itemInBasket} onClick={(e) => { clicked(e, selectedBurger, 1) }}>{itemInBasket ? "ADDED TO BASKET!" : "ADD TO BASKET"}</button>
                 </div>
-                <div className="burger_elem_topr">
+                <div className="burger_top-cont">
                     <img src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`} alt="burger" />
                 </div>
             </div>
-            <div className="burger_elem_bot">
-                <div className="burger_elem_bot_container">
-                    <div className="burger_elem_bot_container_top">
-                        <h5>fresh</h5>
-                        <p>ingredients</p>
-                    </div>
-                    <div className="burger_elem_bot_container_bot">
-                        <table id="customers">
-                            <tbody>
-                                <tr>
-                                    <td>potato buns</td>
-                                    <td>2</td>
-                                </tr>
-                                {recipeTable}
-                            </tbody>
-                        </table>
-                    </div>
+            <div className="burger_bot">
+                <div className="burger_bot_main">
+                    <h1>Fresh Ingredients</h1>
+
+                    <table id="customers">
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>potato buns</td>
+                            </tr>
+                            {recipeTable}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
