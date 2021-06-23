@@ -142,8 +142,8 @@
     width: 200px;
 }
 .footer section img{
-    width: 100%;
-    height: auto;
+    width: 40px;
+    height: 40px;
     margin: 2% 2% 2% 0;
 }
 .footer section img:hover{
@@ -187,11 +187,13 @@
     padding: 5%;
 }
 .main-img-1{
-    width: 10%;
+    width: 40px;
+    height: 40px;
     align-self: flex-end;
 }
 .main-img-2{
-    width: 8%;
+    width: 40px;
+    height: 40px;
     align-self: flex-start;
 }
 .mainLeft h1{
@@ -329,9 +331,8 @@
     display: flex;
     width: 100%;
     height: 20%;
-    color: rgb(255, 217, 0);
+    color: rgb(160, 136, 2);
     font-weight: bolder;
-    text-shadow: rgb(0, 0, 0) 0px 0px 1px;
     justify-content: space-between;
     align-items: center;
 }
