@@ -4,7 +4,7 @@ function Footer() {
 	return (
 		<div className="footer">
 			<div>
-				<h2>Categories</h2>
+				<h3>Categories</h3>
 				<ul>
 					<li>About Us</li>
 					<li>Testimonials</li>
@@ -14,7 +14,7 @@ function Footer() {
 				</ul>
 			</div>
 			<div>
-				<h2>Partners</h2>
+				<h3>Partners</h3>
 				<ul>
 					<li>Support</li>
 					<li>Shipping & Returns</li>
@@ -23,16 +23,18 @@ function Footer() {
 				</ul>
 			</div>
 			<div>
-				<h2>Contact Us</h2>
+				<h3>Contact Us</h3>
 				<ul>
-					<li>26A Pagoda St, Tangs</li>
-					<li>Singapore, 058187</li>
-					<br></br>
+					<section>
+						26A Pagoda St, Tangs<br />
+						Singapore, 058187
+					</section>
+					<br/>
 					<li>+65 62215462</li>
 				</ul>
 			</div>
 			<div>
-				<h2>Follow Us</h2>
+				<h3>Follow Us</h3>
 				<section>
 					<img src={`${process.env.PUBLIC_URL}/assets/insta.png`} alt="I"></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/fb.png`} alt="F" ></img>

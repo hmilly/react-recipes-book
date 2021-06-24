@@ -54,6 +54,7 @@ function Burger() {
                     </section>
                     <h3>Ingredients:</h3>
                     <h4>{ingredientsList}</h4>
+                    <h4>£{selectedBurger.price}</h4>
                     <button disabled={itemInBasket} onClick={(e) => { clicked(e, selectedBurger, 1) }}>{itemInBasket ? "ADDED TO BASKET!" : "ADD TO BASKET"}</button>
                 </div>
                 <div className="burger_top-cont">

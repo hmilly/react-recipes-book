@@ -8,10 +8,10 @@ const Nav = () => {
         <div className="nav">
             <ul>
                 <li>
-                    <Link to="/">ON THE MENU</Link>
+                    <Link to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link to="/menu">RECIPES</Link>
+                    <Link to="/menu">MENU</Link>
                 </li>
                 <li>
                     <button>WINE</button>

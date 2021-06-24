@@ -24,15 +24,16 @@ function Burgers({ burgerObj }) {
             <Link to="/burgerCard" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
                 <div className="burger_card_img">
                     <img src={burgerObj.imageUrl} alt={burgerObj.name} />
-                    <p>{burgerObj.name}</p>
+                    <h3>{burgerObj.name}</h3>
                 </div>
                 <div className="burger_card_txt">
                     <p>{p}</p>
                     <div>
                         <img src="/assets/clock.png" alt="clock" />
-                        <p>{burgerObj.prepTime}</p>
+                        <h4>{burgerObj.prepTime}</h4>
                     </div>
                     <div>
+                        <h4>£{burgerObj.price}</h4>
                         <button className="add_btn" disabled={itemInBasket} onClick={(e) => clicked(e, burgerObj, 1)}>{itemInBasket ? "Added to basket" : "Add to basket"}</button>
                     </div>
                 </div>

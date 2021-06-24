@@ -5,8 +5,7 @@
 #root{
     background-color: black;
     width: 100%;
-    min-width: 700px;
-    max-height: 2600px;
+    height: auto;
 }
 #link:link, #link:visited, #link:active {
     text-decoration: none;
@@ -24,7 +23,6 @@
     align-items: stretch;
     max-width: 1100px;
     width: 100%;
-    min-width: 700px;
     margin: 0 auto;
     height: 100%;
 }
@@ -33,14 +31,14 @@
     display: flex;
     align-content: center;
     justify-content: flex-end;
-    width: 100%;
+    width: 90%;
     height: 40px;
     background-image: url("./img/footer.png");
 }
 .nav ul {
     display: flex;
     align-items: center;
-    width: 50%;
+    flex:1;
     padding: 0;
     margin: 2px 0;
 }
@@ -81,20 +79,16 @@
     display: flex;
     height: 500px;
     align-items: center;
-    justify-items: center;
     justify-content: flex-end;
     background-image: url("./img/mainhead.png");
     background-size:cover;
 }
 .main_head div{
-    position: relative;
-    flex-basis: 600px;
-    padding: 2%;
+    flex: 0.5;
     color: white;
 }
 .main_head h1{
-    margin: auto;
-    font-size: 50px;
+    font-size: 40px;
     padding: 4% 0;
 }
 .main_head button{
@@ -119,9 +113,10 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    flex-wrap: wrap;
     color: white;
 }
-.footer h2{
+.footer h3{
     color: yellow;
 }
 .footer ul {
@@ -131,84 +126,80 @@
     padding: 0;
 }
 .footer li {
-    padding: 0;
     align-items: flex-start;
     list-style-type: none;
+    font-size: 14px;
 }
 .footer section{
     display: flex;
     flex-direction: row;
-    height: auto;
-    width: 200px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .footer section img{
     width: 40px;
     height: 40px;
-    margin: 2% 2% 2% 0;
+    padding: 3%;
 }
-.footer section img:hover{
+.footer section img:hover, .footer li:hover{
     cursor: pointer;
     opacity: 0.8;
 }
 /* main pg styling */
 .main_cont{
-    display: flex;
     flex: 2;
-}
-.mainRight{
     display: flex;
-    height: 1200px;
-    width: auto;
     flex-direction: column;
+}
+.main_cont-row{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.main_cont-row section{
     flex: 1;
 }
-.mainRight div {
-    width: 574px;
+.main_cont-row section img {
+    width: 100%;
     height: auto;
 }
-.mainRight img {
-    height: 100%;
-    width: 100%;
-}
-
-.mainLeft{
+.main_cont-row div{
     flex:1;
     display: flex;
-    height: 1200px;
-    flex-direction: column;
-}
-.mainLeft div{
-    flex:1;
-    width: 100%;
-    height:auto;
-    display: flex;
+    position: relative;
     background: white;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 5%;
+    margin: 0 auto;
 }
 .main-img-1{
-    width: 40px;
-    height: 40px;
+    position:absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 10%;
     align-self: flex-end;
 }
 .main-img-2{
-    width: 40px;
-    height: 40px;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    margin-left: 10%;
     align-self: flex-start;
 }
-.mainLeft h1{
+.main_cont-row h1{
     margin: 0;
-    font-size: 40px;
-    text-align: left;
+    text-align: center;
 }
-.mainLeft p{
+.main_cont-row p{
     width: 80%;
     padding: 1%;
-    font-size: 22px;
-    text-align: left;
+    font-size: 20px;
+    text-align: center;
 }
 /* special offer pg styling */
-.special_offer{
+.special_offer_cont{
     background-image: url("./img/mainbot.png");
     flex: 1;
     display: flex;
@@ -216,37 +207,31 @@
     background-size:cover;
     background-position: center;
 }
-.special_offer_txt{
+.special_offer{
     position: absolute;
     left: 15%;
     padding: 4%;
 }
-.special_offer_txt  :nth-child(1){
+.special_offer :nth-child(1), .special_offer :nth-child(2){
     background: linear-gradient(275.03deg, #FFC700 4.43%, #AF9845 32.39%,
     #7E6C2A 58.65%, #BCA03B 103.4%, #E7B811 116.19%);
     transform: rotate(-24.54deg);
 }
-.special_offer_txt :nth-child(2){
-    background: linear-gradient(114.68deg, #FFC700 22.41%, #665F48 45.2%,
-    #A89244 69.97%, #F2C218 95.64%, #454545 121.79%, #F0C118 134.62%);
-    transform: rotate(-24.54deg);
-}
-.special_offer_getstarted{
-    width: 100%;
-    height: 100%;
+.special_offer_main{
+    flex: 1;
     text-align: center;
     padding: 15%;
     font-size: 30px;
     color: gold;
     background-color: rgba(0, 0, 0, 0.357);
 }
-.special_offer button{
+.special_offer_cont button{
     padding: 2% 4%;
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px gold;
     color: gold;
 }
-.special_offer button:hover{
+.special_offer_cont button:hover{
     cursor: pointer;
     background-color: rgba(100, 90, 14, 0.522);
 }
@@ -258,23 +243,26 @@
     background-color: white;
 }
 .menu_top {
-    width: 40%;
-    height: 200px;
-    margin: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_top h1, .menu_top p {
+    width: 60%;
+    text-align: center;
+    margin: 1% 0;
 }
 .menu_mid {
+    flex: 3;
     display: flex;
     justify-content: center;
-    height: 100%;
-    width: 100%;
     flex-wrap: wrap;
-    margin: auto;
 }
 .menu_bot {
+    flex: 1;
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 110px;
     padding: 2%;
 }
 .menu_bot button, .add_btn{
@@ -290,6 +278,7 @@
     opacity: 0.6;
 }
 .burger_card{
+    display: flex;
     height: 300px;
     flex-basis: 220px;
     padding: 0;
@@ -300,34 +289,31 @@
     box-shadow: 4px 7px 10px -3px #6B6B6B;
 }
 .burger_card_img{
+    flex: 1;
     position: relative;
-    height: 150px;
-    width: auto;
 }
 .burger_card_img img{
-    width: 100%;
-    height: 100%;
+    width: 220px;
+    height: 150px;
 }
-.burger_card_img p{
+.burger_card h3{
     position: absolute;
     background-color: rgba(255, 217, 0, 0.74);
-    border-radius: 5px;
-    top: 70%;
+    bottom: 0;
     left: 10%;
-    padding: 1%;
+    font-size: 16px;
 }
 .burger_card_txt{
+    flex: 1;
     display: flex;
     flex-direction: column;
     padding: 1% 8%;
-    height: 50%;
-    width: 100%;
     justify-content: space-around;
 }
 .burger_card_txt :nth-child(1){
     margin: 0;
 }
-.burger_card_txt div{
+.burger_card_txt div, .burger_card_txt section{
     display: flex;
     width: 100%;
     height: 20%;
@@ -479,7 +465,7 @@
     display: flex;
     flex: 1;
     background: white;
-    margin-top: 8%;
+    margin: 1% 0;
 }
 .order_page form{
     display: flex;
@@ -597,4 +583,74 @@
 .burger_in_cart_main button:hover{
     cursor: pointer;
     opacity: 0.8;
+}
+
+@media only screen and (max-width: 400px) {
+
+    #root h1{
+        font-size: 25px;
+    }
+    #root h2{
+        font-size: 20px;
+    }
+    #root h3, #root h4, #root h5{
+        font-size: 12px;
+    }
+    #root button, #root a, #root p,#root li,#root section {
+        font-size: 12px;
+    }
+    
+
+
+
+    .main_head{
+        height: 200px;
+    }
+
+
+    .footer section img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu_top h1, .menu_top p {
+        width: 100%;
+        margin: 3% 0;
+    }
+
+    .burger_card{
+        height: 150px;
+        flex-basis: 110px;
+    }
+    .burger_card_img img{
+        width: 100%;
+        height: 85px;
+    } 
+    .burger_card h3{
+        width: 100%;
+        left: 0;
+    }
+    
+    .burger_card div:last-child{
+        flex-direction: column;
+    }
+
+    .burger_card_txt p{
+        display: none;
+    }
+
+    .burger_card_txt{
+    height: 60px;
+    }
+
+    .special_offer{
+        left: 1%;
+        padding: 1%;
+    }
+
+    .order_page{
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
 }
