@@ -5,6 +5,7 @@
 #root{
     background-color: black;
     width: 100%;
+    min-width: 350px;
     height: auto;
 }
 #link:link, #link:visited, #link:active {
@@ -22,6 +23,7 @@
     flex-direction: column;
     align-items: stretch;
     max-width: 1100px;
+    min-width: 350px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
@@ -164,14 +166,13 @@
     height: auto;
 }
 .main_cont-row div{
+    border: solid green 1px;
     flex:1;
     display: flex;
     position: relative;
     background: white;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0 auto;
 }
 .main-img-1{
     position:absolute;
@@ -182,6 +183,7 @@
     align-self: flex-end;
 }
 .main-img-2{
+    position:absolute;
     bottom: 0;
     width: 60px;
     height: 60px;
@@ -189,7 +191,6 @@
     align-self: flex-start;
 }
 .main_cont-row h1{
-    margin: 0;
     text-align: center;
 }
 .main_cont-row p{
@@ -249,9 +250,9 @@
     align-items: center;
 }
 .menu_top h1, .menu_top p {
-    width: 60%;
+    width: 70%;
     text-align: center;
-    margin: 1% 0;
+    margin: 2% 0;
 }
 .menu_mid {
     flex: 3;
@@ -265,7 +266,7 @@
     justify-content: center;
     padding: 2%;
 }
-.menu_bot button, .add_btn{
+.menu_bot button, .burger_card_info button{
     color: black;
     background: gold;
     padding: 2% 4%;
@@ -273,7 +274,7 @@
     font-weight: bold;
     border-radius: 5px;
 }
-.menu_bot button:hover, .burger_top button:hover, .add_btn:hover{
+.menu_bot button:hover, .burger_top button:hover, .burger_card_info button:hover{
     cursor: pointer;
     opacity: 0.6;
 }
@@ -281,7 +282,6 @@
     display: flex;
     height: 300px;
     flex-basis: 220px;
-    padding: 0;
     margin: 2%;
     border: solid 1px rgba(0, 0, 0, 0.207);
     border-radius: 5px;
@@ -289,44 +289,55 @@
     box-shadow: 4px 7px 10px -3px #6B6B6B;
 }
 .burger_card_img{
-    flex: 1;
+    bordeR: solid red 1px;
     position: relative;
 }
 .burger_card_img img{
     width: 220px;
     height: 150px;
 }
-.burger_card h3{
+.burger_card_img h3{
     position: absolute;
     background-color: rgba(255, 217, 0, 0.74);
     bottom: 0;
     left: 10%;
     font-size: 16px;
 }
-.burger_card_txt{
+
+.burger_card_info{
+    bordeR: solid red 1px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 1% 8%;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 0 2%;
+
 }
-.burger_card_txt :nth-child(1){
+.burger_card_info p{
+    flex: 1;
     margin: 0;
 }
-.burger_card_txt div, .burger_card_txt section{
+.burger_card_info div{
     display: flex;
-    width: 100%;
-    height: 20%;
-    color: rgb(160, 136, 2);
-    font-weight: bolder;
-    justify-content: space-between;
     align-items: center;
+    flex: 1;
+    margin: 0;
+    padding: 2%;
+    color: rgb(160, 136, 2);
 }
-.burger_card_txt div img{
+.burger_card_info div img{
     width: 20px;
     height: 20px;
 }
-.add_btn{
+.burger_card_info div h4{
+    flex: 1;
+    margin: 0 2%;
+    color: rgb(160, 136, 2);
+}
+
+.burger_card_info button{
+    height: 30px;
+    width: 80%;
     font-size: 14px;
     font-weight: normal;
 }
@@ -585,13 +596,13 @@
     opacity: 0.8;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 650px) {
 
     #root h1{
-        font-size: 25px;
+        font-size: 20px;
     }
     #root h2{
-        font-size: 20px;
+        font-size: 16px;
     }
     #root h3, #root h4, #root h5{
         font-size: 12px;
@@ -607,24 +618,20 @@
         height: 200px;
     }
 
-
     .footer section img{
         width: 30px;
         height: 30px;
     }
 
-    .menu_top h1, .menu_top p {
-        width: 100%;
-        margin: 3% 0;
-    }
+
 
     .burger_card{
-        height: 150px;
-        flex-basis: 110px;
+        height: 200px;
+        flex-basis: 146.6px;
     }
     .burger_card_img img{
         width: 100%;
-        height: 85px;
+        height: 100%;
     } 
     .burger_card h3{
         width: 100%;
@@ -635,12 +642,8 @@
         flex-direction: column;
     }
 
-    .burger_card_txt p{
-        display: none;
-    }
-
-    .burger_card_txt{
-    height: 60px;
+    .burger_card_info{
+        height: 100px;
     }
 
     .special_offer{
