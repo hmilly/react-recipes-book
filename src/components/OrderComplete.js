@@ -4,7 +4,7 @@ function OrderComplete() {
     return (
         <div className="order_complete">
             <div >
-                <p>Thank you for your order!</p>
+                <h1>Thank you for your order!</h1>
             </div>
         </div>
     )
