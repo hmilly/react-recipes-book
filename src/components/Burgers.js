@@ -7,7 +7,6 @@ function Burgers({ burgerObj }) {
 
     const [itemInBasket, setItemInBasket] = useState(false)
     useEffect(() => {
-        // eslint-disable-next-line array-callback-return
         state.basketContents.map(b => {
             if (b.burger.name.includes(burgerObj.name))
                 setItemInBasket(true)

@@ -12,9 +12,7 @@ function MainContent() {
                         and top-rated customer favourites.</p>
                     <img className="main-img-2" src={`${process.env.PUBLIC_URL}/assets/maingbg2.png`} alt="burger_logo" />
                 </div>
-                <section>
-                    <img src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
-                </section>
+                <img className="main_cont-img" src={`${process.env.PUBLIC_URL}/assets/main1.png`} alt="burger" />
             </div>
             <div className="main_cont-row">
                 <div>
@@ -25,9 +23,7 @@ function MainContent() {
                         door.</p>
                     <img className="main-img-2" src={`${process.env.PUBLIC_URL}/assets/maingbg4.png`} alt="burger_logo" />
                 </div>
-                <section>
-                    <img src={`${process.env.PUBLIC_URL}/assets/main2.png`} alt="shopping_img" />
-                </section>
+                <img className="main_cont-img" src={`${process.env.PUBLIC_URL}/assets/main2.png`} alt="shopping_img" />
             </div>
             <div className="main_cont-row">
                 <div>
@@ -38,9 +34,7 @@ function MainContent() {
                         chefs create with your family's tastes in mind.</p>
                     <img className="main-img-2" src={`${process.env.PUBLIC_URL}/assets/maingbg6.png`} alt="burger_logo" />
                 </div>
-                <section>
-                    <img src={`${process.env.PUBLIC_URL}/assets/7.png`} alt="burger" />
-                </section>
+                <img className="main_cont-img" src={`${process.env.PUBLIC_URL}/assets/7.png`} alt="burger" />
             </div>
 
         </div>

@@ -36,9 +36,9 @@ function Burger() {
     return (
         <div className="burger">
             <div className="burger_top">
-                <div className="burger_top-main">
+                <div className="burger_top-info">
                     <h1>{selectedBurger.name}</h1>
-                    <section>
+                    <aside>
                         <div>
                             <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
                             <p>{selectedBurger.prepTime}</p>
@@ -51,20 +51,18 @@ function Burger() {
                             <img src={`${process.env.PUBLIC_URL}/assets/apple.png`} alt="apple" />
                             <p>820 cals/serving</p>
                         </div>
-                    </section>
+                    </aside>
                     <h3>Ingredients:</h3>
-                    <h4>{ingredientsList}</h4>
-                    <h4>£{selectedBurger.price}</h4>
+                    <h5>{ingredientsList}</h5>
+                    <h5>£{selectedBurger.price}</h5>
                     <button disabled={itemInBasket} onClick={(e) => { clicked(e, selectedBurger, 1) }}>{itemInBasket ? "ADDED TO BASKET!" : "ADD TO BASKET"}</button>
                 </div>
-                <div className="burger_top-cont">
-                    <img src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`} alt="burger" />
-                </div>
+                    <img className="burger_top-img" src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`} alt="burger" />
+
             </div>
             <div className="burger_bot">
                 <div className="burger_bot_main">
                     <h1>Fresh Ingredients</h1>
-
                     <table id="customers">
                         <tbody>
                             <tr>

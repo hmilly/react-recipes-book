@@ -25,22 +25,21 @@ function Footer() {
 			<div>
 				<h3>Contact Us</h3>
 				<ul>
-					<section>
-						26A Pagoda St, Tangs<br />
+					<p>
+						26A Pagoda St, Tangs
 						Singapore, 058187
-					</section>
-					<br/>
+					</p>
 					<li>+65 62215462</li>
 				</ul>
 			</div>
 			<div>
 				<h3>Follow Us</h3>
-				<section>
+				<ul id="footer_socials">
 					<img src={`${process.env.PUBLIC_URL}/assets/insta.png`} alt="I"></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/fb.png`} alt="F" ></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/tw.png`} alt="T" ></img>
 					<img src={`${process.env.PUBLIC_URL}/assets/wh.png`} alt="W" ></img>
-				</section>
+				</ul>
 			</div>
 		</div>
 	)
