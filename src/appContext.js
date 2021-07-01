@@ -49,12 +49,14 @@ const AppState = ({ children }) => {
 
     const clicked = (e, burgerObj, quantity) => {
         e.preventDefault();
-        const findBurgerobj = state.basketContents.find(b => b.burger.name.includes(burgerObj.name))
+        const findBurgerobj = state.basketContents.find(b => b.burger.name.match(burgerObj.name))
         if (findBurgerobj) {
             const allObjects = state.basketContents
             const index = allObjects.indexOf(findBurgerobj)
             let edited = allObjects.splice(index, 1)
-            edited = { burger: edited[0].burger, quantity: parseInt(quantity) }
+            console.log(edited)
+            edited = { burger: edited[0].burger, quantity: parseInt(quantity) + parseInt(edited[0].quantity) }
+            console.log(edited)
             allObjects.splice(index, 0, edited)
             setItem("SETBASKET", [...allObjects])
         } else {

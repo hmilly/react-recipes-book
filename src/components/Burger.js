@@ -1,10 +1,10 @@
 import React, {
-    useContext, useState, useEffect
+    useContext
 } from "react";
 import { store } from "../appContext"
 
 function Burger() {
-    const { state, clicked } = useContext(store)
+    const { state, clicked, deleteFromBasket } = useContext(store)
     const selectedBurger = state.selectedBurger
 
     let ingredientsList
@@ -22,16 +22,6 @@ function Burger() {
             </tr>
         )
     }
-
-    const [itemInBasket, setItemInBasket] = useState(false)
-    useEffect(() => {
-        // eslint-disable-next-line array-callback-return
-        state.basketContents.map(b => {
-            if (b.burger.name.includes(selectedBurger.name))
-                setItemInBasket(true)
-
-        })
-    }, [state.basketContents, selectedBurger.name])
 
     return (
         <div className="burger">
@@ -55,10 +45,13 @@ function Burger() {
                     <h3>Ingredients:</h3>
                     <h5>{ingredientsList}</h5>
                     <h5>£{selectedBurger.price}</h5>
-                    <button disabled={itemInBasket} onClick={(e) => { clicked(e, selectedBurger, 1) }}>{itemInBasket ? "ADDED TO BASKET!" : "ADD TO BASKET"}</button>
-                </div>
-                    <img className="burger_top-img" src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`} alt="burger" />
+                    <div>
+                        <button onClick={(e) => { clicked(e, selectedBurger, 1) }}>{"Add 1 to basket"}</button>
+                        <button onClick={(e) => { deleteFromBasket(e, selectedBurger) }}>{"X"}</button>
+                    </div>
 
+                </div>
+                <img className="burger_top-img" src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`} alt="burger" />
             </div>
             <div className="burger_bot">
                 <div className="burger_bot_main">
@@ -67,7 +60,7 @@ function Burger() {
                         <tbody>
                             <tr>
                                 <td>2</td>
-                                <td>potato buns</td>
+                                <td>Potato buns</td>
                             </tr>
                             {recipeTable}
                         </tbody>

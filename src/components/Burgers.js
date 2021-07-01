@@ -1,17 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Route, Link, } from "react-router-dom";
 import { store } from "../appContext"
 
 function Burgers({ burgerObj }) {
-    const { state, setItem, clicked } = useContext(store)
-
-    const [itemInBasket, setItemInBasket] = useState(false)
-    useEffect(() => {
-        state.basketContents.map(b => {
-            if (b.burger.name.includes(burgerObj.name))
-                setItemInBasket(true)
-        })
-    }, [state.basketContents, burgerObj])
+    const { setItem, clicked, deleteFromBasket } = useContext(store)
 
     const p = burgerObj.ingredients.map((ing, i) =>
         i < burgerObj.ingredients.length - 1
@@ -32,7 +24,10 @@ function Burgers({ burgerObj }) {
                         <h4>{burgerObj.prepTime}</h4>
                         <h4>£{burgerObj.price}</h4>
                     </div>
-                    <button disabled={itemInBasket} onClick={(e) => clicked(e, burgerObj, 1)}>{itemInBasket ? "Added to basket" : "Add to basket"}</button>
+                    <div>
+                        <button onClick={(e) => { clicked(e, burgerObj, 1) }}>{"Add 1 to basket"}</button>
+                        <button onClick={(e) => { deleteFromBasket(e, burgerObj) }}>{"X"}</button>
+                    </div>
                 </div>
             </Link>
             <Route path="/burgerCard" />
@@ -41,10 +36,3 @@ function Burgers({ burgerObj }) {
 }
 
 export default Burgers
-
-
-
-
-
-
-

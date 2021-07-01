@@ -51,7 +51,7 @@ function UserForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (state.basketContents.length === 0) {
-            window.alert("please add something to the basket")
+            window.alert("Please add something to the basket")
         } else {
             const u = users.find(u => u.email.toLowerCase() === userDetails.email.toLowerCase())
             u ? window.alert("Email entered is currently in use, please re-enter and try again")
@@ -69,15 +69,13 @@ function UserForm() {
                 <option value="Ms" >Ms</option>
                 <option value="Mx" >Mx</option>
             </select>
-            <section>
+            <div>
                 <input type="text" name="firstname" placeholder="First name*"
                     onChange={(e) => handleChange(e)} />
                 <input type="text" name="lastname" placeholder="Last name*"
                     onChange={(e) => handleChange(e)} />
-            </section>
-            <input type="text" name="email" placeholder="Email address*"
-                onChange={(e) => handleChange(e)} />
-            <input type="password" name="password" placeholder="Password*" minLength="8" required={true}
+            </div>
+            <input type="text" name="email" placeholder="Email address*" required={true}
                 onChange={(e) => handleChange(e)} />
             <p>Contact number:</p>
             <input type="number" name="phonenumber" placeholder="Phone number*"
