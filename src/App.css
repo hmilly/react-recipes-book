@@ -31,11 +31,8 @@
 /* nav styling */
 .nav{
     display: flex;
-    align-content: center;
-    justify-content: flex-end;
-    width: 90%;
+    width: 100%;
     height: 40px;
-    background-image: url("./img/footer.png");
 }
 .nav ul {
     display: flex;
@@ -46,13 +43,10 @@
 }
 .nav li {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     white-space: nowrap;
     flex: 1;
     height: auto;
-}
-.nav li:last-child{
-    flex: 0.5;
 }
 .nav a, .nav button{
     color: white;
@@ -66,19 +60,36 @@
     color: white;
     text-decoration: none;
 }
+
 .nav a:hover, .nav button:hover{
     border-bottom: 1px solid gold;
     cursor: pointer;
     text-decoration: none;
+}
+.basket{
+    flex: 0.5;
+}
+.basket a{
+    flex: 0.8;
+    display: flex;
+    background: gold;
+    align-items: center;
+    justify-content: space-around;
 }
 .nav img{
     width: 22px;
     margin: 1px;
     height: 20px;
 }
+.nav h3{
+    color: black;
+
+    font-weight: 700;
+}
 /* main page header */
 .main_head{
     display: flex;
+    width: 100%;
     height: 500px;
     align-items: center;
     justify-content: flex-end;
@@ -319,31 +330,43 @@
 }
 .burger_card_info div{
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-around;
     margin: 0;
     padding: 2%;
     color: rgb(160, 136, 2);
 }
-.burger_card_info div img{
+.burger_card_info img{
     width: 20px;
     height: 20px;
 }
-.burger_card_info div h4{
+.burger_card_info h4{
     margin: 0 2%;
     color: rgb(160, 136, 2);
 }
 
-.burger_card_info button{
+.burger_card_info button, .btns button{
+    flex: 0.75;
     height: 100%;
-    width: 80%;
-    margin: 0 2%;
-    align-self: center;
     font-size: 14px;
     font-weight: normal;
+    border-radius: 2px;
+    border: none;
 }
-.burger_card_info button:last-child{
-    width: 15%;
+.burger_card_info div:last-child h4, .btns h4{
+    flex: 0.1;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: gold;
+    color: black;
+    border-radius: 2px;
+ } 
+.burger_card_info button:last-child, .btns button:last-child{
+    flex: 0.12;
+    background-color:rgb(204, 3, 3);
+    color: white;
+    border-radius: 2px;
 }
 /* each burger page styling */
 .burger{
@@ -377,9 +400,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 5;
+    flex: 4;
 }
-.burger_top-info aside div{
+.burger_top-info div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -405,24 +428,16 @@
     margin: 1% 0;
 }
 .burger_top-info h5{
-    flex: 2;
-    margin: 3% 0;
+    flex: 1;
+    margin: 1% 0;
 }
-.burger_top-info button{
-    width: 80%;
-    color: black;
+.btns button{
     background: gold;
-    border: none;
-    padding: 3% 6%;
-    margin: 4% 1%;
-    font-size: 14px;
     font-weight: bolder;
-    border-radius: 2px;
 }
-.burger_top-info button:last-child{
-    width: 15%;
+.btns h4{
+    padding-top: 5%; 
 }
-
 
 .burger_bot{
     display: flex;
@@ -605,6 +620,14 @@
     cursor: pointer;
     opacity: 0.8;
 }
+ * button:active, .animate:active{
+    background-color: rgb(255, 196, 0);
+    transform: translateY(2px);
+}
+.nav button:active, .animate:active{
+    background-color: black;
+    transform: translateY(2px);
+}
 
 @media only screen and (max-width: 650px) {
 
@@ -617,7 +640,7 @@
     #root h3, #root h4, #root h5{
         font-size: 12px;
     }
-    #root button, #root a, #root p,#root li,#root section {
+    #root button, #root a, #root p,#root li,#root section, td {
         font-size: 12px;
     }
 
@@ -654,6 +677,9 @@
     .burger_top-info aside {
         flex-direction: row;
     }
+    .btns h4{
+        padding: 0; 
+    }
     .burger_bot_main {
         padding: 1%;
     }
@@ -669,6 +695,9 @@
         flex-flow: column-reverse;
     }
 
+    .order_complete{
+        background-color: black;
+    }
     .order_complete div{
         height: 40%;
     }

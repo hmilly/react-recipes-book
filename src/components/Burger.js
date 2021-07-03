@@ -4,7 +4,7 @@ import React, {
 import { store } from "../appContext"
 
 function Burger() {
-    const { state, clicked, deleteFromBasket } = useContext(store)
+    const { state, clicked, deleteFromBasket, inBasket } = useContext(store)
     const selectedBurger = state.selectedBurger
 
     let ingredientsList
@@ -45,11 +45,11 @@ function Burger() {
                     <h3>Ingredients:</h3>
                     <h5>{ingredientsList}</h5>
                     <h5>£{selectedBurger.price}</h5>
-                    <div>
-                        <button onClick={(e) => { clicked(e, selectedBurger, 1) }}>{"Add 1 to basket"}</button>
+                    <div className="btns">
+                        <button onClick={(e) => { clicked(e, selectedBurger, 1) }}>{"Add to basket"}</button>
+                        <h4>{inBasket(selectedBurger.name)}</h4>
                         <button onClick={(e) => { deleteFromBasket(e, selectedBurger) }}>{"X"}</button>
                     </div>
-
                 </div>
                 <img className="burger_top-img" src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`} alt="burger" />
             </div>

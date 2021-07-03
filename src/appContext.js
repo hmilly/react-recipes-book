@@ -47,21 +47,35 @@ const AppState = ({ children }) => {
         })
     }
 
+    const getQuantity = (e, q, q2) => {
+        return e.target.name === "quantity" ? q : q + parseInt(q2)
+    }
+
     const clicked = (e, burgerObj, quantity) => {
         e.preventDefault();
+        quantity = parseInt(quantity)
         const findBurgerobj = state.basketContents.find(b => b.burger.name.match(burgerObj.name))
-        if (findBurgerobj) {
+
+        if (!findBurgerobj) {
+            setItem("SETBASKET", [...state.basketContents, { burger: burgerObj, quantity: 1 }])
+        } else {
             const allObjects = state.basketContents
             const index = allObjects.indexOf(findBurgerobj)
             let edited = allObjects.splice(index, 1)
-            console.log(edited)
-            edited = { burger: edited[0].burger, quantity: parseInt(quantity) + parseInt(edited[0].quantity) }
-            console.log(edited)
+            let newQ = getQuantity(e, quantity, edited[0].quantity)
+            if (newQ === 10) {
+                newQ = 9
+                window.alert(`Max number of ${burgerObj.name} added to basket`)
+            }
+            edited = { burger: edited[0].burger, quantity: newQ }
             allObjects.splice(index, 0, edited)
             setItem("SETBASKET", [...allObjects])
-        } else {
-            setItem("SETBASKET", [...state.basketContents, { burger: burgerObj, quantity: 1 }])
         }
+    }
+
+    const inBasket = (name) => {
+        const findBurgerobj = state.basketContents.find(b => b.burger.name.match(name))
+        return state.basketContents.find(b => b.burger.name.match(name)) ? findBurgerobj.quantity : 0
     }
 
     const [totalPrice, setTotalPrice] = useState(0)
@@ -78,7 +92,8 @@ const AppState = ({ children }) => {
             setItem,
             deleteFromBasket,
             clicked,
-            totalPrice
+            totalPrice,
+            inBasket
         }}>
         {children} </Provider>;
 };
