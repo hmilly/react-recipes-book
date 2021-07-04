@@ -33,13 +33,10 @@ function OrderPage({ UserForm }) {
         )
     }
 
-    let total
-    if (totalPrice === 0) {
-        total = 0
-    } else if (!Number.isInteger(totalPrice)) {
-        total = (totalPrice + 3).toString().concat("0")
-    } else {
-        total = totalPrice + 3
+    const getTotal = (t) => {
+        if (t === 0) return 0
+        else if (!Number.isInteger(t)) return (t + 3).toString().concat("0")
+        else return t + 3
     }
 
     return (
@@ -58,7 +55,7 @@ function OrderPage({ UserForm }) {
                 </div>
                 <div className="receipt_total">
                     <h3>Total Price:</h3>
-                    <h3>£{total}</h3>
+                    <h3>£{getTotal(totalPrice)}</h3>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ function Burgers({ burgerObj }) {
 
     return (
         <div className="burger_card">
-            <Link to="/burgerCard" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
+            <Link to="/burger" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
                 <div className="burger_card_img">
                     <img src={burgerObj.imageUrl} alt={burgerObj.name} />
                     <h3>{burgerObj.name}</h3>
@@ -31,7 +31,7 @@ function Burgers({ burgerObj }) {
                     </div>
                 </div>
             </Link>
-            <Route path="/burgerCard" />
+            <Route path="/burger" />
         </div>
     )
 }

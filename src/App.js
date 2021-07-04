@@ -1,9 +1,5 @@
 import React from "react";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer"
 import MainContent from "./components/MainContent"
@@ -16,7 +12,6 @@ import Nav from "./components/Nav"
 import UserForm from "./components/UserForm"
 import Burger from "./components/Burger"
 import OrderComplete from "./components/OrderComplete"
-
 
 function App() {
 	return (
@@ -33,7 +28,7 @@ function App() {
 						<OrderPage UserForm={UserForm} />
 						<Footer />
 					</Route>
-					<Route path="/burgerCard">
+					<Route path="/burger">
 						<Burger />
 						<SpecialOffer />
 						<Footer />

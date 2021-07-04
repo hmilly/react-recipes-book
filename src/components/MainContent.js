@@ -36,7 +36,6 @@ function MainContent() {
                 </div>
                 <img className="main_cont-img" src={`${process.env.PUBLIC_URL}/assets/7.png`} alt="burger" />
             </div>
-
         </div>
     )
 }

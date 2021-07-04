@@ -1,21 +1,19 @@
-import React, {
-    useContext
-} from "react";
+import React, { useContext } from "react";
 import { store } from "../appContext"
 
 function Burger() {
     const { state, clicked, deleteFromBasket, inBasket } = useContext(store)
     const selectedBurger = state.selectedBurger
 
-    let ingredientsList
-    let recipeTable
-    if (selectedBurger) {
-        ingredientsList = selectedBurger.ingredients.map((ing, i) =>
-            i < selectedBurger.ingredients.length - 1
+    const setIngredients = (burger) => {
+        return burger.ingredients.map((ing, i) =>
+            i < burger.ingredients.length - 1
                 ? `${ing.split(": ")[1]}, `
                 : `${ing.split(": ")[1]}.`)
+    }
 
-        recipeTable = selectedBurger.ingredients.map((ing, i) =>
+    const setRecipe = (burger) => {
+        return burger.ingredients.map((ing, i) =>
             <tr key={i}>
                 <td>{ing.slice(0, ing.indexOf(":"))}</td>
                 <td>{ing.slice((ing.indexOf(":") + 1))}</td>
@@ -43,7 +41,7 @@ function Burger() {
                         </div>
                     </aside>
                     <h3>Ingredients:</h3>
-                    <h5>{ingredientsList}</h5>
+                    <h5>{setIngredients(selectedBurger)}</h5>
                     <h5>£{selectedBurger.price}</h5>
                     <div className="btns">
                         <button onClick={(e) => { clicked(e, selectedBurger, 1) }}>{"Add to basket"}</button>
@@ -62,7 +60,7 @@ function Burger() {
                                 <td>2</td>
                                 <td>Potato buns</td>
                             </tr>
-                            {recipeTable}
+                            {setRecipe(selectedBurger)}
                         </tbody>
                     </table>
                 </div>
