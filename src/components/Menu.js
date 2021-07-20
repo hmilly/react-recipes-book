@@ -6,6 +6,7 @@ function Menu({ Burgers }) {
     const [btn, setbtn] = useState(true)
     // json-server -p 8080 ./public/db.json
     useEffect(() => {
+        window.scrollTo(0, 0)
         const getBurgers = async () => {
             await fetch('db.json')
                 .then(res => res.json())

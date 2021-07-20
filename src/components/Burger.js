@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { store } from "../appContext"
 
 function Burger() {
     const { state, clicked, deleteFromBasket, inBasket } = useContext(store)
     const selectedBurger = state.selectedBurger
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     const setIngredients = (burger) => {
         return burger.ingredients.map((ing, i) =>

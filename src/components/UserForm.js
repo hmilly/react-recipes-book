@@ -7,9 +7,7 @@ function UserForm() {
     const orderComplete = () => {
         history.push("/complete")
     }
-
     const { state } = useContext(store)
-    // json-server -p 8080 ./public/db.json
 
     const [users, setUsers] = useState([])
     const [userDetails, setUserDetails] = useState({})
@@ -78,10 +76,10 @@ function UserForm() {
             <input type="text" name="email" placeholder="Email address*" required={true}
                 onChange={(e) => handleChange(e)} />
             <p>Contact number:</p>
-            <input type="number" name="phonenumber" placeholder="Phone number*"
+            <input type="tel" name="phone" placeholder="Phone number*"
                 onChange={(e) => handleChange(e)} />
             <p>Delivery address:</p>
-            <input className="postcode" name="postcode" placeholder="Postcode*" type="text"
+            <input className="postcode" name="address" placeholder="Address*" type="text"
                 onChange={(e) => handleChange(e)} />
             <button type="submit" value="submit" onClick={(e) => handleSubmit(e)}>SUBMIT</button>
         </form>

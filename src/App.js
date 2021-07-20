@@ -12,6 +12,7 @@ import Nav from "./components/Nav"
 import UserForm from "./components/UserForm"
 import Burger from "./components/Burger"
 import OrderComplete from "./components/OrderComplete"
+// json-server --watch db.json --port 8080
 
 function App() {
 	return (
