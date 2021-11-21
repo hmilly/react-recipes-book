@@ -7,10 +7,23 @@ function Menu({ Burgers }) {
     // json-server -p 8080 ./public/db.json
     useEffect(() => {
         window.scrollTo(0, 0)
+        // const getBurgers = async () => {
+        //     await fetch('https://my-json-server.typicode.com/hmilly/db')
+        //         .then(res => res.json())
+        //         .then(res => setAllBurgers(res.burgers))
+        //         .catch((error) => console.log(error));
+        // }
+
         const getBurgers = async () => {
-            await fetch('db.json')
-                .then(res => res.json())
-                .then(res => setAllBurgers(res.burgers))
+            await fetch("https://my-json-server.typicode.com/hmilly/db/burgers", {
+                method: 'GET',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    Accept: 'application/json;odata.metadata=full',
+                    'Content-Type': 'application/json',
+                }
+            }).then(res => res.json())
+                .then(res => setAllBurgers(res))
                 .catch((error) => console.log(error));
         }
         getBurgers()

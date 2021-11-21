@@ -14,9 +14,16 @@ function UserForm() {
 
     useEffect(() => {
         const getUsers = async () => {
-            await fetch('db.json')
+            await fetch('https://my-json-server.typicode.com/hmilly/db/users', {
+                method: "GET",
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    Accept: 'application/json;odata.metadata=full',
+                    'Content-Type': 'application/json',
+                }
+            })
                 .then(res => res.json())
-                .then(res => setUsers(res.users))
+                .then(res => setUsers(res))
                 .catch((error) => console.log(error));
         }
         getUsers()
@@ -33,14 +40,15 @@ function UserForm() {
         const configObject = await {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
+                'Access-Control-Allow-Origin': '*',
+                Accept: 'application/json;odata.metadata=full',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 ...userDetails, "order": userOrder
             }),
         };
-        await fetch(`http://localhost:8080/users`, configObject)
+        await fetch(`https://my-json-server.typicode.com/hmilly/db/users`, configObject)
             .then((res) => (res.ok ? res.json() : "Oops we couldn't update that!"))
             .catch((error) => console.log(error));
         orderComplete()

@@ -14,13 +14,13 @@ function Burgers({ burgerObj }) {
         <div className="burger_card">
             <Link to="/burger" id="link" onClick={() => setItem("SETBURGER", burgerObj)}>
                 <div className="burger_card_img">
-                    <img src={burgerObj.imageUrl} alt={burgerObj.name} />
+                    <img src={`${process.env.PUBLIC_URL}${burgerObj.imageUrl}`} alt={burgerObj.name} />
                     <h3>{burgerObj.name}</h3>
                 </div>
                 <div className="burger_card_info">
                     <p>{p}</p>
                     <div>
-                        <img src="/assets/clock.png" alt="clock" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/clock.png`} alt="clock" />
                         <h4>{burgerObj.prepTime}</h4>
                         <h4>£{burgerObj.price}</h4>
                     </div>
