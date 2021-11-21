@@ -20,7 +20,7 @@ function Menu({ Burgers }) {
         setbtn(!btn)
         num === 12 ? setnum(9) : setnum(12)
     }
-    
+
     return (
         <div className="menu">
             <div className="menu_top">
