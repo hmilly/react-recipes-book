@@ -1,0 +1,174 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "Mrs",
+      "firstname": "Owen",
+      "lastname": "Paul",
+      "email": "Op@gmail.com",
+      "phone": "0123456789",
+      "address": "10 the broadway, london",
+      "order": [
+        "Bacon Plant Burger x 6",
+        "Bacon Burger x 8",
+        "Chicken Plant Burger x 8",
+        "USA Burger x 1"
+      ]
+    }
+  ],
+  "burgers": [
+    {
+      "name": "Bacon Plant Burger",
+      "imageUrl": "/assets/1.jpg",
+      "ingredients": [
+        "10 oz: Bacon Plant Burger",
+        "2 Tbsp Slices: Red Onion",
+        "2 Slices: Tomato",
+        "1 Tbsp: Relish"
+      ],
+      "prepTime": "40 mins",
+      "price": "9.00"
+    },
+    {
+      "name": "Bacon Burger",
+      "imageUrl": "/assets/2.jpg",
+      "ingredients": [
+        "2 Strips: Bacon",
+        "8 oz: Beef Burger",
+        "2 Slices: Cheese",
+        "2: Pickles",
+        "1 Tbsp: Mayo"
+      ],
+      "prepTime": "55 mins",
+      "price": "11.50"
+    },
+    {
+      "name": "Chicken Plant Burger",
+      "imageUrl": "/assets/3.jpg",
+      "ingredients": [
+        "6 oz: Chicken Plant Burger",
+        "2 Slices: Red onion",
+        "2 Slices: Tomato",
+        "2 Leaves: Lettuce",
+        "1 Slice: Cheese"
+      ],
+      "prepTime": "45 mins",
+      "price": "9.00"
+    },
+    {
+      "name": "Chicken Burger",
+      "imageUrl": "/assets/4.jpg",
+      "ingredients": [
+        "2 Breasts: Battered Chicken",
+        "2 Slices: Cheese",
+        "2 Leaves: Lettuce",
+        "2 Slices: Tomato",
+        "1 Tbsp: Mayo"
+      ],
+      "prepTime": "50 mins",
+      "price": "11.00"
+    },
+    {
+      "name": "USA Burger",
+      "imageUrl": "/assets/5.jpg",
+      "ingredients": [
+        "8 oz: Beef Burger",
+        "2 Slices: American Cheese",
+        "2 Leaves: Lettuce",
+        "3 Slices: Tomato",
+        "1 Tbsp: Mayo"
+      ],
+      "prepTime": "49 mins",
+      "price": "13.00"
+    },
+    {
+      "name": "Spicy Plant Burger",
+      "imageUrl": "/assets/6.jpg",
+      "ingredients": [
+        "2 Slices: Facon",
+        "10 oz: plant Burger",
+        "2 Slices: Tomato",
+        "2 Leaves: Lettuce",
+        "1 Tbsp Diced: Jalapenos"
+      ],
+      "prepTime": "35 mins",
+      "price": "9.50"
+    },
+    {
+      "name": "Brisket Burger",
+      "imageUrl": "/assets/7.png",
+      "ingredients": [
+        "10 oz: Beef Brisket",
+        "2 Slices: Tomato",
+        "2 Leaves: Lettuce",
+        "2 Slices: Red Onion",
+        "1 Tbsp: Mayo"
+      ],
+      "prepTime": "55 mins",
+      "price": "15.00"
+    },
+    {
+      "name": "Brisket Plant Burger",
+      "imageUrl": "/assets/8.jpg",
+      "ingredients": [
+        "8 oz: Brisket Plant Shredded",
+        "2 Slices: Red Onion",
+        "2 Leaves: Lettuce",
+        "2 Tbsp: Vegan Mayo"
+      ],
+      "prepTime": "45 mins",
+      "price": "10.00"
+    },
+    {
+      "name": "Spicy Chicken Burger",
+      "imageUrl": "/assets/9.jpg",
+      "ingredients": [
+        "2 Breasts: Steamed Chicken",
+        "2 Slices: Tomato",
+        "1 Slice: Cheese",
+        "1 Tbsp Diced: Jalapenos"
+      ],
+      "prepTime": "50 mins",
+      "price": "11.00"
+    },
+    {
+      "name": "Tofu Burger",
+      "imageUrl": "/assets/10.jpg",
+      "ingredients": [
+        "2: Tofu Patty",
+        "2 Slices: Red Onion",
+        "3 Slices: Tomato",
+        "1 Tbsp: Relish"
+      ],
+      "prepTime": "40 mins",
+      "price": "10.50"
+    },
+    {
+      "name": "Cheese Burger",
+      "imageUrl": "/assets/11.jpg",
+      "ingredients": [
+        "10 oz: Beef Burger",
+        "2 Slices: Cheese",
+        "3 Slices: Red Onion",
+        "2 Leaves: Lettuce",
+        "2 Slices: Pickle"
+      ],
+      "prepTime": "55 mins",
+      "price": "9.50"
+    },
+    {
+      "name": "Double Beef Burger",
+      "imageUrl": "/assets/12.jpg",
+      "ingredients": [
+        "2 x 6 oz: Double Beef Patty",
+        "3 Slices: Red Onion",
+        "2 Slices: Cheese",
+        "2 Leaves: Lettuce",
+        "2 Slices: Red Onion",
+        "2 Slices: Pickle"
+      ],
+      "prepTime": "55 mins",
+      "price": "15.00"
+    }
+  ]
+}
