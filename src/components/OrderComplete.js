@@ -1,13 +1,11 @@
-import React from 'react'
+const OrderComplete = () => {
+  return (
+    <div className="order_complete">
+      <div>
+        <h1>Thank you for your order!</h1>
+      </div>
+    </div>
+  );
+};
 
-function OrderComplete() {
-    return (
-        <div className="order_complete">
-            <div >
-                <h1>Thank you for your order!</h1>
-            </div>
-        </div>
-    )
-}
-
-export default OrderComplete
+export default OrderComplete;

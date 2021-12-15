@@ -1,20 +1,16 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function MainHead() {
-  let history = useHistory();
-  const menu = () => {
-    history.push("/menu")
-  }
-
+const MainHead = () => {
   return (
     <div className="main_head">
       <div>
         <h1>Order our top-rated recipes today!</h1>
-        <button className="get_started" onClick={menu}>GET STARTED</button>
+        <Link to="/menu">
+          <button>GET STARTED</button>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MainHead
+export default MainHead;
