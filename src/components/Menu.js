@@ -49,7 +49,7 @@ const Menu = () => {
       </div>
       <div className="menu_mid">
         {allBurgers.slice(0, num).map((b, i) => (
-          <Burgers key={b.name} burgerObj={b} key={i} />
+          <Burgers burgerObj={b} key={i} />
         ))}
       </div>
       <div className="menu_bot">
