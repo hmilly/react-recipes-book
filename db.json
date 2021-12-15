@@ -18,6 +18,7 @@
   ],
   "burgers": [
     {
+      "id": 1,
       "name": "Bacon Plant Burger",
       "imageUrl": "/assets/1.jpg",
       "ingredients": [
@@ -30,6 +31,7 @@
       "price": "9.00"
     },
     {
+      "id": 2,
       "name": "Bacon Burger",
       "imageUrl": "/assets/2.jpg",
       "ingredients": [
@@ -43,6 +45,7 @@
       "price": "11.50"
     },
     {
+      "id": 3,
       "name": "Chicken Plant Burger",
       "imageUrl": "/assets/3.jpg",
       "ingredients": [
@@ -56,6 +59,7 @@
       "price": "9.00"
     },
     {
+      "id": 4,
       "name": "Chicken Burger",
       "imageUrl": "/assets/4.jpg",
       "ingredients": [
@@ -69,6 +73,7 @@
       "price": "11.00"
     },
     {
+      "id": 5,
       "name": "USA Burger",
       "imageUrl": "/assets/5.jpg",
       "ingredients": [
@@ -82,6 +87,7 @@
       "price": "13.00"
     },
     {
+      "id": 6,
       "name": "Spicy Plant Burger",
       "imageUrl": "/assets/6.jpg",
       "ingredients": [
@@ -95,6 +101,7 @@
       "price": "9.50"
     },
     {
+      "id": 7,
       "name": "Brisket Burger",
       "imageUrl": "/assets/7.png",
       "ingredients": [
@@ -108,6 +115,7 @@
       "price": "15.00"
     },
     {
+      "id": 8,
       "name": "Brisket Plant Burger",
       "imageUrl": "/assets/8.jpg",
       "ingredients": [
@@ -120,6 +128,7 @@
       "price": "10.00"
     },
     {
+      "id": 9,
       "name": "Spicy Chicken Burger",
       "imageUrl": "/assets/9.jpg",
       "ingredients": [
@@ -132,6 +141,7 @@
       "price": "11.00"
     },
     {
+      "id": 10,
       "name": "Tofu Burger",
       "imageUrl": "/assets/10.jpg",
       "ingredients": [
@@ -144,6 +154,7 @@
       "price": "10.50"
     },
     {
+      "id": 11,
       "name": "Cheese Burger",
       "imageUrl": "/assets/11.jpg",
       "ingredients": [
@@ -157,6 +168,7 @@
       "price": "9.50"
     },
     {
+      "id": 12,
       "name": "Double Beef Burger",
       "imageUrl": "/assets/12.jpg",
       "ingredients": [
