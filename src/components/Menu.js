@@ -39,25 +39,25 @@ const Menu = () => {
   };
 
   return (
-    <div className="menu">
-      <div className="menu_top">
+    <main className="menu">
+      <div className="top">
         <h1>Explore our Menus</h1>
         <p>
           Choose from an ever-changing mix of meat, fish, Beyond Meat™, WW
           Approved, Diabetes Friendly recipes and health-conscious offerings.
         </p>
       </div>
-      <div className="menu_mid">
+      <div className="mid">
         {allBurgers.slice(0, num).map((b, i) => (
           <Burgers burgerObj={b} key={i} />
         ))}
       </div>
-      <div className="menu_bot">
+      <div className="bot">
         <button className="onclickBtn" onClick={moreOrLess}>
           {btn === true ? "SEE MORE" : "SEE LESS"}
         </button>
       </div>
-    </div>
+    </main>
   );
 };
 

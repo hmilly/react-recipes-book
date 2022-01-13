@@ -16,25 +16,25 @@ const OrderPage = () => {
     <div className="order_page">
       <UserForm />
       <div className="order_page_receipt">
-        <div className="receipt_top">
+        <header>
           <h1>Basket</h1>
-        </div>
-        <div className="receipt_main">
+        </header>
+        <main>
           {state.basketContents.length !== 0 ? (
             state.basketContents.map((b) => <CartItem b={b} key={b.name} />)
           ) : (
             <p>Nothing added to basket yet, please use the menu</p>
           )}
-        </div>
+        </main>
 
-        <div className="receipt_delivery">
+        <section>
           <h3>Delivery Fee:</h3>
           <h3>£3</h3>
-        </div>
-        <div className="receipt_total">
+        </section>
+        <footer>
           <h3>Total Price:</h3>
           <h3>£{getTotal(totalPrice)}</h3>
-        </div>
+        </footer>
       </div>
     </div>
   );

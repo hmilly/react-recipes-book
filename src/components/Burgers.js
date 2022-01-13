@@ -14,7 +14,7 @@ const Burgers = ({ burgerObj }) => {
   return (
     <div className="burger_card">
       <Link
-        to={ `/burger/${burgerObj.id}`}
+        to={`/burger/${burgerObj.id}`}
         id="link"
         onClick={() => setItem("SETBURGER", burgerObj)}
       >

@@ -14,7 +14,7 @@ const Nav = () => {
   }, [state.basketContents]);
 
   return (
-    <div className="nav">
+    <nav>
       <ul>
         <li className="animate">
           <Link to="/recipes-book">HOME</Link>
@@ -38,7 +38,7 @@ const Nav = () => {
           </Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

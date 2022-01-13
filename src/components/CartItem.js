@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import { store } from "../appContext";
 
-const CartItem = ({ b}) => {
+const CartItem = ({ b }) => {
   const { deleteFromBasket, clicked } = useContext(store);
   return (
     <div className="burger_in_cart">
-      <div className="burger_in_cart_img">
+      <header>
         <img
           src={`${process.env.PUBLIC_URL}${b.burger.imageUrl}`}
           alt="burger"
         />
-      </div>
-      <div className="burger_in_cart_main">
+      </header>
+      <main>
         <p>{b.burger.name}</p>
         <div>
-          <h3>£{b.burger.price}</h3>
+          <p>£{b.burger.price}</p>
           <select
             name="quantity"
             value={b.quantity}
@@ -32,7 +32,7 @@ const CartItem = ({ b}) => {
           </select>
           <button onClick={(e) => deleteFromBasket(e, b.burger)}>X</button>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

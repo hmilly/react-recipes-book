@@ -27,36 +27,36 @@ const Burger = () => {
   };
 
   return (
-    <div className="burger">
+    <main className="burger">
       <div className="burger_top">
-        <div className="burger_top-info">
+        <aside>
           <h1>{selectedBurger.name}</h1>
-          <aside>
-            <div>
+          <ul>
+            <li>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/clock.png`}
                 alt="clock"
               />
               <p>{selectedBurger.prepTime}</p>
-            </div>
-            <div>
+            </li>
+            <li>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/ute.png`}
                 alt="cutlery"
               />
               <p>2 servings</p>
-            </div>
-            <div>
+            </li>
+            <li>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/apple.png`}
                 alt="apple"
               />
               <p>820 cals/serving</p>
-            </div>
-          </aside>
-          <h3>Ingredients:</h3>
-          <h5>{setIngredients(selectedBurger)}</h5>
-          <h5>£{selectedBurger.price}</h5>
+            </li>
+          </ul>
+          <h2>Ingredients:</h2>
+          <p>{setIngredients(selectedBurger)}</p>
+          <p>£{selectedBurger.price}</p>
           <div className="btns">
             <button
               onClick={(e) => {
@@ -74,15 +74,16 @@ const Burger = () => {
               {"X"}
             </button>
           </div>
-        </div>
+        </aside>
         <img
-          className="burger_top-img"
+          className="burger_main-img"
           src={`${process.env.PUBLIC_URL}${selectedBurger.imageUrl}`}
           alt="burger"
         />
       </div>
+
       <div className="burger_bot">
-        <div className="burger_bot_main">
+        <aside>
           <h1>Fresh Ingredients</h1>
           <table id="customers">
             <tbody>
@@ -93,9 +94,9 @@ const Burger = () => {
               {setRecipe(selectedBurger)}
             </tbody>
           </table>
-        </div>
+        </aside>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,10 +1,10 @@
 const MainContent = () => {
   return (
-    <div className="main_cont">
-      <div className="main_cont-row">
-        <div>
+    <main className="intro">
+      <div>
+        <section>
           <img
-            className="main-img-1"
+            className="burger-bg-1"
             src={`${process.env.PUBLIC_URL}/assets/maingbg1.png`}
             alt="burger_logo"
           />
@@ -14,23 +14,23 @@ const MainContent = () => {
             quick one-pan dinners, and top-rated customer favourites.
           </p>
           <img
-            className="main-img-2"
+            className="burger-bg-2"
             src={`${process.env.PUBLIC_URL}/assets/maingbg2.png`}
             alt="burger_logo"
           />
-        </div>
+        </section>
         <img
-          className="main_cont-img"
+          className="burger-img"
           src={`${process.env.PUBLIC_URL}/assets/main1.png`}
           alt="burger"
         />
       </div>
-      <div className="main_cont-row">
-        <div>
+      <div>
+        <section>
           <img
-            className="main-img-1"
+            className="burger-bg-1"
             src={`${process.env.PUBLIC_URL}/assets/maingbg3.png`}
-            alt="burger_logo"
+            alt="burger logo"
           />
           <h1>Unpack your box</h1>
           <p>
@@ -38,23 +38,23 @@ const MainContent = () => {
             in an insulated box right to your door.
           </p>
           <img
-            className="main-img-2"
+            className="burger-bg-2"
             src={`${process.env.PUBLIC_URL}/assets/maingbg4.png`}
-            alt="burger_logo"
+            alt="burger logo"
           />
-        </div>
+        </section>
         <img
-          className="main_cont-img"
+          className="burger-img"
           src={`${process.env.PUBLIC_URL}/assets/main2.png`}
           alt="shopping_img"
         />
       </div>
-      <div className="main_cont-row">
-        <div>
+      <div>
+        <section>
           <img
-            className="main-img-1"
+            className="burger-bg-1"
             src={`${process.env.PUBLIC_URL}/assets/maingbg5.png`}
-            alt="burger_logo"
+            alt="burger logo"
           />
           <h1>Create magic</h1>
           <p>
@@ -63,18 +63,18 @@ const MainContent = () => {
             in mind.
           </p>
           <img
-            className="main-img-2"
+            className="burger-bg-2"
             src={`${process.env.PUBLIC_URL}/assets/maingbg6.png`}
-            alt="burger_logo"
+            alt="burger logo"
           />
-        </div>
+        </section>
         <img
-          className="main_cont-img"
+          className="burger-img"
           src={`${process.env.PUBLIC_URL}/assets/7.png`}
           alt="burger"
         />
       </div>
-    </div>
+    </main>
   );
 };
 

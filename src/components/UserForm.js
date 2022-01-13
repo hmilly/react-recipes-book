@@ -91,7 +91,7 @@ export const UserForm = () => {
         <option value="Ms">Ms</option>
         <option value="Mx">Mx</option>
       </select>
-      <div>
+      <section>
         <input
           type="text"
           name="firstname"
@@ -104,7 +104,7 @@ export const UserForm = () => {
           placeholder="Last name*"
           onChange={(e) => handleChange(e)}
         />
-      </div>
+      </section>
       <input
         type="text"
         name="email"
