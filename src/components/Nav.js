@@ -16,10 +16,10 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-        <li className="animate">
+        <li >
           <Link to="/recipes-book">HOME</Link>
         </li>
-        <li className="animate">
+        <li >
           <Link to="/menu">MENU</Link>
         </li>
         <li>
@@ -31,10 +31,10 @@ const Nav = () => {
         <li>
           <Link to="/menu">MARKET</Link>
         </li>
-        <li className="animate basket">
+        <li className="basket">
           <Link to="/basket">
             <img src={`${process.env.PUBLIC_URL}/assets/buy.png`} alt="cart" />
-            <h3>{q}</h3>
+            <p>{q}</p>
           </Link>
         </li>
       </ul>

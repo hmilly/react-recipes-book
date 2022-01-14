@@ -32,8 +32,8 @@ const Burgers = ({ burgerObj }) => {
               src={`${process.env.PUBLIC_URL}/assets/clock.png`}
               alt="clock"
             />
-            <h4>{burgerObj.prepTime}</h4>
-            <h4>£{burgerObj.price}</h4>
+            <p>{burgerObj.prepTime}</p>
+            <p>£{burgerObj.price}</p>
           </div>
           <div>
             <button
@@ -43,7 +43,7 @@ const Burgers = ({ burgerObj }) => {
             >
               {"Add to basket"}
             </button>
-            <h4>{inBasket(burgerObj.name)}</h4>
+            <p className="burger_card_num">{inBasket(burgerObj.name)}</p>
             <button
               onClick={(e) => {
                 deleteFromBasket(e, burgerObj);
