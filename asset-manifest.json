@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/recipes-book/static/css/main.3514e11d.css",
-    "main.js": "/recipes-book/static/js/main.223fc433.js",
+    "main.css": "/recipes-book/static/css/main.11bb6de5.css",
+    "main.js": "/recipes-book/static/js/main.2361324e.js",
     "static/media/mainbot.png": "/recipes-book/static/media/mainbot.3e49385d54cf78afdc8e.png",
     "static/media/burger_component_img1.png": "/recipes-book/static/media/burger_component_img1.3f9eb72878954ebb0a42.png",
     "static/media/mainhead.png": "/recipes-book/static/media/mainhead.4347ae165df0bef98dd0.png",
     "static/media/complete_order.png": "/recipes-book/static/media/complete_order.ad53d728d2e3df7bbef3.png",
     "static/media/footer.png": "/recipes-book/static/media/footer.5fccb5ccf223fd0d21e5.png",
     "index.html": "/recipes-book/index.html",
-    "main.3514e11d.css.map": "/recipes-book/static/css/main.3514e11d.css.map",
-    "main.223fc433.js.map": "/recipes-book/static/js/main.223fc433.js.map"
+    "main.11bb6de5.css.map": "/recipes-book/static/css/main.11bb6de5.css.map",
+    "main.2361324e.js.map": "/recipes-book/static/js/main.2361324e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3514e11d.css",
-    "static/js/main.223fc433.js"
+    "static/css/main.11bb6de5.css",
+    "static/js/main.2361324e.js"
   ]
 }
