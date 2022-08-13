@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { store } from "../appContext";
+import store from "../context/appContext";
 
 const Burgers = ({ burgerObj }) => {
-  const { setItem, clicked, deleteFromBasket, inBasket } = useContext(store);
+  const { clicked, deleteFromBasket, inBasket } = useContext(store);
 
   const p = burgerObj.ingredients.map((ing, i) =>
     i < burgerObj.ingredients.length - 1
@@ -14,9 +14,8 @@ const Burgers = ({ burgerObj }) => {
   return (
     <div className="burger_card">
       <Link
-        to={`/burger/${burgerObj.id}`}
+        to={`/menu/${burgerObj.id}`}
         id="link"
-        onClick={() => setItem("SETBURGER", burgerObj)}
       >
         <div className="burger_card_img">
           <img

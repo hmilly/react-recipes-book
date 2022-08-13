@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const MainHead = () => {
+const Header = () => {
   return (
     <header className="main_head">
       <div>
@@ -13,4 +13,4 @@ const MainHead = () => {
   );
 };
 
-export default MainHead;
+export default Header;

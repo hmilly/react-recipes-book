@@ -91,7 +91,6 @@
         }
         &:hover {
           background: rgb(255, 196, 0);
-          
         }
       }
     }
@@ -411,6 +410,16 @@
     flex: 1;
     flex-direction: column;
     background-color: white;
+    .loading{
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      img{
+        max-height: 50%;
+        max-width: 50%;
+      }
+    }
     .burger_top {
       display: flex;
       flex-direction: row;

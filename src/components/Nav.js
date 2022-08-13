@@ -1,23 +1,23 @@
 import { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { store } from "../appContext";
+import store from "../context/appContext";
 
 const Nav = () => {
-  const { state } = useContext(store);
+  const { basket } = useContext(store);
   const [q, setQ] = useState(0);
 
   useEffect(() => {
-    const num = state.basketContents.reduce((tot, curVal) => {
+    const num = basket.reduce((tot, curVal) => {
       return tot + curVal.quantity;
     }, 0);
     setQ(num);
-  }, [state.basketContents]);
+  }, [basket]);
 
   return (
     <nav>
       <ul>
         <li >
-          <Link to="/recipes-book">HOME</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li >
           <Link to="/menu">MENU</Link>

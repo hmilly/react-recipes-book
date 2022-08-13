@@ -1,73 +1,34 @@
-import React from "react";
+import { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import Footer from "./components/Footer";
-import MainContent from "./components/MainContent";
-import Menu from "./components/Menu";
-import SpecialOffer from "./components/SpecialOffer";
-import MainHead from "./components/MainHead";
-import OrderPage from "./components/OrderPage";
+
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Burger from "./pages/Burger";
+import Basket from "./pages/Basket";
+import OrderComplete from "./pages/OrderComplete";
 import Nav from "./components/Nav";
-import Burger from "./components/Burger";
-import OrderComplete from "./components/OrderComplete";
+import store from "./context/appContext";
 // json-server --watch db.json --port 8080
 
 function App() {
+  const { getUsers, getAllBurgers } = useContext(store);
+
+  useEffect(() => {
+    getAllBurgers();
+    getUsers();
+  }, []);
+
   return (
     <div className="app">
       <Router>
         <Nav />
         <Routes>
-          <Route
-            path="/menu"
-            element={
-              <>
-                <MainHead />
-                <Menu />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/basket"
-            element={
-              <>
-                <OrderPage />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/burger/:id"
-            element={
-              <>
-                <Burger />
-                <SpecialOffer />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/complete"
-            element={
-              <>
-                <OrderComplete />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/recipes-book"
-            exact
-            element={
-              <>
-                <MainHead />
-                <MainContent />
-                <SpecialOffer />
-                <Footer />
-              </>
-            }
-          />
+          <Route path="/menu" exact element={<Menu />} />
+          <Route path="/menu/:id" element={<Burger />}></Route>
+          <Route path="/basket" element={<Basket />} />
+          <Route path="/complete" element={<OrderComplete />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </div>

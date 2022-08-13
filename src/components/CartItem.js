@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { store } from "../appContext";
+import store from "../context/appContext";
 
 const CartItem = ({ b }) => {
   const { deleteFromBasket, clicked } = useContext(store);

@@ -1,33 +1,18 @@
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { store } from "../appContext";
+import store from "../context/appContext";
 
 export const UserForm = () => {
-  let navigate = useNavigate();
-  const orderComplete = () => {
-    navigate.go("/complete");
-  };
-  const { state } = useContext(store);
-
-  const [users, setUsers] = useState([]);
+  const { users, basket, addNewUser } = useContext(store);
   const [userDetails, setUserDetails] = useState({});
 
-  useEffect(() => {
-    const getUsers = async () => {
-      await fetch("https://my-json-server.typicode.com/hmilly/db/users", {
-        method: "GET",
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          Accept: "application/json;odata.metadata=full",
-          "Content-Type": "application/json",
-        },
-      })
-        .then((res) => res.json())
-        .then((res) => setUsers(res))
-        .catch((error) => console.log(error));
-    };
-    getUsers();
-  }, [userDetails]);
+  let navigate = useNavigate();
+  const orderComplete = () => {
+    setUserDetails({});
+
+    navigate("/complete");
+  };
+
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -36,44 +21,22 @@ export const UserForm = () => {
     setUserDetails({ ...userDetails, id: users.length + 1, [name]: v });
   };
 
-  const newUser = async () => {
-    const userOrder = state.basketContents.map(
-      (b) => `${b.burger.name} x ${b.quantity}`
-    );
-    const configObject = await {
-      method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        Accept: "application/json;odata.metadata=full",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...userDetails,
-        order: userOrder,
-      }),
-    };
-    await fetch(
-      `https://my-json-server.typicode.com/hmilly/db/users`,
-      configObject
-    )
-      .then((res) => (res.ok ? res.json() : "Oops we couldn't update that!"))
-      .catch((error) => console.log(error));
-    orderComplete();
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (state.basketContents.length === 0) {
+
+    if (basket.length === 0) {
       window.alert("Please add something to the basket");
-    } else {
-      const u = users.find(
-        (u) => u.email.toLowerCase() === userDetails.email.toLowerCase()
+    } else if (
+      users.find(
+        (user) => user.email.toLowerCase() === userDetails.email.toLowerCase()
+      )
+    ) {
+      window.alert(
+        "Email entered is currently in use, please re-enter and try again"
       );
-      u
-        ? window.alert(
-            "Email entered is currently in use, please re-enter and try again"
-          )
-        : newUser();
+    } else {
+      addNewUser(userDetails);
+      orderComplete();
     }
   };
 
