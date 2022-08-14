@@ -1,6 +1,6 @@
 {
-  "homepage": "https://hmilly.github.io/",
-  "home": "/",
+  "homepage": "https://hmilly.github.io/recipe-book/",
+  "home": "recipe-book",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
