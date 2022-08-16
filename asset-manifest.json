@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/recipe-book/static/css/main.87e60683.css",
-    "main.js": "/recipe-book/static/js/main.b5e3ccf7.js",
+    "main.js": "/recipe-book/static/js/main.cf3140dd.js",
     "static/media/mainbot.png": "/recipe-book/static/media/mainbot.3e49385d54cf78afdc8e.png",
     "static/media/burger_component_img1.png": "/recipe-book/static/media/burger_component_img1.3f9eb72878954ebb0a42.png",
     "static/media/mainhead.png": "/recipe-book/static/media/mainhead.4347ae165df0bef98dd0.png",
@@ -10,10 +10,10 @@
     "index.html": "/recipe-book/index.html",
     "static/media/index.cjs": "/recipe-book/static/media/index.cd351d7c31d0d3fccf96.cjs",
     "main.87e60683.css.map": "/recipe-book/static/css/main.87e60683.css.map",
-    "main.b5e3ccf7.js.map": "/recipe-book/static/js/main.b5e3ccf7.js.map"
+    "main.cf3140dd.js.map": "/recipe-book/static/js/main.cf3140dd.js.map"
   },
   "entrypoints": [
     "static/css/main.87e60683.css",
-    "static/js/main.b5e3ccf7.js"
+    "static/js/main.cf3140dd.js"
   ]
 }
