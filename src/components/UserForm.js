@@ -13,7 +13,6 @@ export const UserForm = () => {
     navigate("/complete");
   };
 
-
   const handleChange = (e) => {
     const name = e.target.name;
     const v =

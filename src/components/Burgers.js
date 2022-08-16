@@ -13,10 +13,7 @@ const Burgers = ({ burgerObj }) => {
 
   return (
     <div className="burger_card">
-      <Link
-        to={`/menu/${burgerObj.id}`}
-        id="link"
-      >
+      <Link to={`/menu/${burgerObj.id}`} id="link">
         <div className="burger_card_img">
           <img
             src={`${process.env.PUBLIC_URL}${burgerObj.imageUrl}`}

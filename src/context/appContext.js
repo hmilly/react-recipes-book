@@ -96,7 +96,6 @@ export const AppState = ({ children }) => {
       .catch((error) => console.log(error));
   };
 
-  // *****    ***** //
   const [state, dispatch] = useReducer(appReducer, initialState);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -123,6 +122,7 @@ export const AppState = ({ children }) => {
     });
   };
 
+  // fns below need re-writing //
   const addToBasket = () => {};
 
   const clicked = (e, burgerObj, quantity) => {
@@ -177,7 +177,7 @@ export const AppState = ({ children }) => {
         addNewUser,
       }}
     >
-      {children}{" "}
+      {children}
     </store.Provider>
   );
 };

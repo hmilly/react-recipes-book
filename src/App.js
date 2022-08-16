@@ -28,7 +28,7 @@ function App() {
           <Route path="/menu/:id" element={<Burger />}></Route>
           <Route path="/basket" element={<Basket />} />
           <Route path="/complete" element={<OrderComplete />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/recipe-book" element={<Home />} />
         </Routes>
       </Router>
     </div>

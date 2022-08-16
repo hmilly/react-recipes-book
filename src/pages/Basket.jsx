@@ -28,7 +28,6 @@ const Basket = () => {
               <p>Nothing added to basket yet, please use the menu</p>
             )}
           </main>
-
           <section>
             <h3>Delivery Fee:</h3>
             <h3>£3</h3>

@@ -15,10 +15,7 @@ const Burger = () => {
     return (
       <main className="burger">
         <div className="loading">
-          <img
-            
-            src={`${process.env.PUBLIC_URL}/assets/spinner.gif`}
-          ></img>
+          <img src={`${process.env.PUBLIC_URL}/assets/spinner.gif`}></img>
         </div>
       </main>
     );
