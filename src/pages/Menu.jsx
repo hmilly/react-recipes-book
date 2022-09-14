@@ -2,14 +2,15 @@ import { useState, useEffect, useContext } from "react";
 import Header from "../components/Header";
 import Burgers from "../components/Burgers";
 import Footer from "../components/Footer";
-import store from "../context/appContext";
+import AppContext from "../context/AppContext";
 
 const Menu = () => {
-  const { allBurgers } = useContext(store);
+  const { allBurgers } = useContext(AppContext);
 
   const [num, setnum] = useState(9);
   const [btn, setbtn] = useState(true);
   // json-server -p 8080 ./public/db.json
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,6 +19,7 @@ const Menu = () => {
     setbtn(!btn);
     num === 12 ? setnum(9) : setnum(12);
   };
+
   return (
     <>
       <Header />

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import store from "../context/appContext";
+import AppContext from "../context/AppContext";
 
 const CartItem = ({ b }) => {
-  const { deleteFromBasket, clicked } = useContext(store);
+  const { deleteFromBasket, addToBasket } = useContext(AppContext);
   return (
     <div className="burger_in_cart">
       <header>
@@ -18,7 +18,7 @@ const CartItem = ({ b }) => {
           <select
             name="quantity"
             value={b.quantity}
-            onChange={(e) => clicked(e, b.burger, e.target.value)}
+            onChange={(e) => addToBasket(e, b.burger, parseInt(e.target.value))}
           >
             <option value="1">1</option>
             <option value="2">2</option>

@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { AppState } from "./context/appContext";
+import { AppProvider } from "./context/AppContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AppState>
+    <AppProvider>
       <App />
-    </AppState>
+    </AppProvider>
   </React.StrictMode>
 );

@@ -1,25 +1,26 @@
 import { useContext, useState, useEffect } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import store from "../context/appContext";
+import AppContext from "../context/AppContext";
 
 const Nav = () => {
-  const { basket } = useContext(store);
-  const [q, setQ] = useState(0);
+  const { basket } = useContext(AppContext);
+  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     const num = basket.reduce((tot, curVal) => {
       return tot + curVal.quantity;
     }, 0);
-    setQ(num);
+    setQuantity(num);
   }, [basket]);
 
   return (
     <nav>
       <ul>
-        <li >
+        <li>
           <Link to="/recipe-book">HOME</Link>
         </li>
-        <li >
+        <li>
           <Link to="/menu">MENU</Link>
         </li>
         <li>
@@ -33,8 +34,8 @@ const Nav = () => {
         </li>
         <li className="basket">
           <Link to="/basket">
-            <img src={`${process.env.PUBLIC_URL}/assets/buy.png`} alt="cart" />
-            <p>{q}</p>
+            <FaShoppingCart alt="cart" />
+            <p>{quantity}</p>
           </Link>
         </li>
       </ul>

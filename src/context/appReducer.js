@@ -1,21 +1,11 @@
 const appReducer = (state, action) => {
   switch (action.type) {
-    case "SET_USERS":
-      return {
-        ...state,
-        users: action.payload,
-      };
-    case "SET_BURGERS":
-      return {
-        ...state,
-        allBurgers: action.payload,
-      };
-    case "SET_BURGER":
-      return {
-        ...state,
-        burger: action.payload,
-        loading: false,
-      };
+    case "SET_APP_DATA":
+    return {
+      ...state,
+      allBurgers: action.payload.allBurgers,
+      users: action.payload.users,
+    }
     case "SET_BASKET":
       return {
         ...state,

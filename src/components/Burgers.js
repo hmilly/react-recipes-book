@@ -1,9 +1,9 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import store from "../context/appContext";
+import { useContext } from "react";
+import AppContext from "../context/AppContext";
 
 const Burgers = ({ burgerObj }) => {
-  const { clicked, deleteFromBasket, inBasket } = useContext(store);
+  const { addToBasket, deleteFromBasket, inBasket } = useContext(AppContext);
 
   const p = burgerObj.ingredients.map((ing, i) =>
     i < burgerObj.ingredients.length - 1
@@ -34,7 +34,7 @@ const Burgers = ({ burgerObj }) => {
           <div>
             <button
               onClick={(e) => {
-                clicked(e, burgerObj, 1);
+                addToBasket(e, burgerObj, 1);
               }}
             >
               {"Add to basket"}

@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import store from "../context/appContext";
+import AppContext from "../context/AppContext";
 import CartItem from "../components/CartItem";
 import UserForm from "../components/UserForm";
 import Footer from "../components/Footer";
 
 const Basket = () => {
-  const { basket, totalPrice } = useContext(store);
+  const { basket, totalPrice } = useContext(AppContext);
 
   const getTotal = (t) => {
     if (t === 0) return 0;
@@ -23,7 +23,7 @@ const Basket = () => {
           </header>
           <main>
             {basket.length !== 0 ? (
-              basket.map((b) => <CartItem b={b} key={b.name} />)
+              basket.map((b, i) => <CartItem b={b} key={i} />)
             ) : (
               <p>Nothing added to basket yet, please use the menu</p>
             )}

@@ -1,16 +1,22 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import store from "../context/appContext";
+
+import AppContext from "../context/AppContext";
+import { addNewUser } from "../context/AppActions";
 
 export const UserForm = () => {
-  const { users, basket, addNewUser } = useContext(store);
+  const { users, basket, dispatch } = useContext(AppContext);
+
   const [userDetails, setUserDetails] = useState({});
 
   let navigate = useNavigate();
   const orderComplete = () => {
-    setUserDetails({});
-
     navigate("/complete");
+    setUserDetails({});
+    dispatch({
+      type: "SET_BASKET",
+      payload: [],
+    });
   };
 
   const handleChange = (e) => {
@@ -25,17 +31,20 @@ export const UserForm = () => {
 
     if (basket.length === 0) {
       window.alert("Please add something to the basket");
+    } else if (Object.values(userDetails).some((obj) => obj === "")) {
+      window.alert("Missing details required");
     } else if (
       users.find(
-        (user) => user.email.toLowerCase() === userDetails.email.toLowerCase()
+        (user) => user?.email.toLowerCase() === userDetails?.email.toLowerCase()
       )
     ) {
       window.alert(
         "Email entered is currently in use, please re-enter and try again"
       );
     } else {
-      addNewUser(userDetails);
       orderComplete();
+      // post method for when internal db is running
+      // addNewUser(userDetails);
     }
   };
 
@@ -59,12 +68,14 @@ export const UserForm = () => {
           name="firstname"
           placeholder="First name*"
           onChange={(e) => handleChange(e)}
+          required={true}
         />
         <input
           type="text"
           name="lastname"
           placeholder="Last name*"
           onChange={(e) => handleChange(e)}
+          required={true}
         />
       </section>
       <input
@@ -80,6 +91,7 @@ export const UserForm = () => {
         name="phone"
         placeholder="Phone number*"
         onChange={(e) => handleChange(e)}
+        required={true}
       />
       <p>Delivery address:</p>
       <input
@@ -88,6 +100,7 @@ export const UserForm = () => {
         placeholder="Address*"
         type="text"
         onChange={(e) => handleChange(e)}
+        required={true}
       />
       <button type="submit" value="submit" onClick={(e) => handleSubmit(e)}>
         SUBMIT

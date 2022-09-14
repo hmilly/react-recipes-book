@@ -1,27 +1,21 @@
-import { useContext, useEffect } from "react";
-import store from "../context/appContext";
+import { useContext, useState, useMemo } from "react";
+import AppContext from "../context/AppContext";
 import { useParams } from "react-router-dom";
 
 const Burger = () => {
+  const { allBurgers, addToBasket, deleteFromBasket, inBasket } =
+    useContext(AppContext);
   const params = useParams();
-  const { getBurger, burger, loading, clicked, deleteFromBasket, inBasket } =
-    useContext(store);
 
-  useEffect(() => {
-    getBurger(parseInt(params.id));
-  }, [params.id]);
+  const [burger, setBurger] = useState(allBurgers[0 - 1]);
 
-  if (loading) {
-    return (
-      <main className="burger">
-        <div className="loading">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/spinner.gif`}
-            alt="spinner"
-          ></img>
-        </div>
-      </main>
-    );
+  useMemo(() => {
+    const b = allBurgers[+params.id - 1];
+    setBurger(b);
+  }, [params.id, allBurgers]);
+
+  if (burger === undefined) {
+    <main className="burger"></main>;
   } else {
     return (
       <main className="burger">
@@ -63,7 +57,7 @@ const Burger = () => {
             <div className="btns">
               <button
                 onClick={(e) => {
-                  clicked(e, burger, 1);
+                  addToBasket(e, burger, 1);
                 }}
               >
                 {"Add to basket"}
