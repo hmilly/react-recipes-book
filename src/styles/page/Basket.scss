@@ -1,0 +1,43 @@
+div.basket {
+    display: flex;
+    flex: 1;
+    background: white;
+    margin: 1% 0;
+  }
+
+  .basket_receipt {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: black;
+    border: solid 1px rgba(128, 128, 128, 0.494);
+    color: white;
+    padding: 1% 3%;
+    header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex: 1;
+      h1 {
+        flex: 1;
+        padding: 1% 6%;
+        text-align: center;
+        color: white;
+      }
+    }
+    main {
+      flex: 8;
+      display: flex;
+      flex-direction: column;
+      padding: 2% 0;
+
+    }
+    section,
+    footer {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      padding: 3% 0;
+      border-top: solid 1px grey;
+    }
+  }

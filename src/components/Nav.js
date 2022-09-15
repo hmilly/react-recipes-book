@@ -8,9 +8,7 @@ const Nav = () => {
   const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
-    const num = basket.reduce((tot, curVal) => {
-      return tot + curVal.quantity;
-    }, 0);
+    const num = basket.reduce((tot, curVal) => tot + curVal.quantity, 0);
     setQuantity(num);
   }, [basket]);
 

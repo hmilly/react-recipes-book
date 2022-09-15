@@ -1,0 +1,121 @@
+main.burger {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: white;
+}
+
+.burger_top {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  flex: 1;
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    flex: 1;
+    padding: 10px;
+    h2 {
+      flex: 1;
+      font-weight: bolder;
+      color: black;
+      text-align: center;
+      margin: 1% 0;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex: 4;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        img {
+          flex: 1;
+          padding: 0 10px;
+        }
+        p {
+          flex: 7;
+          padding: 0 5%;
+          margin: 0;
+        }
+      }
+    }
+
+    .btns {
+      display: flex;
+      flex: 1 1;
+      flex-direction: row;
+      align-items: center;
+      background-color: gold;
+      button {
+        border: none;
+        background: gold;
+        border-radius: 2px;
+        flex: 0.75 1;
+        font-weight: bolder;
+        height: 100%;
+        border-right: 1px white solid;
+        &:last-child {
+          justify-self: end;
+          background-color: #cc0303;
+          border-radius: 2px;
+          color: #fff;
+          flex: 0.12 1;
+        }
+        &:hover {
+          cursor: pointer;
+          opacity: 0.6;
+        }
+      }
+      h4 {
+        border-radius: 2px;
+        color: #000;
+        flex: 0.1 1;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+
+  .burger_main-img {
+    flex: 2;
+    width: 60%;
+    height: 60%;
+    padding: 10% 0;
+  }
+}
+
+.burger_bot {
+  display: flex;
+  flex: 1;
+  background-image: url("../assets/burger_ingredients_bg.png");
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 50%;
+    height: 100%;
+    color: white;
+    padding: 10% 0;
+    h1 {
+      flex: 1;
+    }
+    table {
+      flex: 5;
+      td {
+        padding-bottom: 5%;
+      }
+    }
+  }
+}

@@ -21,7 +21,8 @@ export const fetchAppData = async () => {
   return { allBurgers: allBurgers, users: users };
 };
 
-/// post request for adding new user
+// post request for adding new user
+// works when internal server is running only
 
 export const addNewUser = (userDetails) => {
   const userOrder = state.basket.map((b) => `${b.burger.name} x ${b.quantity}`);

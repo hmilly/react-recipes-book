@@ -14,6 +14,7 @@ export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
   const [totalPrice, setTotalPrice] = useState(0);
 
+  // get total price of basket items
   useEffect(() => {
     const total = state.basket.reduce(
       (all, bVal) =>
@@ -23,7 +24,12 @@ export const AppProvider = ({ children }) => {
     setTotalPrice(total);
   }, [state.basket]);
 
+  // find if the matching burger is currently in the basket
+  const findInBasket = (name) =>
+    state.basket.find((b) => b.burger.name.match(name));
 
+  // check quantity in basket
+  // max items per burger is 9
   const checkQuantity = (e, q, q2) => {
     let total = e.target.name === "quantity" ? q : q + parseInt(q2);
     return total < 10 ? total : (total = 9);
@@ -31,16 +37,15 @@ export const AppProvider = ({ children }) => {
 
   const addToBasket = (e, burgerObj, quantity) => {
     e.preventDefault();
-
-    const bInBasket = state.basket.find((b) =>
-      b.burger.name.match(burgerObj.name)
-    );
-
+    // see if burger is all ready in the basket
+    const bInBasket = findInBasket(burgerObj.name);
+    // if not in basket, add to basket with quantity of 1
     if (!bInBasket) {
       dispatch({
         type: "SET_BASKET",
         payload: [...state.basket, { burger: burgerObj, quantity: 1 }],
       });
+      // otherwise find object, remove, update and add back at the correct place.
     } else {
       const allObjects = state.basket;
       const i = allObjects.indexOf(bInBasket);
@@ -54,6 +59,7 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+  // delete from basket using filter
   const deleteFromBasket = (e, burgerObj) => {
     e.preventDefault();
     const basket = state.basket.filter((b) => b.burger.name !== burgerObj.name);
@@ -64,20 +70,13 @@ export const AppProvider = ({ children }) => {
     });
   };
 
-  const inBasket = (name) => {
-    const bInBasket = state.basket.find((b) => b.burger.name.match(name));
-    return state.basket.find((b) => b.burger.name.match(name))
-      ? bInBasket.quantity
-      : 0;
-  };
-
   return (
     <AppContext.Provider
       value={{
         ...state,
         dispatch,
         addToBasket,
-        inBasket,
+        findInBasket,
         deleteFromBasket,
         totalPrice,
       }}

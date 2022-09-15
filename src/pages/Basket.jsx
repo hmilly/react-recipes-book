@@ -7,19 +7,13 @@ import Footer from "../components/Footer";
 const Basket = () => {
   const { basket, totalPrice } = useContext(AppContext);
 
-  const getTotal = (t) => {
-    if (t === 0) return 0;
-    else if (!Number.isInteger(t)) return (t + 3).toString().concat("0");
-    else return t + 3;
-  };
-
   return (
     <>
-      <div className="order_page">
+      <div className="basket">
         <UserForm />
-        <div className="order_page_receipt">
+        <div className="basket_receipt">
           <header>
-            <h1>Basket</h1>
+            <h2>Basket</h2>
           </header>
           <main>
             {basket.length !== 0 ? (
@@ -34,7 +28,7 @@ const Basket = () => {
           </section>
           <footer>
             <h3>Total Price:</h3>
-            <h3>£{getTotal(totalPrice)}</h3>
+            <h3>£{totalPrice === 0 ? 0 : totalPrice + 3}</h3>
           </footer>
         </div>
       </div>

@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(150, 128, 0);
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(34, 1, 77, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: gold;
+    outline: 2px solid rgb(213, 182, 2);
+    border-radius: 2px;
+  }
+}
+
+#root {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  height: auto;
+}
+
+#root h1 {
+  font-size: 50px;
+}
+#root h2 {
+  font-size: 40px;
+}
+
+#root h3,
+#root li,
+#root p,
+#root button {
+  font-size: 25px;
+}
+#root h4,
+#root h5,
+#root button,
+#root a,
+#root p,
+#root li,
+#root section,
+#root td {
+  font-size: 18px;
+}
+
+#root svg {
+  font-size: 20px;
+}
+
+#link:link,
+#link:visited,
+#link:active {
+  text-decoration: none;
+  color: black;
+}
+#link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: 1100px;
+  min-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+  #root {
+    height: 100vh;
+  }
+  #root h1 {
+    font-size: 18px;
+  }
+  #root h2 {
+    font-size: 16px;
+  }
+
+  #root h3,
+  #root h4,
+  #root h5,
+  #root button,
+  #root a,
+  #root p,
+  #root li,
+  #root section,
+  #root td,   #root svg {
+    font-size: 12px;
+  }
+
+  .app {
+    nav a {
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    header.header {
+      a {
+        height: 35px;
+        width: 120px;
+      }
+    }
+
+    footer.footer {
+      div {
+        .socials {
+          li {
+            width: 35%;
+            margin: 0 2%;
+          }
+        }
+      }
+    }
+
+    main.menu {
+      .burger_card {
+        height: 200px;
+        flex-basis: 146.6px;
+        .burger_card_img {
+          height: 100px;
+          flex-basis: 73.3px;
+        }
+        .burger_card_info {
+          height: 100px;
+          flex-basis: 73.3px;
+        }
+      }
+    }
+
+    main.burger {
+      .burger_top {
+        flex-direction: column-reverse;
+        aside {
+          ul {
+            flex-direction: row;
+          }
+          .btns > * {
+            padding: 10px 0;
+          }
+        }
+        h1 {
+          padding: 0;
+        }
+        .burger_main-img {
+          width: 80%;
+          height: 80%;
+          margin: 0 auto;
+          padding: 1% 0;
+        }
+      }
+      .burger_bot {
+        padding: 1%;
+      }
+    }
+
+    .offer_container {
+      .offer_text {
+        left: 1%;
+        padding: 1%;
+      }
+    }
+
+    .basket {
+      display: flex;
+      flex-direction: column;
+      flex-flow: column-reverse;
+    }
+
+    .order_complete {
+      background-color: black;
+      height: 400px;
+      div {
+        height: 50%;
+      }
+    }
+  }
+}

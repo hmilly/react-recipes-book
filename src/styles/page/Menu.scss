@@ -1,0 +1,44 @@
+main.menu {
+  display: flex;
+  flex: 3.75;
+  flex-direction: column;
+  background-color: white;
+  .top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2,
+    p {
+      width: 70%;
+      text-align: center;
+      margin: 2% 0;
+    }
+  }
+  .mid {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .bot {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    button {
+      flex: 0.75;
+      height: 100%;
+      font-weight: 600;
+      border-radius: 2px;
+      border: none;
+      color: black;
+      background: gold;
+      padding: 2% 4%;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+}

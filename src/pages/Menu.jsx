@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import Header from "../components/Header";
-import Burgers from "../components/Burgers";
+import BurgerCard from "../components/BurgerCard";
 import Footer from "../components/Footer";
 import AppContext from "../context/AppContext";
 
@@ -15,7 +15,7 @@ const Menu = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const moreOrLess = () => {
+  const showMoreOrLess = () => {
     setbtn(!btn);
     num === 12 ? setnum(9) : setnum(12);
   };
@@ -25,7 +25,7 @@ const Menu = () => {
       <Header />
       <main className="menu">
         <div className="top">
-          <h1>Explore our Menus</h1>
+          <h2>Explore our Menus</h2>
           <p>
             Choose from an ever-changing mix of meat, fish, Beyond Meat™, WW
             Approved, Diabetes Friendly recipes and health-conscious offerings.
@@ -33,11 +33,11 @@ const Menu = () => {
         </div>
         <div className="mid">
           {allBurgers.slice(0, num).map((b, i) => (
-            <Burgers burgerObj={b} key={i} />
+            <BurgerCard burgerObj={b} key={i} />
           ))}
         </div>
         <div className="bot">
-          <button className="onclickBtn" onClick={moreOrLess}>
+          <button className="onclickBtn" onClick={showMoreOrLess}>
             {btn === true ? "SEE MORE" : "SEE LESS"}
           </button>
         </div>

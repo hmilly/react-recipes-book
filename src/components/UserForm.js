@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import AppContext from "../context/AppContext";
-import { addNewUser } from "../context/AppActions";
+// import { addNewUser } from "../context/AppActions";
 
 export const UserForm = () => {
   const { users, basket, dispatch } = useContext(AppContext);
@@ -29,15 +29,15 @@ export const UserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const checkEmail = users.find(
+      (user) => user.email.toLowerCase() === userDetails.email.toLowerCase()
+    );
+
     if (basket.length === 0) {
       window.alert("Please add something to the basket");
     } else if (Object.values(userDetails).some((obj) => obj === "")) {
       window.alert("Missing details required");
-    } else if (
-      users.find(
-        (user) => user?.email.toLowerCase() === userDetails?.email.toLowerCase()
-      )
-    ) {
+    } else if (checkEmail) {
       window.alert(
         "Email entered is currently in use, please re-enter and try again"
       );
@@ -49,8 +49,8 @@ export const UserForm = () => {
   };
 
   return (
-    <form>
-      <h1>Your details:</h1>
+    <form className="form">
+      <h2>Your details:</h2>
       <select
         name="title"
         placeholder="Title"

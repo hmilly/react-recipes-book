@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { FaTrash } from "react-icons/fa";
 import AppContext from "../context/AppContext";
 
-const Burgers = ({ burgerObj }) => {
-  const { addToBasket, deleteFromBasket, inBasket } = useContext(AppContext);
+const BurgerCard = ({ burgerObj }) => {
+  const { addToBasket, deleteFromBasket, findInBasket } =
+    useContext(AppContext);
+
+  const basketItem = findInBasket(burgerObj.name);
 
   const p = burgerObj.ingredients.map((ing, i) =>
     i < burgerObj.ingredients.length - 1
@@ -19,7 +23,7 @@ const Burgers = ({ burgerObj }) => {
             src={`${process.env.PUBLIC_URL}${burgerObj.imageUrl}`}
             alt={burgerObj.name}
           />
-          <h3>{burgerObj.name}</h3>
+          <h4>{burgerObj.name}</h4>
         </div>
         <div className="burger_card_info">
           <p>{p}</p>
@@ -39,13 +43,15 @@ const Burgers = ({ burgerObj }) => {
             >
               {"Add to basket"}
             </button>
-            <p className="burger_card_num">{inBasket(burgerObj.name)}</p>
+            <p className="burger_card_num">
+              {basketItem ? basketItem.quantity : 0}
+            </p>
             <button
               onClick={(e) => {
                 deleteFromBasket(e, burgerObj);
               }}
             >
-              {"X"}
+              <FaTrash />
             </button>
           </div>
         </div>
@@ -54,4 +60,4 @@ const Burgers = ({ burgerObj }) => {
   );
 };
 
-export default Burgers;
+export default BurgerCard;

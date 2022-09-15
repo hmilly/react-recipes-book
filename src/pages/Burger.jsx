@@ -1,13 +1,16 @@
 import { useContext, useState, useMemo } from "react";
+import { FaTrash } from "react-icons/fa";
 import AppContext from "../context/AppContext";
 import { useParams } from "react-router-dom";
 
 const Burger = () => {
-  const { allBurgers, addToBasket, deleteFromBasket, inBasket } =
+  const { allBurgers, addToBasket, deleteFromBasket, findInBasket } =
     useContext(AppContext);
   const params = useParams();
 
   const [burger, setBurger] = useState(allBurgers[0 - 1]);
+
+  const basketItem = findInBasket(burger?.name);
 
   useMemo(() => {
     const b = allBurgers[+params.id - 1];
@@ -21,7 +24,7 @@ const Burger = () => {
       <main className="burger">
         <div className="burger_top">
           <aside>
-            <h1>{burger.name}</h1>
+            <h2>{burger.name}</h2>
             <ul>
               <li>
                 <img
@@ -62,13 +65,13 @@ const Burger = () => {
               >
                 {"Add to basket"}
               </button>
-              <h4>{inBasket(burger.name)}</h4>
+              <h4> {basketItem ? basketItem.quantity : 0}</h4>
               <button
                 onClick={(e) => {
                   deleteFromBasket(e, burger);
                 }}
               >
-                {"X"}
+                <FaTrash />
               </button>
             </div>
           </aside>
@@ -81,7 +84,7 @@ const Burger = () => {
 
         <div className="burger_bot">
           <aside>
-            <h1>Fresh Ingredients</h1>
+            <h2>Fresh Ingredients</h2>
             <table id="customers">
               <tbody>
                 <tr>

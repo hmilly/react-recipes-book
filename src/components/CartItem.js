@@ -4,7 +4,7 @@ import AppContext from "../context/AppContext";
 const CartItem = ({ b }) => {
   const { deleteFromBasket, addToBasket } = useContext(AppContext);
   return (
-    <div className="burger_in_cart">
+    <div className="cart_item">
       <header>
         <img
           src={`${process.env.PUBLIC_URL}${b.burger.imageUrl}`}
@@ -12,7 +12,7 @@ const CartItem = ({ b }) => {
         />
       </header>
       <main>
-        <p>{b.burger.name}</p>
+        <h4>{b.burger.name}</h4>
         <div>
           <p>£{b.burger.price}</p>
           <select

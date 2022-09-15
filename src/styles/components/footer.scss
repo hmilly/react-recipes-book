@@ -1,0 +1,40 @@
+footer.footer {
+  display: flex;
+  flex: 0.3;
+  background-image: url("../assets/footer.png");
+  background-size: fixed;
+  padding: 6% 3%;
+  ul,
+  div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    color: white;
+    margin: 0;
+    padding: 0;
+    h3 {
+      color: yellow;
+    }
+    p {
+      margin: 0 10px 5px 0;
+    }
+    li {
+      align-items: flex-start;
+      list-style-type: none;
+      img {
+        width: 100%;
+        height: auto;
+        padding: 3%;
+      }
+    }
+    img:hover,
+    li:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  .socials {
+    flex-direction: row;
+  }
+}

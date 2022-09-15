@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="intro">
+      <main className="home">
         <div>
           <section>
             <img
@@ -14,7 +14,7 @@ const Home = () => {
               src={`${process.env.PUBLIC_URL}/assets/maingbg1.png`}
               alt="burger_logo"
             />
-            <h1>Choose your meals</h1>
+            <h2>Choose your meals</h2>
             <p>
               Our chef-designed recipes include balanced Medditerranean meals,
               quick one-pan dinners, and top-rated customer favourites.
@@ -38,7 +38,7 @@ const Home = () => {
               src={`${process.env.PUBLIC_URL}/assets/maingbg3.png`}
               alt="burger logo"
             />
-            <h1>Unpack your box</h1>
+            <h2>Unpack your box</h2>
             <p>
               We guarentee the freshness of all our ingredients and deliver them
               in an insulated box right to your door.
@@ -62,7 +62,7 @@ const Home = () => {
               src={`${process.env.PUBLIC_URL}/assets/maingbg5.png`}
               alt="burger logo"
             />
-            <h1>Create magic</h1>
+            <h2>Create magic</h2>
             <p>
               Following our step-by-step instructions you'll experience the
               magic of cooking recipes that our chefs create with your family's

@@ -1,0 +1,43 @@
+.offer_container {
+  background-image: url("../assets/special_offer_meal.png");
+  flex: 1;
+  display: flex;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  .offer_text {
+    position: absolute;
+    left: 15%;
+    padding: 4%;
+    h3 {
+      background: linear-gradient(
+        275.03deg,
+        #ffc700 4.43%,
+        #af9845 32.39%,
+        #7e6c2a 58.65%,
+        #bca03b 103.4%,
+        #e7b811 116.19%
+      );
+      transform: rotate(-24.54deg);
+    }
+  }
+
+  .offer_wrapper {
+    flex: 1;
+    text-align: center;
+    padding: 15%;
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.357);
+    button {
+      padding: 2% 4%;
+      background-color: rgba(0, 0, 0, 0);
+      border: solid 2px gold;
+      color: gold;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(100, 90, 14, 0.522);
+      }
+    }
+  }
+}

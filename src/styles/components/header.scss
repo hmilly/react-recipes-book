@@ -1,0 +1,33 @@
+header.header {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url("../assets/header_platter.png");
+  background-size: cover;
+  div {
+    flex: 0.5;
+    color: white;
+    h1 {
+      padding: 4% 0;
+    }
+    a {
+      display: inline-block;
+      height: 60px;
+      width: 200px;
+      border: solid 1px gold;
+      button {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        color: gold;
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(100, 90, 14, 0.234);
+        }
+      }
+    }
+  }
+}

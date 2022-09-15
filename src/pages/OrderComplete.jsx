@@ -5,7 +5,7 @@ const OrderComplete = () => {
     <>
       <div className="order_complete">
         <div>
-          <h1>Thank you for your order!</h1>
+          <h2>Thank you for your order!</h2>
         </div>
       </div>
       <Footer />

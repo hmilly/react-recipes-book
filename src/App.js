@@ -1,13 +1,12 @@
 import { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.scss";
 
+import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Burger from "./pages/Burger";
 import Basket from "./pages/Basket";
 import OrderComplete from "./pages/OrderComplete";
-import Nav from "./components/Nav";
 import AppContext from "./context/AppContext";
 import { fetchAppData } from "./context/AppActions";
 // json-server --watch db.json --port 8080
@@ -16,7 +15,7 @@ function App() {
   const { dispatch } = useContext(AppContext);
 
   useEffect(() => {
-    dispatch("SET_LOADING")
+    dispatch("SET_LOADING");
     const getAppData = async () => {
       const appData = await fetchAppData();
       dispatch({ type: "SET_APP_DATA", payload: appData });

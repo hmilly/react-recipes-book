@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="main_head">
+    <header className="header">
       <div>
-        <h2>Order our top-rated recipes today!</h2>
+        <h1>Order our top-rated recipes today!</h1>
         <Link to="/menu">
           <button>GET STARTED</button>
         </Link>
