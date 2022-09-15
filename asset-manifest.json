@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/recipe-book/static/css/main.11f7894d.css",
-    "main.js": "/recipe-book/static/js/main.77edaa10.js",
-    "static/media/mainbot.png": "/recipe-book/static/media/mainbot.3e49385d54cf78afdc8e.png",
-    "static/media/burger_component_img1.png": "/recipe-book/static/media/burger_component_img1.3f9eb72878954ebb0a42.png",
-    "static/media/mainhead.png": "/recipe-book/static/media/mainhead.4347ae165df0bef98dd0.png",
-    "static/media/complete_order.png": "/recipe-book/static/media/complete_order.ad53d728d2e3df7bbef3.png",
+    "main.css": "/recipe-book/static/css/main.3d401239.css",
+    "main.js": "/recipe-book/static/js/main.8f6c5e3c.js",
+    "static/media/special_offer_meal.png": "/recipe-book/static/media/special_offer_meal.3e49385d54cf78afdc8e.png",
+    "static/media/burger_ingredients_bg.png": "/recipe-book/static/media/burger_ingredients_bg.3f9eb72878954ebb0a42.png",
+    "static/media/header_platter.png": "/recipe-book/static/media/header_platter.4347ae165df0bef98dd0.png",
+    "static/media/order_complete.png": "/recipe-book/static/media/order_complete.ad53d728d2e3df7bbef3.png",
     "static/media/footer.png": "/recipe-book/static/media/footer.5fccb5ccf223fd0d21e5.png",
     "index.html": "/recipe-book/index.html",
-    "main.11f7894d.css.map": "/recipe-book/static/css/main.11f7894d.css.map",
-    "main.77edaa10.js.map": "/recipe-book/static/js/main.77edaa10.js.map"
+    "main.3d401239.css.map": "/recipe-book/static/css/main.3d401239.css.map",
+    "main.8f6c5e3c.js.map": "/recipe-book/static/js/main.8f6c5e3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.11f7894d.css",
-    "static/js/main.77edaa10.js"
+    "static/css/main.3d401239.css",
+    "static/js/main.8f6c5e3c.js"
   ]
 }
